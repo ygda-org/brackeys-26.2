@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 600
-const ACCELERATION = 3000
-const DECELERATION = 5000
+const MAX_SPEED = 200
+const ACCELERATION = 1500
+const DECELERATION = 3000
 @export var acceleration_curve: Curve
 
 func _physics_process(delta):
