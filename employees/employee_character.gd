@@ -3,8 +3,19 @@ class_name Employee
 
 var application: Application
 
+const SPEED = 200
+
 func _ready():
 	GameState.employees_list.append(self)
+
+func _physics_process(_delta):
+	if $NavigationAgent2D.is_navigation_finished():
+		return
+	var agent_position: Vector2 = global_position
+	var next_position: Vector2 = $NavigationAgent2D.get_next_path_position()
+
+	velocity = agent_position.direction_to(next_position) * SPEED
+	move_and_slide()
 
 func fired():
 	var tween1 = get_tree().create_tween()

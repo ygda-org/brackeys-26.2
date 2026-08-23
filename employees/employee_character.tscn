@@ -18,3 +18,5 @@ region_rect = Rect2(112, 64, 16, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=218294883]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_88mo1")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=860070895]

@@ -101,6 +101,11 @@ texture = ExtResource("2_xwkvk")
 sources/0 = SubResource("TileSetAtlasSource_c651c")
 sources/1 = SubResource("TileSetAtlasSource_3wy1v")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_c651c"]
+vertices = PackedVector2Array(271.32813, 77, 275.64844, 207.57813, 268.60938, 207.28906, 237.72656, 99.703125, 31.46875, 77, 31.59375, 79.88281)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(21, 67, 281, 67, 286, 218, 261, 217, 230, 109, 22, 89)])
+
 [node name="Main" type="Node2D" unique_id=1068375960]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=229983145]
@@ -114,4 +119,7 @@ position = Vector2(158, 144)
 color = Color(0.17, 0.17, 0.17, 1)
 
 [node name="EmployeeCharacter" parent="." unique_id=1144723912 instance=ExtResource("4_c651c")]
-position = Vector2(245, 133)
+position = Vector2(268, 186)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=978754185]
+navigation_polygon = SubResource("NavigationPolygon_c651c")
