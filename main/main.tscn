@@ -107,7 +107,7 @@ tile_map_data = PackedByteArray("AAABAAAAAQABAAIAAAABAAEAAQABAAMAAAABAAIAAQABAAQ
 tile_set = SubResource("TileSet_55d6i")
 
 [node name="Player" parent="." unique_id=1482995803 instance=ExtResource("3_xwkvk")]
-position = Vector2(91, 134)
+position = Vector2(189, 127)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=216632159]
 color = Color(0.17, 0.17, 0.17, 1)
