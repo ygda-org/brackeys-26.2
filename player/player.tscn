@@ -47,10 +47,11 @@ position_smoothing_speed = 12.0
 
 [node name="VisionArm" type="Node2D" parent="." unique_id=1480016774]
 
-[node name="PointLight2D" type="PointLight2D" parent="VisionArm" unique_id=773722785]
-position = Vector2(187.99997, -2)
+[node name="ConeLight" type="PointLight2D" parent="VisionArm" unique_id=773722785]
 scale = Vector2(5.46875, 6.8281245)
+shadow_enabled = true
 texture = SubResource("GradientTexture2D_g1dw6")
+offset = Vector2(32, 0)
 
 [node name="EmployeeScan" type="Area2D" parent="VisionArm" unique_id=40700012]
 collision_layer = 0
