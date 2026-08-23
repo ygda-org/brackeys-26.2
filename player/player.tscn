@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://b3d3vaf1vcmw4" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://gviclm35pjr7" path="res://assets/prog_art/programmer_art-objects.png" id="2_rkbax"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xwkvk"]
+light_mode = 1
+
 [sub_resource type="Curve" id="Curve_u52ul"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6846153), -0.80448663, 0.0, 0, 0]
 point_count = 2
@@ -23,6 +26,7 @@ gradient = SubResource("Gradient_rkbax")
 size = Vector2(44, 13.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1482995803]
+material = SubResource("CanvasItemMaterial_xwkvk")
 script = ExtResource("1_rkbax")
 acceleration_curve = SubResource("Curve_u52ul")
 
@@ -37,6 +41,9 @@ region_rect = Rect2(128, 64, 16, 32)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=101055751]
 zoom = Vector2(2.5, 2.5)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 12.0
 
 [node name="VisionArm" type="Node2D" parent="." unique_id=1480016774]
 
@@ -44,6 +51,13 @@ zoom = Vector2(2.5, 2.5)
 position = Vector2(187.99997, -2)
 scale = Vector2(5.46875, 6.8281245)
 texture = SubResource("GradientTexture2D_g1dw6")
+
+[node name="EmployeeScan" type="Area2D" parent="VisionArm" unique_id=40700012]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArm/EmployeeScan" unique_id=338517568]
+polygon = PackedVector2Array(15, -1, 145, -125, 139, 99)
 
 [node name="PunchHitbox" type="Area2D" parent="." unique_id=603627785]
 collision_layer = 0
@@ -57,12 +71,5 @@ shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]
 
-[node name="EmployeeScan" type="Area2D" parent="." unique_id=40700012]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EmployeeScan" unique_id=338517568]
-polygon = PackedVector2Array(15, -1, 145, -125, 139, 99)
-
+[connection signal="body_entered" from="VisionArm/EmployeeScan" to="." method="_on_employee_scan_body_entered"]
 [connection signal="body_entered" from="PunchHitbox" to="." method="_on_punch_hitbox_body_entered"]
-[connection signal="body_entered" from="EmployeeScan" to="." method="_on_employee_scan_body_entered"]
