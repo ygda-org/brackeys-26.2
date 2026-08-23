@@ -22,6 +22,7 @@ func _physics_process(delta):
 			velocity.y = move_toward(velocity.y, 0.0, DECELERATION * delta)
 	else:
 		velocity.y = move_toward(velocity.y, 0.0, DECELERATION * delta)
+	velocity = velocity.limit_length(MAX_SPEED)
 	move_and_slide()
 	$VisionArm.look_at(get_global_mouse_position())
 	$PunchHitbox.look_at(get_global_mouse_position())
