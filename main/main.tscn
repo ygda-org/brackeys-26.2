@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://f3j4brdrdo70" path="res://assets/prog_art/programmer_art-terrain.png" id="1_pjrb6"]
 [ext_resource type="Texture2D" uid="uid://j2hdw21g5sct" path="res://assets/prog_art/YGDA-ProgrammerArt-3.png.png" id="2_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://bk6x32oppt138" path="res://player/player.tscn" id="3_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://cmbb1fu0dvb01" path="res://employees/employee_character.tscn" id="4_c651c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
 texture = ExtResource("1_pjrb6")
@@ -107,7 +108,10 @@ tile_map_data = PackedByteArray("AAABAAAAAQABAAIAAAABAAEAAQABAAMAAAABAAIAAQABAAQ
 tile_set = SubResource("TileSet_55d6i")
 
 [node name="Player" parent="." unique_id=1482995803 instance=ExtResource("3_xwkvk")]
-position = Vector2(189, 127)
+position = Vector2(158, 144)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=216632159]
 color = Color(0.17, 0.17, 0.17, 1)
+
+[node name="EmployeeCharacter" parent="." unique_id=1144723912 instance=ExtResource("4_c651c")]
+position = Vector2(245, 133)
