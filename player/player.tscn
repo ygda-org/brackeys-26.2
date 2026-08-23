@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bk6x32oppt138"]
+
+[ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://b3d3vaf1vcmw4" path="res://player/player.gd" id="1_rkbax"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbl4g"]
+radius = 61.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rkbax"]
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_rkbax"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g1dw6"]
+gradient = SubResource("Gradient_rkbax")
+
+[node name="Player" type="CharacterBody2D" unique_id=1482995803]
+script = ExtResource("1_rkbax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614029055]
+shape = SubResource("CircleShape2D_bbl4g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=194300464]
+material = SubResource("CanvasItemMaterial_rkbax")
+texture = ExtResource("1_oul6g")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=101055751]
+
+[node name="VisionArm" type="Node2D" parent="." unique_id=1480016774]
+
+[node name="PointLight2D" type="PointLight2D" parent="VisionArm" unique_id=773722785]
+position = Vector2(237, -9.500015)
+scale = Vector2(5.46875, 6.8281245)
+texture = SubResource("GradientTexture2D_g1dw6")

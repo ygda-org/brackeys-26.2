@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cfuf580udqoo8"]
+
+[ext_resource type="PackedScene" uid="uid://bk6x32oppt138" path="res://player/player.tscn" id="1_u52ul"]
+
+[sub_resource type="Gradient" id="Gradient_u52ul"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5kg8m"]
+gradient = SubResource("Gradient_u52ul")
+
+[node name="Level" type="Node2D" unique_id=1190401393]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1729825284]
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." unique_id=1482995803 instance=ExtResource("1_u52ul")]
+position = Vector2(-11, 38)
+
+[node name="ColorRect" type="Sprite2D" parent="." unique_id=635789999]
+position = Vector2(-319.25, 68.5)
+scale = Vector2(3.6640625, 3.265625)
+texture = SubResource("GradientTexture2D_5kg8m")
