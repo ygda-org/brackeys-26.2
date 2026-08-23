@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://b3d3vaf1vcmw4" path="res://player/player.gd" id="1_rkbax"]
 
+[sub_resource type="Curve" id="Curve_u52ul"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6846153), -0.80448663, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_bbl4g"]
 radius = 61.0
 
@@ -15,8 +19,12 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g1dw6"]
 gradient = SubResource("Gradient_rkbax")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(124, 41)
+
 [node name="Player" type="CharacterBody2D" unique_id=1482995803]
 script = ExtResource("1_rkbax")
+acceleration_curve = SubResource("Curve_u52ul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614029055]
 shape = SubResource("CircleShape2D_bbl4g")
@@ -33,3 +41,11 @@ texture = ExtResource("1_oul6g")
 position = Vector2(237, -9.500015)
 scale = Vector2(5.46875, 6.8281245)
 texture = SubResource("GradientTexture2D_g1dw6")
+
+[node name="PunchHitbox" type="Area2D" parent="." unique_id=603627785]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1732708328]
+position = Vector2(124, 26)
+shape = SubResource("RectangleShape2D_rkbax")
