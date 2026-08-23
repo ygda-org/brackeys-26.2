@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bk6x32oppt138" path="res://player/player.tscn" id="1_u52ul"]
 
 [sub_resource type="Gradient" id="Gradient_u52ul"]
+colors = PackedColorArray(0.31431612, 0.31431612, 0.3143161, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5kg8m"]
 gradient = SubResource("Gradient_u52ul")
