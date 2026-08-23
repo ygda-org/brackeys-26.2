@@ -103,7 +103,8 @@ sources/1 = SubResource("TileSetAtlasSource_oi3di")
 size = Vector2(304, 63)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vonw3"]
-polygon = PackedVector2Array(288, 1, 288, 128, 353, 128, 354, 1)
+cull_mode = 1
+polygon = PackedVector2Array(288, 1, 288, 128, 353, 128, 353, 159, 288, 159, 288, 224, 17, 224, 14, 13, 0, 0, 1, 241, 368, 240, 369, 1, 354, 1)
 
 [node name="Level" type="StaticBody2D" unique_id=614229357]
 z_index = -1
