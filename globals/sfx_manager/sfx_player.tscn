@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://te0dbabeltgt"]
+
+[ext_resource type="Script" uid="uid://cqwnexy7ffl0g" path="res://globals/sfx_manager/sfx_player.gd" id="1_d6bbf"]
+[ext_resource type="Script" uid="uid://brt0dygmwve00" path="res://globals/sfx_manager/sfx_settings.gd" id="2_xmiic"]
+[ext_resource type="AudioStream" uid="uid://345kk1rag2l5" path="res://assets/sfx/button_click.mp3" id="3_4xqb4"]
+
+[sub_resource type="Resource" id="Resource_d6bbf"]
+script = ExtResource("2_xmiic")
+bus = "Master"
+stream = ExtResource("3_4xqb4")
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[node name="SfxPlayer" type="Node" unique_id=1859485083]
+process_mode = 3
+script = ExtResource("1_d6bbf")
+id_to_setting = Dictionary[int, ExtResource("2_xmiic")]({
+0: SubResource("Resource_d6bbf")
+})

@@ -17,6 +17,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 GameState="*uid://cbdpcyn52aofh"
+SFX="*uid://te0dbabeltgt"
 
 [display]
 
