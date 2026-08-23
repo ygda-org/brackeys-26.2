@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bk6x32oppt138"]
 
-[ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://b3d3vaf1vcmw4" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://gviclm35pjr7" path="res://assets/prog_art/programmer_art-objects.png" id="2_rkbax"]
 
 [sub_resource type="Curve" id="Curve_u52ul"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6846153), -0.80448663, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bbl4g"]
-radius = 61.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
+radius = 7.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rkbax"]
 light_mode = 1
@@ -20,25 +20,28 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_rkbax")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
-size = Vector2(124, 41)
+size = Vector2(44, 13.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1482995803]
 script = ExtResource("1_rkbax")
 acceleration_curve = SubResource("Curve_u52ul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614029055]
-shape = SubResource("CircleShape2D_bbl4g")
+shape = SubResource("CapsuleShape2D_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=194300464]
 material = SubResource("CanvasItemMaterial_rkbax")
-texture = ExtResource("1_oul6g")
+texture = ExtResource("2_rkbax")
+region_enabled = true
+region_rect = Rect2(128, 64, 16, 32)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=101055751]
+zoom = Vector2(2.5, 2.5)
 
 [node name="VisionArm" type="Node2D" parent="." unique_id=1480016774]
 
 [node name="PointLight2D" type="PointLight2D" parent="VisionArm" unique_id=773722785]
-position = Vector2(237, -9.500015)
+position = Vector2(187.99997, -2)
 scale = Vector2(5.46875, 6.8281245)
 texture = SubResource("GradientTexture2D_g1dw6")
 
@@ -47,5 +50,5 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1732708328]
-position = Vector2(124, 26)
+position = Vector2(29, 14)
 shape = SubResource("RectangleShape2D_rkbax")
