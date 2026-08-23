@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cmbb1fu0dvb01"]
+
+[ext_resource type="Script" uid="uid://c3lsl5oyv776s" path="res://employees/employee_character.gd" id="1_frejn"]
+[ext_resource type="Texture2D" uid="uid://gviclm35pjr7" path="res://assets/prog_art/programmer_art-objects.png" id="2_88mo1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88mo1"]
+size = Vector2(16, 30)
+
+[node name="EmployeeCharacter" type="CharacterBody2D" unique_id=1144723912]
+collision_layer = 3
+script = ExtResource("1_frejn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=324160235]
+texture = ExtResource("2_88mo1")
+region_enabled = true
+region_rect = Rect2(112, 64, 16, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=218294883]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_88mo1")

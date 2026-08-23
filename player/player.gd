@@ -5,6 +5,9 @@ const ACCELERATION = 1500
 const DECELERATION = 3000
 @export var acceleration_curve: Curve
 
+func _ready():
+	GameState.camera = $Camera2D
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("punch"):
 		$PunchHitbox.monitoring = true
@@ -26,3 +29,7 @@ func _physics_process(delta):
 	move_and_slide()
 	$VisionArm.look_at(get_global_mouse_position())
 	$PunchHitbox.look_at(get_global_mouse_position())
+
+
+func _on_punch_hitbox_body_entered(body):
+	body.fired()

@@ -46,9 +46,15 @@ scale = Vector2(5.46875, 6.8281245)
 texture = SubResource("GradientTexture2D_g1dw6")
 
 [node name="PunchHitbox" type="Area2D" parent="." unique_id=603627785]
+collision_layer = 0
+collision_mask = 2
 monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1732708328]
 position = Vector2(29, 14)
 shape = SubResource("RectangleShape2D_rkbax")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]
+
+[connection signal="body_entered" from="PunchHitbox" to="." method="_on_punch_hitbox_body_entered"]
