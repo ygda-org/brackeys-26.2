@@ -57,4 +57,12 @@ shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]
 
+[node name="EmployeeScan" type="Area2D" parent="." unique_id=40700012]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EmployeeScan" unique_id=338517568]
+polygon = PackedVector2Array(15, -1, 145, -125, 139, 99)
+
 [connection signal="body_entered" from="PunchHitbox" to="." method="_on_punch_hitbox_body_entered"]
+[connection signal="body_entered" from="EmployeeScan" to="." method="_on_employee_scan_body_entered"]

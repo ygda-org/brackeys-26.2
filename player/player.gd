@@ -33,3 +33,7 @@ func _physics_process(delta):
 
 func _on_punch_hitbox_body_entered(body):
 	body.fired()
+
+
+func _on_employee_scan_body_entered(body):
+	body.reset_motivation()

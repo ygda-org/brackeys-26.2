@@ -2,8 +2,14 @@ extends CharacterBody2D
 class_name Employee
 
 var application: Application
+## every employee has a home position (like their desk) which they return to after finishing a task
+var home_position: Vector2 = Vector2(0,0)
 
 const SPEED = 200
+
+var max_motivation: int
+## motivation is the number of positive tasks an employee will do without the watchful gaze of their superviser to reset them
+@onready var motivation: int = max_motivation
 
 func _ready():
 	GameState.employees_list.append(self)
@@ -16,6 +22,28 @@ func _physics_process(_delta):
 
 	velocity = agent_position.direction_to(next_position) * SPEED
 	move_and_slide()
+
+func reset_motivation():
+	motivation = max_motivation
+
+func do_sabotage():
+	$NavigationAgent2D.target_position = get_sabotage_target_position()
+	await $NavigationAgent2D.navigation_finished
+	# hurt company
+	$NavigationAgent2D.target_position = home_position
+
+func do_neutral_task():
+	$NavigationAgent2D.target_position = get_neutral_target_position()
+	await $NavigationAgent2D.navigation_finished
+	$NavigationAgent2D.target_position = home_position
+
+## returns a position for an employee to go to for sabotage
+func get_sabotage_target_position():
+	return Vector2(0,0)
+
+## returns a position for an employee to get up and go to, like a water cooler
+func get_neutral_target_position():
+	return Vector2(0,0)
 
 func fired():
 	var tween1 = get_tree().create_tween()
