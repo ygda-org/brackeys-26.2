@@ -9,6 +9,8 @@ func _ready():
 	GameState.camera = $Camera2D
 
 func _physics_process(delta):
+	if GameState.player_animation_lock:
+		return
 	if Input.is_action_just_pressed("punch"):
 		$PunchHitbox.monitoring = true
 		get_tree().create_timer(0.25).timeout.connect($PunchHitbox.set.bind("monitoring", false))

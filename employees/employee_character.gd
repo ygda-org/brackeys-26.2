@@ -46,6 +46,7 @@ func get_neutral_target_position():
 	return Vector2(0,0)
 
 func fired():
+	GameState.player_animation_lock = true
 	var tween1 = get_tree().create_tween()
 	tween1.set_parallel()
 	tween1.set_trans(Tween.TRANS_CUBIC)
@@ -60,4 +61,5 @@ func fired():
 	tween2.tween_property(GameState.camera, "global_position", GameState.camera.get_parent().global_position, 0.3)
 	await tween2.finished
 	GameState.employees_list.remove_at(GameState.employees_list.find(self))
+	GameState.player_animation_lock = false
 	queue_free()
