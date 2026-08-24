@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cfuf580udqoo8"]
 
-[ext_resource type="Texture2D" uid="uid://bbiicbp5ok410" path="res://assets/prog_art/personal_office_layout.png" id="2_vonw3"]
-[ext_resource type="Texture2D" uid="uid://ds5xmx54eigsd" path="res://assets/prog_art/external_office_layout.png" id="3_oi3di"]
+[ext_resource type="Texture2D" uid="uid://dsebfmf4mtudk" path="res://assets/prog_art/office_layout.png" id="1_u52ul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
 size = Vector2(304, 63)
@@ -19,9 +18,5 @@ shape = SubResource("RectangleShape2D_vonw3")
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1889880130]
 occluder = SubResource("OccluderPolygon2D_vonw3")
 
-[node name="FactoryLayout" type="Sprite2D" parent="." unique_id=1667867848]
-texture = ExtResource("3_oi3di")
-
-[node name="PersonalOfficeLayout" type="Sprite2D" parent="." unique_id=1283653860]
-position = Vector2(0, -490)
-texture = ExtResource("2_vonw3")
+[node name="OfficeLayout" type="Sprite2D" parent="." unique_id=1667867848]
+texture = ExtResource("1_u52ul")
