@@ -11,7 +11,8 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6846153), -0.80448663, 0.0,
 point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
-radius = 7.0
+radius = 0.5
+height = 1.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rkbax"]
 light_mode = 1
@@ -31,6 +32,11 @@ script = ExtResource("1_rkbax")
 acceleration_curve = SubResource("Curve_u52ul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614029055]
+position = Vector2(-7, 15)
+shape = SubResource("CapsuleShape2D_rkbax")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=44287828]
+position = Vector2(7, 15)
 shape = SubResource("CapsuleShape2D_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=194300464]

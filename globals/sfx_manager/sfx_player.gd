@@ -23,6 +23,8 @@ extends Node
 ## List of all sounds. Add a new id here when you add a new sound.
 enum Id {
 	BUTTON_CLICK,
+	BUTTON_HOVER,
+	YGDA_STING,
 }
 
 ## [code]TRUE[/code]: Print debug messages [br]
