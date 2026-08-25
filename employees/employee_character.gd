@@ -13,6 +13,7 @@ var max_motivation: int
 
 func _ready():
 	GameState.employees_list.append(self)
+	$NavigationAgent2D.target_position = Vector2(-100,-250)
 
 func _physics_process(_delta):
 	if $NavigationAgent2D.is_navigation_finished():

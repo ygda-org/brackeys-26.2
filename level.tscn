@@ -6,9 +6,6 @@
 cull_mode = 2
 polygon = PackedVector2Array(17, -419, 164, -419, 164, -521, -164, -521, -164, -419, -17, -419, -17, -355, -166, -355, -166, -232, -275, -232, -275, -211, -169, -211, -169, -147, -275, -147, -275, -111, -169, -111, -169, -47, -275, -47, -275, -11, -169, -11, -169, 53, -275, 53, -275, 253, 275, 253, 275, 53, 169, 53, 169, -11, 275, -11, 275, -47, 169, -47, 169, -111, 275, -111, 275, -147, 169, -147, 169, -211, 275, -211, 275, -232, 166, -232, 166, -355, 17, -355)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tfgf"]
-size = Vector2(153, 64)
-
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u52ul"]
 cull_mode = 2
 polygon = PackedVector2Array(-129, -211, -16, -211, -16, 53, -129, 53, -129, -11, -23, -11, -23, -47, -129, -47, -129, -111, -23, -111, -23, -147, -129, -147)
@@ -122,7 +119,17 @@ size = Vector2(112, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jj8p3"]
 size = Vector2(8, 30)
 
-[node name="Level" type="StaticBody2D" unique_id=614229357]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tfgf"]
+size = Vector2(153, 64)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_u52ul"]
+vertices = PackedVector2Array(154, -222, 263, -222, 263, 243, -267, 243, -267, -222, -158, -222, 154, -345, -158, -345)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 4, 5), PackedInt32Array(0, 3, 5, 6), PackedInt32Array(6, 5, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-168, -355, 164, -355, 164, -232, 273, -232, 273, 253, -277, 253, -277, -232, -168, -232)])
+parsed_geometry_type = 1
+parsed_collision_mask = 4294967041
+
+[node name="Level" type="Node2D" unique_id=707170212]
 z_index = -1
 
 [node name="ExteriorOccluder" type="LightOccluder2D" parent="." unique_id=1889880130]
@@ -132,156 +139,162 @@ occluder = SubResource("OccluderPolygon2D_vonw3")
 position = Vector2(-2, 0)
 texture = ExtResource("1_u52ul")
 
-[node name="LeftRoomBoundary" type="CollisionShape2D" parent="OfficeLayout" unique_id=1641346168]
-position = Vector2(-93, -387)
-shape = SubResource("RectangleShape2D_4tfgf")
-
-[node name="RightRoomBoundary" type="CollisionShape2D" parent="OfficeLayout" unique_id=598416931]
-position = Vector2(93.5, -387)
-shape = SubResource("RectangleShape2D_4tfgf")
-
 [node name="CenterLeftOccluder" type="LightOccluder2D" parent="." unique_id=1345590477]
 occluder = SubResource("OccluderPolygon2D_u52ul")
 
 [node name="CenterRightOccluder" type="LightOccluder2D" parent="." unique_id=503856065]
 occluder = SubResource("OccluderPolygon2D_oi3di")
 
-[node name="LeftBoundary1" type="CollisionShape2D" parent="." unique_id=1289879644]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1582519654]
+
+[node name="LeftBoundary1" type="CollisionShape2D" parent="Walls" unique_id=1289879644]
 position = Vector2(-169, -501.5)
 shape = SubResource("RectangleShape2D_oi3di")
 
-[node name="LeftBoundary2" type="CollisionShape2D" parent="." unique_id=1218684969]
+[node name="LeftBoundary2" type="CollisionShape2D" parent="Walls" unique_id=1218684969]
 position = Vector2(-170, -327)
 shape = SubResource("RectangleShape2D_0b4ue")
 
-[node name="LeftBoundary3" type="CollisionShape2D" parent="." unique_id=1845159507]
+[node name="LeftBoundary3" type="CollisionShape2D" parent="Walls" unique_id=1845159507]
 position = Vector2(-280.5, 9)
 shape = SubResource("RectangleShape2D_f2txt")
 
-[node name="RightBoundary1" type="CollisionShape2D" parent="." unique_id=221067333]
+[node name="RightBoundary1" type="CollisionShape2D" parent="Walls" unique_id=221067333]
 position = Vector2(165, -501.5)
 shape = SubResource("RectangleShape2D_vonw3")
 
-[node name="RightBoundary2" type="CollisionShape2D" parent="." unique_id=1871357975]
+[node name="RightBoundary2" type="CollisionShape2D" parent="Walls" unique_id=1871357975]
 position = Vector2(166, -327)
 shape = SubResource("RectangleShape2D_fgc5p")
 
-[node name="RightBoundary3" type="CollisionShape2D" parent="." unique_id=413801417]
+[node name="RightBoundary3" type="CollisionShape2D" parent="Walls" unique_id=413801417]
 position = Vector2(276.5, 9)
 shape = SubResource("RectangleShape2D_u52ul")
 
-[node name="TopBoundary" type="CollisionShape2D" parent="." unique_id=1383741237]
+[node name="TopBoundary" type="CollisionShape2D" parent="Walls" unique_id=1383741237]
 position = Vector2(-2, -552.5)
 shape = SubResource("RectangleShape2D_xkopx")
 
-[node name="BottomBoundary" type="CollisionShape2D" parent="." unique_id=1416887623]
+[node name="BottomBoundary" type="CollisionShape2D" parent="Walls" unique_id=1416887623]
 position = Vector2(-2, 285)
 shape = SubResource("RectangleShape2D_g3tss")
 
-[node name="Cabinet1" type="CollisionShape2D" parent="." unique_id=956192854]
+[node name="Cabinet1" type="CollisionShape2D" parent="Walls" unique_id=956192854]
 position = Vector2(-148, -506)
 shape = SubResource("RectangleShape2D_6fca4")
 
-[node name="Cabinet2" type="CollisionShape2D" parent="." unique_id=1954821031]
+[node name="Cabinet2" type="CollisionShape2D" parent="Walls" unique_id=1954821031]
 position = Vector2(-116, -511.5)
 shape = SubResource("RectangleShape2D_0fy01")
 
-[node name="TopLeftCubicle" type="CollisionShape2D" parent="." unique_id=1707678484]
+[node name="TopLeftCubicle" type="CollisionShape2D" parent="Walls" unique_id=1707678484]
 position = Vector2(-222.375, -265.5)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="TopRightCubicle" type="CollisionShape2D" parent="." unique_id=1887867158]
+[node name="TopRightCubicle" type="CollisionShape2D" parent="Walls" unique_id=1887867158]
 position = Vector2(218.5025, -265.5)
 shape = SubResource("RectangleShape2D_ud35u")
 
-[node name="LeftCubicle1" type="CollisionShape2D" parent="." unique_id=684334441]
+[node name="LeftCubicle1" type="CollisionShape2D" parent="Walls" unique_id=684334441]
 position = Vector2(-223.9975, -179.0025)
 shape = SubResource("RectangleShape2D_5xq6g")
 
-[node name="LeftCubicle2" type="CollisionShape2D" parent="." unique_id=437271762]
+[node name="LeftCubicle2" type="CollisionShape2D" parent="Walls" unique_id=437271762]
 position = Vector2(-223.9975, -79.0025)
 shape = SubResource("RectangleShape2D_n6hdu")
 
-[node name="LeftCubicle3" type="CollisionShape2D" parent="." unique_id=190343926]
+[node name="LeftCubicle3" type="CollisionShape2D" parent="Walls" unique_id=190343926]
 position = Vector2(-224, 21)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="RightCubicle1" type="CollisionShape2D" parent="." unique_id=649378544]
+[node name="RightCubicle1" type="CollisionShape2D" parent="Walls" unique_id=649378544]
 position = Vector2(220.0025, -179.0025)
 shape = SubResource("RectangleShape2D_i2t4f")
 
-[node name="RightCubicle2" type="CollisionShape2D" parent="." unique_id=691177773]
+[node name="RightCubicle2" type="CollisionShape2D" parent="Walls" unique_id=691177773]
 position = Vector2(220.0025, -79.0025)
 shape = SubResource("RectangleShape2D_8cye3")
 
-[node name="RightCubicle3" type="CollisionShape2D" parent="." unique_id=1866705457]
+[node name="RightCubicle3" type="CollisionShape2D" parent="Walls" unique_id=1866705457]
 position = Vector2(220.0025, 20.997498)
 shape = SubResource("RectangleShape2D_2orkt")
 
-[node name="CenterLeftCubicleWall" type="CollisionShape2D" parent="." unique_id=2144254513]
+[node name="CenterLeftCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=2144254513]
 position = Vector2(-20.5, -79)
 shape = SubResource("RectangleShape2D_aicyk")
 
-[node name="CenterRightCubicleWall" type="CollisionShape2D" parent="." unique_id=578489079]
+[node name="CenterRightCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=578489079]
 position = Vector2(18.5, -79)
 shape = SubResource("RectangleShape2D_y6cx8")
 
-[node name="CenterLeftCubicle1" type="CollisionShape2D" parent="." unique_id=1862468094]
+[node name="CenterLeftCubicle1" type="CollisionShape2D" parent="Walls" unique_id=1862468094]
 position = Vector2(-78, -179)
 shape = SubResource("RectangleShape2D_8b0r0")
 
-[node name="CenterLeftCubicle2" type="CollisionShape2D" parent="." unique_id=35982662]
+[node name="CenterLeftCubicle2" type="CollisionShape2D" parent="Walls" unique_id=35982662]
 position = Vector2(-78, -79)
 shape = SubResource("RectangleShape2D_h6smj")
 
-[node name="CenterLeftCubicle3" type="CollisionShape2D" parent="." unique_id=2107331542]
+[node name="CenterLeftCubicle3" type="CollisionShape2D" parent="Walls" unique_id=2107331542]
 position = Vector2(-78, 21)
 shape = SubResource("RectangleShape2D_v5j5c")
 
-[node name="CenterRightCubicle1" type="CollisionShape2D" parent="." unique_id=1490098305]
+[node name="CenterRightCubicle1" type="CollisionShape2D" parent="Walls" unique_id=1490098305]
 position = Vector2(76, -179)
 shape = SubResource("RectangleShape2D_5pxul")
 
-[node name="CenterRightCubicle2" type="CollisionShape2D" parent="." unique_id=355364320]
+[node name="CenterRightCubicle2" type="CollisionShape2D" parent="Walls" unique_id=355364320]
 position = Vector2(76, -79)
 shape = SubResource("RectangleShape2D_fedht")
 
-[node name="CenterRightCubicle3" type="CollisionShape2D" parent="." unique_id=345733644]
+[node name="CenterRightCubicle3" type="CollisionShape2D" parent="Walls" unique_id=345733644]
 position = Vector2(76, 21)
 shape = SubResource("RectangleShape2D_eubwq")
 
-[node name="Desk1" type="CollisionShape2D" parent="." unique_id=897523750]
+[node name="Desk1" type="CollisionShape2D" parent="Walls" unique_id=897523750]
 position = Vector2(-40, -129)
 shape = SubResource("RectangleShape2D_4c15r")
 
-[node name="Desk2" type="CollisionShape2D" parent="." unique_id=376184801]
+[node name="Desk2" type="CollisionShape2D" parent="Walls" unique_id=376184801]
 position = Vector2(-40, -29)
 shape = SubResource("RectangleShape2D_xvnaw")
 
-[node name="SeatLeftWall" type="CollisionShape2D" parent="." unique_id=228590455]
+[node name="SeatLeftWall" type="CollisionShape2D" parent="Walls" unique_id=228590455]
 position = Vector2(-74, 153)
 shape = SubResource("RectangleShape2D_ait7k")
 
-[node name="SeatRightWall" type="CollisionShape2D" parent="." unique_id=1925730659]
+[node name="SeatRightWall" type="CollisionShape2D" parent="Walls" unique_id=1925730659]
 position = Vector2(70, 153)
 shape = SubResource("RectangleShape2D_lyskc")
 
-[node name="Seat" type="CollisionShape2D" parent="." unique_id=957395431]
+[node name="Seat" type="CollisionShape2D" parent="Walls" unique_id=957395431]
 position = Vector2(-2, 147.5)
 shape = SubResource("RectangleShape2D_ef5sy")
 
-[node name="LeftThingWall" type="CollisionShape2D" parent="." unique_id=492420021]
+[node name="LeftThingWall" type="CollisionShape2D" parent="Walls" unique_id=492420021]
 position = Vector2(-151, 138)
 shape = SubResource("RectangleShape2D_42xju")
 
-[node name="LeftThingThing" type="CollisionShape2D" parent="." unique_id=1724396236]
+[node name="LeftThingThing" type="CollisionShape2D" parent="Walls" unique_id=1724396236]
 position = Vector2(-151, 185)
 shape = SubResource("RectangleShape2D_v7sqt")
 
-[node name="RightThingWall" type="CollisionShape2D" parent="." unique_id=1455830052]
+[node name="RightThingWall" type="CollisionShape2D" parent="Walls" unique_id=1455830052]
 position = Vector2(147, 139)
 shape = SubResource("RectangleShape2D_dc3b2")
 
-[node name="RightThingThing" type="CollisionShape2D" parent="." unique_id=1688206495]
+[node name="RightThingThing" type="CollisionShape2D" parent="Walls" unique_id=1688206495]
 position = Vector2(147, 186)
 shape = SubResource("RectangleShape2D_jj8p3")
+
+[node name="LeftRoomBoundary" type="CollisionShape2D" parent="Walls" unique_id=1641346168]
+position = Vector2(-95, -387)
+shape = SubResource("RectangleShape2D_4tfgf")
+
+[node name="RightRoomBoundary" type="CollisionShape2D" parent="Walls" unique_id=598416931]
+position = Vector2(91.5, -387)
+shape = SubResource("RectangleShape2D_4tfgf")
+
+[node name="NPCNavRegion" type="NavigationRegion2D" parent="." unique_id=1718504740]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_u52ul")
