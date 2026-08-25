@@ -1,71 +1,80 @@
 [gd_scene format=3 uid="uid://chx5r6nxm8j6b"]
 
 [ext_resource type="Script" uid="uid://dll7ep3f86h36" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
-[ext_resource type="Texture2D" uid="uid://bw5cp58qiifl7" path="res://assets/main_menu/ygda_logo.png" id="2_mu8pm"]
+[ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="3_omy8q"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_omy8q"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(0, 0, 192, 128)
+[sub_resource type="Animation" id="Animation_i5wg5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("YGDALogo:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i5wg5"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(192, 0, 192, 128)
+[sub_resource type="Animation" id="Animation_3c04x"]
+resource_name = "ygda_intro"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("YGDALogo:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3c04x"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(0, 128, 192, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_joh67"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(192, 128, 192, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u184e"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(0, 256, 192, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6mijq"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(192, 256, 192, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2r0d"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(0, 384, 192, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4e78x"]
-atlas = ExtResource("2_mu8pm")
-region = Rect2(192, 384, 192, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jwd6l"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_omy8q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i5wg5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3c04x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_joh67")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u184e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6mijq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w2r0d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4e78x")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 4.0
-}]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_joh67"]
+_data = {
+&"RESET": SubResource("Animation_i5wg5"),
+&"ygda_intro": SubResource("Animation_3c04x")
+}
 
 [node name="MainMenu" type="Control" unique_id=849729289]
 layout_mode = 3
@@ -75,6 +84,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uhj5c")
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1178994610]
+z_index = 2
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control" parent="." unique_id=961775433]
 anchors_preset = 0
@@ -120,15 +136,24 @@ text = "see what nerds got employed on this game"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="YGDALogo" type="AnimatedSprite2D" parent="YGDAIntro" unique_id=855380541]
-z_index = 1
-position = Vector2(480, 270)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_jwd6l")
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="YGDAIntro" unique_id=1011181919]
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="YGDAIntroAnimPlayer" type="AnimationPlayer" parent="YGDAIntro" unique_id=2078485462]
+libraries/ = SubResource("AnimationLibrary_joh67")
+
+[node name="YGDALogo" type="TextureRect" parent="YGDAIntro" unique_id=1955765412]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 206.0
+offset_right = 544.0
+offset_bottom = 334.0
+texture = ExtResource("3_omy8q")
+
+[connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
