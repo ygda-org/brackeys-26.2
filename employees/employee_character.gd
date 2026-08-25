@@ -13,16 +13,45 @@ var max_motivation: int
 
 func _ready():
 	GameState.employees_list.append(self)
-	$NavigationAgent2D.target_position = Vector2(-100,-250)
+	$NavigationAgent2D.target_position = Vector2(-80,-130)
 
 func _physics_process(_delta):
 	if $NavigationAgent2D.is_navigation_finished():
 		return
 	var agent_position: Vector2 = global_position
 	var next_position: Vector2 = $NavigationAgent2D.get_next_path_position()
-
+	
+	velocity = Vector2.ZERO
 	velocity = agent_position.direction_to(next_position) * SPEED
+	var side_clear = not check_wall_casts(sign(velocity.x), "Side")
+	var vert_clear = not check_wall_casts(sign(velocity.y), "Vert")
+	var side_issue: bool = false
+	if abs(velocity.x) > abs(velocity.y) and side_clear:
+		velocity.y = 0
+	elif abs(velocity.x) <= abs(velocity.y) and vert_clear:
+		velocity.x = 0
+	else:
+		side_issue = true
+	if side_issue:
+		if side_clear:
+			velocity.y = 0
+		elif vert_clear:
+			velocity.x = 0
+		else:
+			print('I give up')
+	velocity = velocity.normalized() * SPEED
 	move_and_slide()
+
+## dir should be 1 or -1, side should be "Side" or "Vert"
+func check_wall_casts(dir: int, side: String):
+	for node: RayCast2D in get_node(side + "WallCheckCasts").get_children():
+		if not dir:
+			break
+		node.target_position = abs(node.target_position) * dir
+		node.force_raycast_update()
+		if node.is_colliding():
+			return true
+	return false
 
 func reset_motivation():
 	motivation = max_motivation

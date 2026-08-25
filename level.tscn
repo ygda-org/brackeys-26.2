@@ -123,11 +123,15 @@ size = Vector2(8, 30)
 size = Vector2(153, 64)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_u52ul"]
-vertices = PackedVector2Array(154, -222, 263, -222, 263, 243, -267, 243, -267, -222, -158, -222, 154, -345, -158, -345)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 4, 5), PackedInt32Array(0, 3, 5, 6), PackedInt32Array(6, 5, 7)])
+vertices = PackedVector2Array(258.5, 67.5, 258.5, 238.5, 217.5, 185.5, 217.5, 92.5, 152.5, 67.5, 143.5, 67.5, 149.5, -217.5, 152.5, -217.5, 152.5, -132.5, 258.5, -132.5, 258.5, -125.5, 152.5, -125.5, 152.5, -32.5, 258.5, -32.5, 258.5, -25.5, 152.5, -25.5, 143.5, -25.5, 37.5, -25.5, 37.5, -32.5, 143.5, -32.5, 143.5, -125.5, 37.5, -125.5, 37.5, -132.5, 143.5, -132.5, 143.5, -225.5, 149.5, -340.5, -153.5, -340.5, -0.5, -225.5, -145.5, -132.5, -69.5, -132.5, -69.5, -125.5, -145.5, -125.5, -145.5, -32.5, -69.5, -32.5, -69.5, -25.5, -145.5, -25.5, 88.5, 92.5, 88.5, 91.5, -1.5, 67.5, -221.5, 91.5, -145.5, 67.5, -221.5, 184.5, -169.5, 184.5, -169.5, 214.5, -132.5, 214.5, -132.5, 184.5, -92.5, 184.5, -92.5, 214.5, -55.5, 214.5, -55.5, 203.5, 51.5, 203.5, 51.5, 214.5, 88.5, 214.5, 88.5, 185.5, 128.5, 185.5, 128.5, 215.5, 165.5, 215.5, 165.5, 185.5, -156.5, -25.5, -262.5, -25.5, -262.5, -32.5, -156.49219, -32.5, -156.49219, -125.5, -262.5, -125.5, -262.5, -132.5, -156.49219, -132.5, -156.49219, -217.5, -153.38281, -217.5, -153.38281, -313.5, -153.5, -313.5, -262.5, 238.5, -262.5, 67.5, -156.5, 67.5, -145.5, -225.5, -1.5, -225.5, -0.5, 67.5)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(4, 3, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(8, 9, 10), PackedInt32Array(8, 10, 11), PackedInt32Array(12, 13, 14), PackedInt32Array(12, 14, 15), PackedInt32Array(15, 4, 5), PackedInt32Array(15, 5, 16), PackedInt32Array(12, 15, 16), PackedInt32Array(16, 17, 18), PackedInt32Array(16, 18, 19), PackedInt32Array(12, 16, 19), PackedInt32Array(11, 12, 19), PackedInt32Array(11, 19, 20), PackedInt32Array(8, 11, 20), PackedInt32Array(20, 21, 22), PackedInt32Array(20, 22, 23), PackedInt32Array(8, 20, 23), PackedInt32Array(6, 8, 23), PackedInt32Array(6, 23, 24), PackedInt32Array(25, 6, 24), PackedInt32Array(26, 25, 24), PackedInt32Array(26, 24, 27), PackedInt32Array(28, 29, 30), PackedInt32Array(28, 30, 31), PackedInt32Array(32, 33, 34), PackedInt32Array(32, 34, 35), PackedInt32Array(3, 36, 37), PackedInt32Array(38, 3, 37), PackedInt32Array(38, 37, 39), PackedInt32Array(40, 38, 39), PackedInt32Array(41, 42, 43), PackedInt32Array(44, 45, 46), PackedInt32Array(44, 46, 47), PackedInt32Array(48, 49, 50), PackedInt32Array(48, 50, 51), PackedInt32Array(52, 53, 54), PackedInt32Array(52, 54, 55), PackedInt32Array(56, 57, 2), PackedInt32Array(58, 59, 60), PackedInt32Array(58, 60, 61), PackedInt32Array(62, 63, 64), PackedInt32Array(62, 64, 65), PackedInt32Array(65, 66, 67), PackedInt32Array(68, 69, 26), PackedInt32Array(68, 26, 27), PackedInt32Array(56, 2, 1), PackedInt32Array(56, 1, 70), PackedInt32Array(55, 56, 70), PackedInt32Array(52, 55, 70), PackedInt32Array(51, 52, 70), PackedInt32Array(48, 51, 70), PackedInt32Array(47, 48, 70), PackedInt32Array(44, 47, 70), PackedInt32Array(43, 44, 70), PackedInt32Array(41, 43, 70), PackedInt32Array(41, 70, 71), PackedInt32Array(39, 41, 71), PackedInt32Array(39, 71, 72), PackedInt32Array(40, 39, 72), PackedInt32Array(35, 40, 72), PackedInt32Array(35, 72, 58), PackedInt32Array(35, 58, 61), PackedInt32Array(32, 35, 61), PackedInt32Array(31, 32, 61), PackedInt32Array(31, 61, 62), PackedInt32Array(28, 31, 62), PackedInt32Array(28, 62, 65), PackedInt32Array(28, 65, 67), PackedInt32Array(73, 28, 67), PackedInt32Array(73, 67, 68), PackedInt32Array(74, 73, 68), PackedInt32Array(74, 68, 27), PackedInt32Array(74, 27, 75), PackedInt32Array(38, 74, 75), PackedInt32Array(3, 38, 75), PackedInt32Array(3, 75, 5)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-168, -355, 164, -355, 164, -232, 273, -232, 273, 253, -277, 253, -277, -232, -168, -232)])
+sample_partition_type = 1
 parsed_geometry_type = 1
 parsed_collision_mask = 4294967041
+source_geometry_mode = 1
+source_geometry_group_name = &"nav_blocker"
+agent_radius = 14.5
 
 [node name="Level" type="Node2D" unique_id=707170212]
 z_index = -1
@@ -145,7 +149,8 @@ occluder = SubResource("OccluderPolygon2D_u52ul")
 [node name="CenterRightOccluder" type="LightOccluder2D" parent="." unique_id=503856065]
 occluder = SubResource("OccluderPolygon2D_oi3di")
 
-[node name="Walls" type="StaticBody2D" parent="." unique_id=1582519654]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1582519654 groups=["nav_blocker"]]
+collision_layer = 5
 
 [node name="LeftBoundary1" type="CollisionShape2D" parent="Walls" unique_id=1289879644]
 position = Vector2(-169, -501.5)
@@ -296,5 +301,4 @@ position = Vector2(91.5, -387)
 shape = SubResource("RectangleShape2D_4tfgf")
 
 [node name="NPCNavRegion" type="NavigationRegion2D" parent="." unique_id=1718504740]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_u52ul")

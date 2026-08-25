@@ -31,6 +31,10 @@ window/size/viewport_height=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+nav_blocker=""
+
 [input]
 
 left={
@@ -63,6 +67,7 @@ punch={
 
 2d_physics/layer_1="Walls"
 2d_physics/layer_2="Employee Detection"
+2d_physics/layer_3="Walls 2"
 
 [physics]
 
