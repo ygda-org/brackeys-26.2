@@ -49,3 +49,8 @@ func _on_play_pressed():
 	fade_out(1)
 	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("uid://b7hx7eym7wpfj")
+
+func _on_settings_pressed():
+	fade_out(1)
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("uid://c81oaw6kaqufp")

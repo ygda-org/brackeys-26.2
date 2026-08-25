@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c81oaw6kaqufp"]
+
+[ext_resource type="Script" uid="uid://3kly0sijxwkq" path="res://ui/main_menu/settings/settings.gd" id="1_7hcgd"]
+
+[node name="Settings" type="Control" unique_id=850807099]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7hcgd")
+
+[node name="VolumeGrid" type="GridContainer" parent="." unique_id=321013457]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 218.0
+offset_right = 632.0
+offset_bottom = 322.0
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="VolumeGrid" unique_id=731952824]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="VolumeGrid" unique_id=1335625402]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="MusicLabel" type="Label" parent="VolumeGrid" unique_id=783592969]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="VolumeGrid" unique_id=34257513]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="SFXLabel" type="Label" parent="VolumeGrid" unique_id=789676641]
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="VolumeGrid" unique_id=155119281]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="AmbienceLabel" type="Label" parent="VolumeGrid" unique_id=1828810180]
+layout_mode = 2
+text = "Ambience"
+
+[node name="AmbienceSlider" type="HSlider" parent="VolumeGrid" unique_id=1618474138]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="Button" type="Button" parent="." unique_id=1101465078]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 391.0
+offset_right = 597.0
+offset_bottom = 502.0
+text = "return
+"
+
+[connection signal="value_changed" from="VolumeGrid/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/AmbienceSlider" to="." method="_on_ambience_slider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
