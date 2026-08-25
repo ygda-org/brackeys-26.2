@@ -2,21 +2,51 @@
 
 [ext_resource type="Texture2D" uid="uid://dsebfmf4mtudk" path="res://assets/prog_art/office_layout.png" id="1_u52ul"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
-size = Vector2(304, 63)
-
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vonw3"]
+cull_mode = 2
+polygon = PackedVector2Array(17, -419, 164, -419, 164, -521, -164, -521, -164, -419, -17, -419, -17, -355, -166, -355, -166, -232, -275, -232, -275, -211, -169, -211, -169, -147, -275, -147, -275, -111, -169, -111, -169, -47, -275, -47, -275, -11, -169, -11, -169, 53, -275, 53, -275, 253, 275, 253, 275, 53, 169, 53, 169, -11, 275, -11, 275, -47, 169, -47, 169, -111, 275, -111, 275, -147, 169, -147, 169, -211, 275, -211, 275, -232, 166, -232, 166, -355, 17, -355)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u52ul"]
+cull_mode = 2
+polygon = PackedVector2Array(-129, -211, -16, -211, -16, 53, -129, 53, -129, -11, -23, -11, -23, -47, -129, -47, -129, -111, -23, -111, -23, -147, -129, -147)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oi3di"]
 cull_mode = 1
+polygon = PackedVector2Array(16, -211, 16, 53, 129, 53, 129, -11, 23, -11, 23, -47, 129, -47, 129, -111, 23, -111, 23, -147, 129, -147, 129, -211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u52ul"]
+size = Vector2(20, 645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
+size = Vector2(11, 296.25)
 
 [node name="Level" type="StaticBody2D" unique_id=614229357]
 z_index = -1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1637755910]
-position = Vector2(153, 256)
-shape = SubResource("RectangleShape2D_vonw3")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1889880130]
+[node name="ExteriorOccluder" type="LightOccluder2D" parent="." unique_id=1889880130]
 occluder = SubResource("OccluderPolygon2D_vonw3")
 
 [node name="OfficeLayout" type="Sprite2D" parent="." unique_id=1667867848]
 texture = ExtResource("1_u52ul")
+
+[node name="CenterLeftOccluder" type="LightOccluder2D" parent="." unique_id=1345590477]
+occluder = SubResource("OccluderPolygon2D_u52ul")
+
+[node name="CenterRightOccluder" type="LightOccluder2D" parent="." unique_id=503856065]
+occluder = SubResource("OccluderPolygon2D_oi3di")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845159507]
+position = Vector2(-285, -1.5)
+shape = SubResource("RectangleShape2D_u52ul")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=413801417]
+position = Vector2(285, -1)
+shape = SubResource("RectangleShape2D_u52ul")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1289879644]
+position = Vector2(-172, -447)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=221067333]
+position = Vector2(175, -447)
+shape = SubResource("RectangleShape2D_vonw3")
