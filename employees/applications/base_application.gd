@@ -112,7 +112,7 @@ enum College
 # Company motto: Trust Not, Fear Not, Fail Not
 # Company mission statement: Encourage orderly game-design and a disciplined workplace.
 # 2 follows either one, 1 follows neither but isn't harmful, 0 shows disloyalty
-const COMPANY_QUALITY = {
+const REASON_QUALITY = {
 	CompanyReason.DISTRUSTFUL : 2,
 	CompanyReason.FEARLESS : 2,
 	CompanyReason.ORGANIZED : 2,
@@ -145,5 +145,6 @@ enum CompanyReason
 @export var person_name: String
 @export var past_jobs: Array[PastJobs]
 @export var skills: Array[Skills]
-@export var college: String
-@export var company_reason: String
+@export var college: College
+@export var company_reason: CompanyReason
+@export var reliability: int
