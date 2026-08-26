@@ -55,7 +55,7 @@ scale = Vector2(5.46875, 6.8281245)
 shadow_enabled = true
 shadow_filter = 1
 texture = ExtResource("3_g1dw6")
-offset = Vector2(6, -20)
+offset = Vector2(6, -22)
 texture_scale = 0.05
 
 [node name="EmployeeScan" type="Area2D" parent="VisionArm" unique_id=40700012]
