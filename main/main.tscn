@@ -6,6 +6,9 @@
 
 [node name="Main" type="Node2D" unique_id=1068375960]
 
+[node name="EmployeeCharacter" parent="." unique_id=1144723912 instance=ExtResource("4_c651c")]
+position = Vector2(245, 192)
+
 [node name="Player" parent="." unique_id=1482995803 instance=ExtResource("3_xwkvk")]
 position = Vector2(92, 190)
 
@@ -13,9 +16,6 @@ position = Vector2(92, 190)
 color = Color(0.17211533, 0.1721153, 0.1721153, 1)
 
 [node name="Level" parent="." unique_id=1190401393 instance=ExtResource("3_c651c")]
-
-[node name="EmployeeCharacter" parent="." unique_id=1144723912 instance=ExtResource("4_c651c")]
-position = Vector2(245, 192)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1931662998]
 editor_only = true
