@@ -2,8 +2,6 @@ extends CharacterBody2D
 class_name Employee
 
 var application: Application
-## every employee has a home position (like their desk) which they return to after finishing a task
-var home_position: Vector2 = Vector2(0,0)
 
 const SPEED = 200
 
@@ -11,12 +9,24 @@ var max_motivation: int
 ## motivation is the number of positive tasks an employee will do without the watchful gaze of their superviser to reset them
 @onready var motivation: int = max_motivation
 
+## every employee has a home position (like their desk) which they return to after finishing a task
+var home_position: Marker2D
+
+var current_task: Task
+
 func _ready():
+	$TaskIntermission.wait_time = randf_range(5,15)
+	$TaskIntermission.start()
 	GameState.employees_list.append(self)
-	$NavigationAgent2D.target_position = Vector2(-80,-130)
+	await get_tree().process_frame
+	home_position = GameState.get_open_home_position()
+	position = home_position.position
 
 func _physics_process(_delta):
 	if $NavigationAgent2D.is_navigation_finished():
+		if $InTask.is_stopped() and current_task: # start task
+			$InTask.wait_time = current_task.task_length
+			$InTask.start()
 		return
 	var agent_position: Vector2 = global_position
 	var next_position: Vector2 = $NavigationAgent2D.get_next_path_position()
@@ -69,7 +79,7 @@ func do_neutral_task():
 
 ## returns a position for an employee to go to for sabotage
 func get_sabotage_target_position():
-	return Vector2(0,0)
+	return GameState.sabo_task_list.pick_random()
 
 ## returns a position for an employee to get up and go to, like a water cooler
 func get_neutral_target_position():
@@ -93,3 +103,16 @@ func fired():
 	GameState.employees_list.remove_at(GameState.employees_list.find(self))
 	GameState.player_animation_lock = false
 	queue_free()
+
+
+
+
+func _on_task_intermission_timeout():
+	current_task = get_sabotage_target_position()
+	$NavigationAgent2D.target_position = current_task.position
+
+
+func _on_in_task_timeout():
+	current_task = null
+	$NavigationAgent2D.target_position = home_position.position
+	$TaskIntermission.start()

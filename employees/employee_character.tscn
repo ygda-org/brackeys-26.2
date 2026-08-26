@@ -52,3 +52,12 @@ collision_mask = 4
 position = Vector2(8, 0)
 target_position = Vector2(0, 18)
 collision_mask = 4
+
+[node name="InTask" type="Timer" parent="." unique_id=1275083428]
+wait_time = 5.0
+one_shot = true
+
+[node name="TaskIntermission" type="Timer" parent="." unique_id=248515668]
+
+[connection signal="timeout" from="InTask" to="." method="_on_in_task_timeout"]
+[connection signal="timeout" from="TaskIntermission" to="." method="_on_task_intermission_timeout"]

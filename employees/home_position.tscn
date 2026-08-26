@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://n8ht182vl4lw"]
+
+[ext_resource type="Script" uid="uid://cxfsurfrfpboi" path="res://employees/home_position.gd" id="1_pg4dd"]
+
+[node name="HomePosition" type="Marker2D" unique_id=1571085186]
+modulate = Color(3.272891e-06, 0.7529556, 0.95896035, 1)
+gizmo_extents = 5.0
+script = ExtResource("1_pg4dd")

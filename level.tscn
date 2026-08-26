@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cfuf580udqoo8"]
 
 [ext_resource type="Texture2D" uid="uid://dsebfmf4mtudk" path="res://assets/prog_art/office_layout.png" id="1_u52ul"]
+[ext_resource type="PackedScene" uid="uid://cjv347w3ty213" path="res://employees/tasks/employee_task.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://n8ht182vl4lw" path="res://employees/home_position.tscn" id="3_oi3di"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vonw3"]
 cull_mode = 2
@@ -302,3 +304,46 @@ shape = SubResource("RectangleShape2D_4tfgf")
 
 [node name="NPCNavRegion" type="NavigationRegion2D" parent="." unique_id=1718504740]
 navigation_polygon = SubResource("NavigationPolygon_u52ul")
+
+[node name="Tasks" type="Node2D" parent="." unique_id=1401544399]
+
+[node name="EmployeeTask" parent="Tasks" unique_id=2065829293 instance=ExtResource("2_vonw3")]
+position = Vector2(21, 207)
+
+[node name="HomePositions" type="Node2D" parent="." unique_id=1556565440]
+
+[node name="HomePosition" parent="HomePositions" unique_id=1571085186 instance=ExtResource("3_oi3di")]
+position = Vector2(-76, -129)
+
+[node name="HomePosition2" parent="HomePositions" unique_id=507907969 instance=ExtResource("3_oi3di")]
+position = Vector2(-258, -129)
+
+[node name="HomePosition3" parent="HomePositions" unique_id=1782583635 instance=ExtResource("3_oi3di")]
+position = Vector2(-259, -28)
+
+[node name="HomePosition4" parent="HomePositions" unique_id=97304215 instance=ExtResource("3_oi3di")]
+position = Vector2(-74, -27)
+
+[node name="HomePosition5" parent="HomePositions" unique_id=385667181 instance=ExtResource("3_oi3di")]
+position = Vector2(41, -28)
+
+[node name="HomePosition6" parent="HomePositions" unique_id=968276874 instance=ExtResource("3_oi3di")]
+position = Vector2(254, -29)
+
+[node name="HomePosition7" parent="HomePositions" unique_id=252136827 instance=ExtResource("3_oi3di")]
+position = Vector2(41, -129)
+
+[node name="HomePosition8" parent="HomePositions" unique_id=1457714033 instance=ExtResource("3_oi3di")]
+position = Vector2(255, -129)
+
+[node name="HomePosition9" parent="HomePositions" unique_id=502965694 instance=ExtResource("3_oi3di")]
+position = Vector2(-192, 190)
+
+[node name="HomePosition10" parent="HomePositions" unique_id=1383593088 instance=ExtResource("3_oi3di")]
+position = Vector2(-123, 190)
+
+[node name="HomePosition11" parent="HomePositions" unique_id=62451378 instance=ExtResource("3_oi3di")]
+position = Vector2(116, 189)
+
+[node name="HomePosition12" parent="HomePositions" unique_id=745434660 instance=ExtResource("3_oi3di")]
+position = Vector2(176, 190)
