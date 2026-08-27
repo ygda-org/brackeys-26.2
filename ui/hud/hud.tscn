@@ -16,3 +16,10 @@ offset_bottom = 40.0
 step = 0.0
 fill_mode = 5
 texture_progress = SubResource("GradientTexture2D_jyp3o")
+
+[node name="QuotaBar" type="ProgressBar" parent="." unique_id=365670585]
+offset_left = 815.0
+offset_top = 1.0
+offset_right = 959.0
+offset_bottom = 28.0
+show_percentage = false

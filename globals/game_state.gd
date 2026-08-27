@@ -1,6 +1,6 @@
 extends Node
 
-const DAY_LENGTH = 10.0
+const DAY_LENGTH = 100.0
 
 signal day_started
 signal day_ended
@@ -21,6 +21,7 @@ var pos_task_list: Array[Task] = []
 var home_positions = []
 
 var productivity_points: int = 0
+var production_requirement: float = 25
 
 func _ready():
 	day_started.connect(start_day)
