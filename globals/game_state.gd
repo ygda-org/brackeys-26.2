@@ -1,5 +1,8 @@
 extends Node
 
+signal day_started
+signal day_ended
+
 var camera: Camera2D
 
 ## application accessible by Employee.application
@@ -14,6 +17,14 @@ var pos_task_list: Array[Task] = []
 @onready var task_lists = [sabo_task_list, neutral_task_list, pos_task_list]
 
 var home_positions = []
+
+var productivity_points: int = 0
+
+func _ready():
+	day_started.connect(start_day)
+
+func start_day():
+	productivity_points = 0
 
 func get_open_home_position():
 	for pos in home_positions:

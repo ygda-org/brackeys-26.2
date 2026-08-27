@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cu5d4okbwduef"]
+
+[ext_resource type="Script" uid="uid://bfxwbe87tvgs0" path="res://ui/hud/hud.gd" id="1_xmswo"]
+
+[sub_resource type="Gradient" id="Gradient_4d6w6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jyp3o"]
+gradient = SubResource("Gradient_4d6w6")
+
+[node name="Hud" type="Control" unique_id=838389343]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmswo")
+
+[node name="DayTimer" type="TextureProgressBar" parent="." unique_id=1450156580]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+value = 96.0
+fill_mode = 5
+texture_progress = SubResource("GradientTexture2D_jyp3o")
