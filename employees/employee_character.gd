@@ -123,7 +123,7 @@ func _on_task_intermission_timeout():
 func _on_in_task_timeout():
 	current_task = null
 	motivation -= 1
-	GameState.productivity_points += 5
+	GameState.productivity_points += 15
 	$NavigationAgent2D.target_position = home_position.position
 	start_intermission()
 

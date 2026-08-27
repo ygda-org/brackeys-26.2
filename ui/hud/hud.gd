@@ -10,12 +10,18 @@ func _ready():
 
 func _process(delta):
 	if pause:
+		visible = false
 		return
+	else:
+		visible = true
 	$QuotaBar.value = GameState.productivity_points
 	$DayTimer.value = $DayTimer.value - delta
 	if $DayTimer.value < 0.1:
 		pause = true
-		GameState.day_ended.emit()
+		if GameState.productivity_points < GameState.production_requirement:
+			GameState.day_failed.emit()
+		else:
+			GameState.day_ended.emit()
 
 func _on_day_started():
 	pause = false

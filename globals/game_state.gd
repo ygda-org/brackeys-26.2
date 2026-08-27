@@ -5,6 +5,8 @@ const DAY_LENGTH = 100.0
 signal day_started
 signal day_ended
 
+signal day_failed
+
 var camera: Camera2D
 
 ## application accessible by Employee.application
@@ -25,6 +27,7 @@ var production_requirement: float = 25
 
 func _ready():
 	day_started.connect(start_day)
+	day_failed.connect(game_over)
 
 func start_day():
 	productivity_points = 0
@@ -33,3 +36,6 @@ func get_open_home_position():
 	for pos in home_positions:
 		if pos.is_open:
 			return pos
+
+func game_over():
+	get_tree().change_scene_to_file("uid://bm863q8bmboqi")
