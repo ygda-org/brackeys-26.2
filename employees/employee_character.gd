@@ -15,12 +15,11 @@ var home_position: Marker2D
 var current_task: Task
 
 func _ready():
-	$TaskIntermission.wait_time = randf_range(5,15)
-	$TaskIntermission.start()
+	position = Vector2(1000,0)
 	GameState.employees_list.append(self)
 	await get_tree().process_frame
 	home_position = GameState.get_open_home_position()
-	position = home_position.position
+	GameState.day_started.connect(_on_day_start)
 
 func _physics_process(_delta):
 	if $NavigationAgent2D.is_navigation_finished():
@@ -62,6 +61,12 @@ func check_wall_casts(dir: int, side: String):
 		if node.is_colliding():
 			return true
 	return false
+
+func _on_day_start():
+	reset_motivation()
+	$TaskIntermission.wait_time = randf_range(5,15)
+	$TaskIntermission.start()
+	position = home_position.position
 
 func reset_motivation():
 	motivation = max_motivation

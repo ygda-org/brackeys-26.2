@@ -1,5 +1,7 @@
 extends Node
 
+const DAY_LENGTH = 10.0
+
 signal day_started
 signal day_ended
 
