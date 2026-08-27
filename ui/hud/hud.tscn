@@ -30,3 +30,10 @@ offset_top = 1.0
 offset_right = 808.0
 offset_bottom = 24.0
 text = "Need to hire: 5 more"
+
+[node name="AppsRemaining" type="Label" parent="." unique_id=1254123383]
+offset_left = 309.0
+offset_top = -1.0
+offset_right = 349.0
+offset_bottom = 22.0
+text = "Applications remaining: "

@@ -16,12 +16,16 @@ var home_position: Marker2D
 
 var current_task: Task
 
+@export var is_initial_employee: bool = false
+
 func _ready():
 	position = Vector2(1000,0)
 	GameState.employees_list.append(self)
 	await get_tree().process_frame
 	home_position = GameState.get_open_home_position()
 	GameState.day_started.connect(_on_day_start)
+	GameState.day_ended.connect($TaskIntermission.stop)
+	GameState.day_ended.connect($InTask.stop)
 
 func _physics_process(_delta):
 	if $NavigationAgent2D.is_navigation_finished():

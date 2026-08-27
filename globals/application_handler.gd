@@ -60,3 +60,4 @@ func create_application():
 	if(evil_modifier>0 and evil_modifier<4):
 		app.reliability-=1
 	
+	return app

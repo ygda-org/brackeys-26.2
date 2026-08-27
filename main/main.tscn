@@ -11,6 +11,7 @@ script = ExtResource("1_3wy1v")
 
 [node name="EmployeeCharacter" parent="." unique_id=1144723912 instance=ExtResource("4_c651c")]
 position = Vector2(245, 192)
+is_initial_employee = true
 
 [node name="Player" parent="." unique_id=1482995803 instance=ExtResource("3_xwkvk")]
 position = Vector2(92, 190)
