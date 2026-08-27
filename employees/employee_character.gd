@@ -1,11 +1,13 @@
 extends CharacterBody2D
 class_name Employee
 
+signal motivation_reset
+
 var application: Application
 
 const SPEED = 200
 
-var max_motivation: int
+var max_motivation: int = 4
 ## motivation is the number of positive tasks an employee will do without the watchful gaze of their superviser to reset them
 @onready var motivation: int = max_motivation
 
@@ -70,6 +72,7 @@ func _on_day_start():
 
 func reset_motivation():
 	motivation = max_motivation
+	motivation_reset.emit()
 
 func do_sabotage():
 	$NavigationAgent2D.target_position = get_sabotage_target_position()
@@ -120,4 +123,8 @@ func _on_task_intermission_timeout():
 func _on_in_task_timeout():
 	current_task = null
 	$NavigationAgent2D.target_position = home_position.position
+	start_intermission()
+
+func start_intermission():
+	$TaskIntermission.wait_time = randf_range(25, 40) - motivation * 5
 	$TaskIntermission.start()

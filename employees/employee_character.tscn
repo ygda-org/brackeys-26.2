@@ -58,6 +58,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="TaskIntermission" type="Timer" parent="." unique_id=248515668]
+one_shot = true
 
 [connection signal="timeout" from="InTask" to="." method="_on_in_task_timeout"]
 [connection signal="timeout" from="TaskIntermission" to="." method="_on_task_intermission_timeout"]
