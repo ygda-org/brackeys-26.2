@@ -23,3 +23,10 @@ offset_top = 1.0
 offset_right = 959.0
 offset_bottom = 28.0
 show_percentage = false
+
+[node name="HiringAmount" type="Label" parent="." unique_id=2098347358]
+offset_left = 651.0
+offset_top = 1.0
+offset_right = 808.0
+offset_bottom = 24.0
+text = "Need to hire: 5 more"

@@ -25,6 +25,8 @@ var home_positions = []
 var productivity_points: int = 0
 var production_requirement: float = 25
 
+var hiring_quota_remaining: int = 5
+
 func _ready():
 	day_started.connect(start_day)
 	day_failed.connect(game_over)

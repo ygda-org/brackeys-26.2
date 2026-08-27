@@ -14,6 +14,7 @@ func _process(delta):
 		return
 	else:
 		visible = true
+	$HiringAmount.text = "Need to hire: " + str(GameState.hiring_quota_remaining) + " more"
 	$QuotaBar.value = GameState.productivity_points
 	$DayTimer.value = $DayTimer.value - delta
 	if $DayTimer.value < 0.1:
