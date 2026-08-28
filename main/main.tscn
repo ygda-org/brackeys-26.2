@@ -4,14 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cfuf580udqoo8" path="res://level.tscn" id="3_c651c"]
 [ext_resource type="PackedScene" uid="uid://bk6x32oppt138" path="res://player/player.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://cu5d4okbwduef" path="res://ui/hud/hud.tscn" id="4_3wy1v"]
-[ext_resource type="PackedScene" uid="uid://cmbb1fu0dvb01" path="res://employees/employee_character.tscn" id="4_c651c"]
 
 [node name="Main" type="Node2D" unique_id=1068375960]
 script = ExtResource("1_3wy1v")
-
-[node name="EmployeeCharacter" parent="." unique_id=1144723912 instance=ExtResource("4_c651c")]
-position = Vector2(245, 192)
-is_initial_employee = true
 
 [node name="Player" parent="." unique_id=1482995803 instance=ExtResource("3_xwkvk")]
 position = Vector2(92, 190)

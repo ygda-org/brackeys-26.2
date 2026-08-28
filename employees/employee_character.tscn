@@ -25,6 +25,9 @@ shape = SubResource("RectangleShape2D_88mo1")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=860070895]
 path_postprocessing = 1
+avoidance_enabled = true
+radius = 15.0
+neighbor_distance = 100.0
 
 [node name="TestingLight" type="DirectionalLight2D" parent="." unique_id=96344115]
 editor_only = true

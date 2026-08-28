@@ -91,7 +91,12 @@ func do_neutral_task():
 
 ## returns a position for an employee to go to for sabotage
 func get_sabotage_target_position():
-	return GameState.sabo_task_list.pick_random()
+	GameState.sabo_task_list.shuffle()
+	for task: Task in GameState.sabo_task_list:
+		if not task.is_occupied:
+			task.is_occupied = true
+			return task
+	return null
 
 ## returns a position for an employee to get up and go to, like a water cooler
 func get_neutral_target_position():
@@ -121,10 +126,13 @@ func fired():
 
 func _on_task_intermission_timeout():
 	current_task = get_sabotage_target_position()
-	$NavigationAgent2D.target_position = current_task.position
-
+	if current_task:
+		$NavigationAgent2D.target_position = current_task.position
+	else:
+		$TaskIntermission.start()
 
 func _on_in_task_timeout():
+	current_task.is_occupied = false
 	current_task = null
 	motivation -= 1
 	GameState.productivity_points += 15
