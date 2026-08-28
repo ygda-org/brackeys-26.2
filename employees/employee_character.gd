@@ -5,7 +5,7 @@ signal motivation_reset
 
 var application: Application
 
-const SPEED = 200
+const SPEED = 150
 
 var max_motivation: int = 4
 ## motivation is the number of positive tasks an employee will do without the watchful gaze of their superviser to reset them
@@ -32,6 +32,7 @@ func _physics_process(_delta):
 		if $InTask.is_stopped() and current_task: # start task
 			$InTask.wait_time = current_task.task_length
 			$InTask.start()
+		$Anim.direction = Vector2i(0,0)
 		return
 	var agent_position: Vector2 = global_position
 	var next_position: Vector2 = $NavigationAgent2D.get_next_path_position()
@@ -54,6 +55,7 @@ func _physics_process(_delta):
 			velocity.x = 0
 		else:
 			print('I give up')
+	$Anim.direction = Vector2i(velocity.normalized() * 1.5)
 	velocity = velocity.normalized() * SPEED
 	move_and_slide()
 

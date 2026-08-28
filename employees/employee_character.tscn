@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cmbb1fu0dvb01"]
 
 [ext_resource type="Script" uid="uid://c3lsl5oyv776s" path="res://employees/employee_character.gd" id="1_frejn"]
-[ext_resource type="Texture2D" uid="uid://gviclm35pjr7" path="res://assets/prog_art/programmer_art-objects.png" id="2_88mo1"]
+[ext_resource type="Texture2D" uid="uid://2jk3dljxlmrm" path="res://assets/characters/sprites/portrait 1 walk.png" id="2_3g2ra"]
+[ext_resource type="Script" uid="uid://dowe3q0twi7c5" path="res://employees/custom_animated_sprite.gd" id="2_88mo1"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_88mo1"]
 light_mode = 2
@@ -13,11 +14,15 @@ size = Vector2(16, 30)
 collision_layer = 3
 script = ExtResource("1_frejn")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=324160235]
+[node name="Anim" type="Sprite2D" parent="." unique_id=1291678730]
 material = SubResource("CanvasItemMaterial_88mo1")
-texture = ExtResource("2_88mo1")
+texture = ExtResource("2_3g2ra")
 region_enabled = true
-region_rect = Rect2(112, 64, 16, 32)
+region_rect = Rect2(0, 0, 16, 32)
+script = ExtResource("2_88mo1")
+
+[node name="Timer" type="Timer" parent="Anim" unique_id=2033880306]
+wait_time = 0.166
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=218294883]
 position = Vector2(0, 1)
@@ -25,7 +30,6 @@ shape = SubResource("RectangleShape2D_88mo1")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=860070895]
 path_postprocessing = 1
-avoidance_enabled = true
 radius = 15.0
 neighbor_distance = 100.0
 
@@ -63,5 +67,6 @@ one_shot = true
 [node name="TaskIntermission" type="Timer" parent="." unique_id=248515668]
 one_shot = true
 
+[connection signal="timeout" from="Anim/Timer" to="Anim" method="_on_timer_timeout"]
 [connection signal="timeout" from="InTask" to="." method="_on_in_task_timeout"]
 [connection signal="timeout" from="TaskIntermission" to="." method="_on_task_intermission_timeout"]
