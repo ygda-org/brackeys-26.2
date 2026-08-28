@@ -70,7 +70,7 @@ max_value = 1.0
 step = 0.05
 value = 0.5
 
-[node name="JuicyButton" type="Button" parent="." unique_id=1215965652]
+[node name="ReturnButton" type="Button" parent="." unique_id=1215965652]
 layout_mode = 0
 offset_left = 344.0
 offset_top = 347.0
@@ -84,4 +84,4 @@ metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 [connection signal="value_changed" from="VolumeGrid/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="VolumeGrid/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="value_changed" from="VolumeGrid/AmbienceSlider" to="." method="_on_ambience_slider_value_changed"]
-[connection signal="pressed" from="JuicyButton" to="." method="_on_juicy_button_pressed"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

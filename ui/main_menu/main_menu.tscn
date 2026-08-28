@@ -139,7 +139,6 @@ script = ExtResource("2_omy8q")
 metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 
 [node name="YGDAIntro" type="Control" parent="." unique_id=2046822149]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

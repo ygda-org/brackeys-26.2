@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cfuf580udqoo8" path="res://level.tscn" id="3_c651c"]
 [ext_resource type="PackedScene" uid="uid://bk6x32oppt138" path="res://player/player.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://cu5d4okbwduef" path="res://ui/hud/hud.tscn" id="4_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://bt36bnfrc05q4" path="res://ui/pause_menu/pause_menu.tscn" id="6_kfbq2"]
 
 [node name="Main" type="Node2D" unique_id=1068375960]
 script = ExtResource("1_3wy1v")
@@ -20,3 +21,7 @@ color = Color(0.17211533, 0.1721153, 0.1721153, 1)
 editor_only = true
 
 [node name="Hud" parent="." unique_id=1698542637 instance=ExtResource("4_3wy1v")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=558521517]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=2044091051 instance=ExtResource("6_kfbq2")]

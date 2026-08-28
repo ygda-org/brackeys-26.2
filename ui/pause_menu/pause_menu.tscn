@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bt36bnfrc05q4"]
+
+[ext_resource type="Script" uid="uid://147a2wf0vhdv" path="res://ui/pause_menu/pause_menu.gd" id="1_jbgdu"]
+[ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="1_mnjdh"]
+
+[node name="PauseMenu" type="Control" unique_id=2044091051]
+process_mode = 3
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jbgdu")
+
+[node name="UnpauseButton" type="Button" parent="." unique_id=302854013]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 110.0
+offset_right = 618.0
+offset_bottom = 259.0
+text = "unpause"
+script = ExtResource("1_mnjdh")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
+
+[node name="MenuButton" type="Button" parent="." unique_id=936892777]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 278.0
+offset_right = 619.0
+offset_bottom = 427.0
+text = "menu"
+script = ExtResource("1_mnjdh")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
+
+[node name="VolumeGrid" type="GridContainer" parent="." unique_id=747198778]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 219.0
+offset_right = 937.0
+offset_bottom = 323.0
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="VolumeGrid" unique_id=717176186]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="VolumeGrid" unique_id=609199401]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="MusicLabel" type="Label" parent="VolumeGrid" unique_id=1814924835]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="VolumeGrid" unique_id=1127473702]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="SFXLabel" type="Label" parent="VolumeGrid" unique_id=771313047]
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="VolumeGrid" unique_id=939900759]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="AmbienceLabel" type="Label" parent="VolumeGrid" unique_id=882744527]
+layout_mode = 2
+text = "Ambience"
+
+[node name="AmbienceSlider" type="HSlider" parent="VolumeGrid" unique_id=1551489048]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[connection signal="pressed" from="UnpauseButton" to="." method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="value_changed" from="VolumeGrid/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/AmbienceSlider" to="." method="_on_ambience_slider_value_changed"]
