@@ -16,12 +16,15 @@ var home_position: Marker2D
 
 var current_task: Task
 
-@export var is_initial_employee: bool = false
+var is_initial_employee: bool = false
 
 func _ready():
 	position = Vector2(1000,0)
 	GameState.employees_list.append(self)
-	await get_tree().process_frame
+	if is_initial_employee:
+		await get_tree().process_frame
+	else:
+		await GameState.day_started
 	home_position = GameState.get_open_home_position()
 	GameState.day_started.connect(_on_day_start)
 	GameState.day_ended.connect($TaskIntermission.stop)
