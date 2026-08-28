@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d0wcp780qo1xd"]
+
+[ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="1_ndql4"]
+
+[node name="JuicyButton" type="Button" unique_id=573039500]
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_ndql4")

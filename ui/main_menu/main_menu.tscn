@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chx5r6nxm8j6b"]
 
 [ext_resource type="Script" uid="uid://dll7ep3f86h36" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
+[ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="2_omy8q"]
 [ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="3_omy8q"]
 
 [sub_resource type="Animation" id="Animation_i5wg5"]
@@ -106,34 +107,39 @@ offset_right = 903.0
 offset_bottom = 127.0
 text = "get employed simulator :kirb_fear:"
 
-[node name="Play" type="Button" parent="Menu" unique_id=1017084620]
+[node name="PlayButton" type="Button" parent="Menu" unique_id=211602542]
 layout_mode = 0
-offset_left = 302.0
-offset_top = 134.0
-offset_right = 545.0
-offset_bottom = 267.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "get a job application "
+offset_left = 347.0
+offset_top = 190.0
+offset_right = 521.0
+offset_bottom = 277.0
+text = "get employed simulator"
+script = ExtResource("2_omy8q")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 
-[node name="Settings" type="Button" parent="Menu" unique_id=902080140]
+[node name="SettingsButton" type="Button" parent="Menu" unique_id=134973713]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 323.0
-offset_right = 488.0
-offset_bottom = 354.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "twek seting"
+offset_left = 350.0
+offset_top = 293.0
+offset_right = 507.0
+offset_bottom = 346.0
+text = "twek them settings"
+script = ExtResource("2_omy8q")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 
-[node name="Credits" type="Button" parent="Menu" unique_id=135155419]
+[node name="CreditsButton" type="Button" parent="Menu" unique_id=564956852]
 layout_mode = 0
-offset_left = 271.0
-offset_top = 383.0
-offset_right = 610.0
-offset_bottom = 466.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "see what nerds got employed on this game"
+offset_left = 248.0
+offset_top = 362.0
+offset_right = 616.0
+offset_bottom = 449.0
+text = "what nerds worked on this game well just click
+thisbutton to find out"
+script = ExtResource("2_omy8q")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 
 [node name="YGDAIntro" type="Control" parent="." unique_id=2046822149]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -157,5 +163,5 @@ offset_right = 544.0
 offset_bottom = 334.0
 texture = ExtResource("3_omy8q")
 
-[connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Menu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]

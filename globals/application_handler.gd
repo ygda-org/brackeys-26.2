@@ -1,6 +1,7 @@
 extends Node
 var unique_skill_count : int
 var evil_modifier : int
+
 func create_application():
 	var app=Application.new()
 	# create two past jobs

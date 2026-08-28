@@ -1,6 +1,4 @@
-extends Marker2D
-
-class_name Task
+class_name Task extends Marker2D
 
 enum TaskTypes {
 	SABO,
