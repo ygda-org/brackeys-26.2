@@ -229,6 +229,10 @@ autoplay = "down_idle"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=101055751]
 zoom = Vector2(2.5, 2.5)
 process_callback = 0
+limit_left = -284
+limit_top = -584
+limit_right = 280
+limit_bottom = 317
 position_smoothing_enabled = true
 position_smoothing_speed = 12.0
 
@@ -242,14 +246,6 @@ shadow_filter = 1
 texture = ExtResource("3_g1dw6")
 offset = Vector2(0, -27)
 texture_scale = 0.05
-
-[node name="ColorRect" type="ColorRect" parent="VisionArm/ConeLight" unique_id=859694875]
-z_index = -4
-offset_left = -65.590034
-offset_top = -60.336823
-offset_right = 61.76435
-offset_bottom = 19.720459
-color = Color(0.65628535, 0.6562854, 0.6562854, 1)
 
 [node name="EmployeeScan" type="Area2D" parent="VisionArm" unique_id=40700012]
 visible = false

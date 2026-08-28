@@ -347,3 +347,11 @@ position = Vector2(116, 189)
 
 [node name="HomePosition12" parent="HomePositions" unique_id=745434660 instance=ExtResource("3_oi3di")]
 position = Vector2(176, 190)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1200601995]
+z_index = -4
+offset_left = -628.0
+offset_top = -759.0
+offset_right = 574.0
+offset_bottom = 461.0
+color = Color(0.65628535, 0.6562854, 0.6562854, 1)
