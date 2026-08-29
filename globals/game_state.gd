@@ -15,6 +15,10 @@ var pause: bool = false
 var camera: Camera2D
 var main: Node2D
 
+var player: CharacterBody2D
+
+var near_desk : bool = false
+
 ## application accessible by Employee.application
 var employees_list: Array[Employee]
 

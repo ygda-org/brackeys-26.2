@@ -9,6 +9,7 @@ var old_dir: Vector2 = Vector2(0,0)
 
 func _ready():
 	GameState.camera = $Camera2D
+	GameState.player = self
 
 func _physics_process(delta):
 	if GameState.player_animation_lock:
