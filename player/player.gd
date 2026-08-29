@@ -42,7 +42,8 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0.0, DECELERATION * delta)
 	velocity = velocity.limit_length(MAX_SPEED)
 	move_and_slide()
-	$VisionArm.rotation = lerpf($VisionArm.rotation, global_position.direction_to(get_global_mouse_position()).angle(), delta * 20)
+	if dir != Vector2(0,0):
+		$VisionArm.rotation = lerpf($VisionArm.rotation, dir.angle(), delta * 20)
 	$PunchHitbox.look_at(get_global_mouse_position())
 	var anim_string
 	var dir_save = dir

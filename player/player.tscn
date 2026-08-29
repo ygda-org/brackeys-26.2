@@ -17,7 +17,7 @@ point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
 radius = 0.5
-height = 1.0
+height = 12.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rkbax"]
 light_mode = 1
@@ -225,15 +225,16 @@ script = ExtResource("1_rkbax")
 acceleration_curve = SubResource("Curve_u52ul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614029055]
-position = Vector2(-7, 15)
+position = Vector2(-7, 6)
 shape = SubResource("CapsuleShape2D_rkbax")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=44287828]
-position = Vector2(7, 15)
+position = Vector2(7, 6)
 shape = SubResource("CapsuleShape2D_rkbax")
 
 [node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1442529838]
 material = SubResource("CanvasItemMaterial_rkbax")
+position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_rkbax")
 animation = &"up"
 autoplay = "down_idle"
@@ -273,7 +274,7 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1732708328]
-position = Vector2(29, 14)
+position = Vector2(29, 10)
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]

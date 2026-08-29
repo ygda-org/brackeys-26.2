@@ -39,6 +39,8 @@ var hiring_quota_remaining: int = START_DAY_HIRING_QUOTA
 var hiring_queue: Array[Application]
 var application_amount: int = 15
 
+var last_portrait : int
+
 func _ready():
 	day_started.connect(start_day)
 	day_failed.connect(game_over)

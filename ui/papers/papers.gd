@@ -3,24 +3,13 @@ extends Control
 var current_app : Application = null
 
 var portraits = {
-	1 : "uid://lkp81lwlj61h",
-	2 : "uid://dwynkhhna46jx",
-	3 : "uid://uyut62piu15r",
-	4 : "uid://b1hqjste1mkfw",
-	5 : "uid://bosottpmmxukb",
-	6 : "uid://cg23r42rk6aij",
-	7 : "uid://c4ubm2ecwpvr",
-}
-var portraits_masc = {
-	1 : "res://assets/characters/portraits/portrait_2.PNG",
-	2 : "res://assets/characters/portraits/portrait_4.PNG",
-	3 : "res://assets/characters/portraits/portrait_7.PNG"
-}
-var portraits_fem = {
-	1 : "res://assets/characters/portraits/portrait_1.PNG",
-	2 : "res://assets/characters/portraits/portrait_3.PNG",
-	3 : "res://assets/characters/portraits/portrait_5.PNG",
-	4 : "res://assets/characters/portraits/portrait_6.PNG"
+	1 : "uid://c4ubm2ecwpvr",
+	2 : "uid://b1hqjste1mkfw",
+	3 : "uid://dwynkhhna46jx",
+	4 : "uid://lkp81lwlj61h",
+	5 : "uid://uyut62piu15r",
+	6 : "uid://bosottpmmxukb",
+	7 : "uid://cg23r42rk6aij",
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -42,12 +31,30 @@ func load_application():
 	text += "College: " + str(current_app.college) + "\n"
 	text += "Company Reason: " + str(current_app.company_reason) + "\n"
 	$ApplicationText.text = text
+	choose_portrait()
+
+func choose_portrait():
+	print("gamble")
+	
+	var current_portrait : int = 0
+	
 	if(current_app.gender==0):
-		$TextureRect.texture = load(portraits[randi_range(1,7)])
+		current_portrait = randi_range(1,7)
+		$TextureRect.texture = load(portraits[current_portrait])
 	elif(current_app.gender==1):
-		$TextureRect.texture = load(portraits_masc[randi_range(1,3)])
+		current_portrait = randi_range(1,3)
+		$TextureRect.texture = load(portraits[current_portrait])
 	elif(current_app.gender==2):
-		$TextureRect.texture = load(portraits_fem[randi_range(1,4)])
+		current_portrait = randi_range(4, 7)
+		$TextureRect.texture = load(portraits[current_portrait])
+		
+	if GameState.last_portrait == null:
+		GameState.last_portrait = current_portrait
+
+	elif current_portrait == GameState.last_portrait:
+		choose_portrait()
+	else:
+		GameState.last_portrait = current_portrait
 
 func _on_hire_button_pressed() -> void:
 	GameState.hire()
