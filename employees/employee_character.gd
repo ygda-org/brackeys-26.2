@@ -112,6 +112,8 @@ func get_neutral_target_position():
 	return Vector2(0,0)
 
 func fired():
+	if in_firing:
+		return
 	var fired_icon = load("uid://bypla0ojpvyao").instantiate()
 	fired_icon.position.y -= 35
 	add_child(fired_icon)
