@@ -27,8 +27,14 @@ func create_application():
 			accepted[3]=true
 			app=load("res://employees/applications/special applications/towercide.tres")
 			return app
-	#set name
-	firstname=app.FirstName.find_key(randi_range(0,app.FirstName.size()-1))
+	#set gender and gendered name
+	app.gender=randi_range(0,2)
+	if(app.gender==0):
+		firstname=app.FirstNameEnby.find_key(randi_range(0,app.FirstNameEnby.size()-1))
+	elif(app.gender==1):
+		firstname=app.FirstNameMasc.find_key(randi_range(0,app.FirstNameMasc.size()-1))
+	elif(app.gender==2):
+		firstname=app.FirstNameFem.find_key(randi_range(0,app.FirstNameFem.size()-1))
 	lastname=app.LastName.find_key(randi_range(0,app.LastName.size()-1))
 	app.name=firstname+" "+lastname
 	# create two past jobs

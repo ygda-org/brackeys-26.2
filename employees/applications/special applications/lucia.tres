@@ -10,4 +10,5 @@ skills = Array[int]([9, 8, 3])
 college = 6
 company_reason = 2
 reliability = 4
+gender = 2
 metadata/_custom_type_script = "uid://coylabq8ccrb8"

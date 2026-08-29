@@ -142,18 +142,39 @@ enum CompanyReason
 	ASKED_TO,
 	UNTRUSTWORTHY
 }
-enum FirstName
+enum FirstNameMasc
 {
 	BOB,
-	SARAH,
 	JOHN,
 	JON,
 	RITHICK,
-	LILA,
 	ARTHUR,
-	LEAH,
 	JIM,
 	PETER,
+	ELI,
+}
+enum FirstNameFem
+{
+	SARAH,
+	LILA,
+	LEAH,
+	ABIGAIL,
+	HELEN,
+	ANNA,
+	SUSIE,
+	HANSIKA,
+}
+enum FirstNameEnby
+{
+	ALEX,
+	SAM,
+	SALEM,
+	THEO,
+	LETHE,
+	JESSE,
+	SAWYER,
+	OPAL,
+	GEORGI
 }
 enum LastName
 {
@@ -173,3 +194,4 @@ enum LastName
 @export var college: College
 @export var company_reason: CompanyReason
 @export var reliability: int
+@export var gender: int #0 is enby, 1 is male, 2 is female

@@ -11,6 +11,17 @@ var portraits = {
 	6 : "uid://cg23r42rk6aij",
 	7 : "uid://c4ubm2ecwpvr",
 }
+var portraits_masc = {
+	1 : "res://assets/characters/portraits/portrait_2.PNG",
+	2 : "res://assets/characters/portraits/portrait_4.PNG",
+	3 : "res://assets/characters/portraits/portrait_7.PNG"
+}
+var portraits_fem = {
+	1 : "res://assets/characters/portraits/portrait_1.PNG",
+	2 : "res://assets/characters/portraits/portrait_3.PNG",
+	3 : "res://assets/characters/portraits/portrait_5.PNG",
+	4 : "res://assets/characters/portraits/portrait_6.PNG"
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,7 +42,12 @@ func load_application():
 	text += "College: " + str(current_app.college) + "\n"
 	text += "Company Reason: " + str(current_app.company_reason) + "\n"
 	$ApplicationText.text = text
-	$TextureRect.texture = load(portraits[randi_range(1,7)])
+	if(current_app.gender==0):
+		$TextureRect.texture = load(portraits[randi_range(1,7)])
+	elif(current_app.gender==1):
+		$TextureRect.texture = load(portraits_masc[randi_range(1,3)])
+	elif(current_app.gender==2):
+		$TextureRect.texture = load(portraits_fem[randi_range(1,4)])
 
 func _on_hire_button_pressed() -> void:
 	GameState.hire()
