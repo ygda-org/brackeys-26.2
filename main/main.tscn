@@ -21,7 +21,9 @@ color = Color(0.17211533, 0.1721153, 0.1721153, 1)
 editor_only = true
 
 [node name="Hud" parent="." unique_id=1698542637 instance=ExtResource("4_3wy1v")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=558521517]
+visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2044091051 instance=ExtResource("6_kfbq2")]
