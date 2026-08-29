@@ -117,7 +117,7 @@ func fired():
 	var punch_dir = Vector2(GameState.player.punch_vec)
 	var pos_tween = get_tree().create_tween()
 	pos_tween.set_ease(Tween.EASE_OUT)
-	$Anim.rotation = PI/2
+	$Anim.rotation = PI/2 if punch_dir.x >= 0 else -PI/2
 	pos_tween.tween_property($Anim, "position", $Anim.position + punch_dir*35, 1.5)
 	var tween1 = get_tree().create_tween()
 	tween1.set_parallel()
