@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://741wnme1c4ic"
-path="res://.godot/imported/portrait 3 walk cycle.png-7e4596c93c6a5fc58d6c51607c4a1271.ctex"
+uid="uid://j2hdw21g5sct"
+path="res://.godot/imported/YGDA-ProgrammerArt-3.png-4ab716fd07561f1031f501808010ff7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/sprites/portrait 3 walk cycle.png"
-dest_files=["res://.godot/imported/portrait 3 walk cycle.png-7e4596c93c6a5fc58d6c51607c4a1271.ctex"]
+source_file="res://assets/prog_art/YGDA-ProgrammerArt-3.png"
+dest_files=["res://.godot/imported/YGDA-ProgrammerArt-3.png-4ab716fd07561f1031f501808010ff7b.ctex"]
 
 [params]
 

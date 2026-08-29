@@ -439,6 +439,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1482995803]
+z_index = 1
 material = SubResource("CanvasItemMaterial_xwkvk")
 script = ExtResource("1_rkbax")
 acceleration_curve = SubResource("Curve_u52ul")

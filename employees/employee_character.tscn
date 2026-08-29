@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmbb1fu0dvb01"]
 
 [ext_resource type="Script" uid="uid://c3lsl5oyv776s" path="res://employees/employee_character.gd" id="1_frejn"]
-[ext_resource type="Texture2D" uid="uid://2jk3dljxlmrm" path="res://assets/characters/sprites/portrait 1 walk.png" id="2_3g2ra"]
+[ext_resource type="Texture2D" uid="uid://2jk3dljxlmrm" path="res://assets/characters/sprites/portrait_4_walk.png" id="2_3g2ra"]
 [ext_resource type="Script" uid="uid://dowe3q0twi7c5" path="res://employees/custom_animated_sprite.gd" id="2_88mo1"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_88mo1"]
