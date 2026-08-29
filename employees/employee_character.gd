@@ -112,6 +112,7 @@ func get_neutral_target_position():
 	return Vector2(0,0)
 
 func fired():
+	$Anim/Timer.queue_free()
 	GameState.fired_amount += 1
 	if GameState.fired_amount > GameState.START_DAY_HIRING_QUOTA:
 		GameState.hiring_quota_remaining += 1
