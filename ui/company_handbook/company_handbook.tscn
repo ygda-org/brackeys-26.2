@@ -26,7 +26,9 @@ offset_top = 35.0
 offset_right = 433.0
 offset_bottom = 194.0
 theme = ExtResource("3_mtvw0")
-text = "High Quality Past Jobs:
+text = "Please hire people with
+relevant experience.
+Relevant jobs:
 Computer Scientist
 Game Developer
 Digital Artist
@@ -37,7 +39,7 @@ Soundtrack Designer
 SFX Designer
 Coder
 
-Low Quality Past Jobs:
+Irrelevant jobs:
 Mathematician
 Youtuber
 Accountant
@@ -45,7 +47,10 @@ Security Guard
 Cashier
 Socialite
 Penguin
-"
+
+DO NOT ACCEPT:
+FBI Agents
+OSHA employees"
 
 [node name="Skills" type="Label" parent="." unique_id=1600498268]
 layout_mode = 0
@@ -54,23 +59,30 @@ offset_top = 35.0
 offset_right = 553.0
 offset_bottom = 362.0
 theme = ExtResource("3_mtvw0")
-text = "Skills to look for in a programmer:
+text = "Each applicant must name at least three seperate skills.
+Some 'skills' are just different phrasings, and do NOT count.
+Accept only those with three skills:
+Programmers might say:
 Programmer
 Coder
 Programming Expert
 
-Skills to look for in an artist:
+Artists might say:
 Artist
 Digital Artist
 
-Skills to look for in a systems designer:
+People skilled in mathematics might say:
 Mathematics Expert
 Math Whiz
 Mathematician
 
-Skills to look for in a marketer include being a communicator and being talkative.
+Great collaborators might say:
+Communicator
+Talkative
 
-Skills to avoid are tool relocatorion and crime-doing."
+Some people pass off crime as a skill. These are:
+Tool Reallocator
+Crime Doer"
 
 [node name="Colleges" type="Label" parent="." unique_id=1171681576]
 layout_mode = 0
@@ -79,7 +91,8 @@ offset_top = 56.0
 offset_right = 824.0
 offset_bottom = 383.0
 theme = ExtResource("3_mtvw0")
-text = "High Quality Universities:
+text = "We try to only accept the highest quality
+universities. They are:
 
 Prestige U.
 James Baker U.
@@ -89,13 +102,16 @@ Serpent U.
 Helios Tech.
 Spirit College
 
-Low quality Universities: 
+Acceptable, but not outstanding Universities: 
 College U.
 Community College
 Heart College
 Mountain Tech
 
-Degree Mills
+There are a few prominent degree mills.
+People get fake bachelors and masters
+from them, so they do not have skills.
+DO NOT ACCEPT:
 Community U.
 John College"
 
@@ -106,7 +122,12 @@ offset_top = 53.0
 offset_right = 1012.0
 offset_bottom = 380.0
 theme = ExtResource("3_mtvw0")
-text = "Good Reasons:
+text = "Our company motto is \"Trust Not, Fear Not, 
+Fail Not\". Good reasons for wanting to join 
+our company follow it, or or mission statement:
+\"Encourage orderly game-design and a 
+disciplined workplace.\"
+Good reasons:
 	Distrustful
 	Fearless
 	Organized
