@@ -1,7 +1,11 @@
 extends Control
 
 var current_app : Application = null
-
+var processed_name : String
+var processed_jobs : String
+var processed_skills : String
+var processed_college : String
+var processed_reason : String
 var portraits = {
 	1 : "uid://c4ubm2ecwpvr",
 	2 : "uid://b1hqjste1mkfw",
@@ -25,11 +29,16 @@ func _process(delta: float) -> void:
 func load_application():
 	current_app = GameState.hiring_queue[0]
 	var text : String = ""
-	text += "Name: " + current_app.name + "\n"
-	text += "Past Jobs: " + str(current_app.past_jobs) + "\n"
-	text += "Skills: " + str(current_app.skills) + "\n"
-	text += "College: " + str(current_app.college) + "\n"
-	text += "Company Reason: " + str(current_app.company_reason) + "\n"
+	processed_name=current_app.name.capitalize()
+	processed_jobs=current_app.PastJobs.find_key(current_app.past_jobs[0]).capitalize() +" and "+current_app.PastJobs.find_key(current_app.past_jobs[1]).capitalize()
+	processed_skills=current_app.Skills.find_key(current_app.skills[0]).capitalize() + ", "+current_app.Skills.find_key(current_app.skills[1]).capitalize()+ ", and "+ current_app.Skills.find_key(current_app.skills[2]).capitalize()
+	processed_college=current_app.College.find_key(current_app.college).capitalize()
+	processed_reason=current_app.CompanyReason.find_key(current_app.company_reason).capitalize()
+	text += "Name: " + processed_name + "\n"
+	text += "Past Jobs: " +processed_jobs+ "\n"
+	text += "Skills: " + processed_skills + "\n"
+	text += "College: " + processed_college + "\n"
+	text += "Company Reason: " + processed_reason + "\n"
 	$ApplicationText.text = text
 	choose_portrait()
 
