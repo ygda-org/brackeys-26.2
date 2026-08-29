@@ -120,7 +120,8 @@ func create_application():
 	elif(app.REASON_QUALITY.get(app.company_reason)==0):
 		app.reliability-=1
 		evil_modifier+=1
-	if(evil_modifier>0 and evil_modifier<4):
-		app.reliability-=1
+	for i in 2:
+		if(evil_modifier>0 and evil_modifier<4):
+			app.reliability-=1
 	print(app.reliability)
 	return app
