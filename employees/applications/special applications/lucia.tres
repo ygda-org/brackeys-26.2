@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Application" format=3 uid="uid://lm6fctmo1u6e"]
+
+[ext_resource type="Script" uid="uid://coylabq8ccrb8" path="res://employees/applications/base_application.gd" id="1_f5imu"]
+
+[resource]
+script = ExtResource("1_f5imu")
+name = "LUCIA BAR"
+past_jobs = Array[int]([4, 13])
+skills = Array[int]([9, 8, 3])
+college = 6
+company_reason = 2
+reliability = 4
+metadata/_custom_type_script = "uid://coylabq8ccrb8"
