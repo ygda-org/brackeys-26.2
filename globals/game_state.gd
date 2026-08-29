@@ -21,6 +21,7 @@ var near_desk : bool = false
 
 ## application accessible by Employee.application
 var employees_list: Array[Employee]
+var fired_amount: int = 0
 
 var player_animation_lock: bool = false
 
@@ -47,6 +48,7 @@ func _ready():
 	day_ended.connect(end_day)
 
 func start_day():
+	fired_amount = 0
 	set_deferred("pause", false)
 	hiring_queue = []
 	hiring_quota_remaining = START_DAY_HIRING_QUOTA
@@ -56,14 +58,15 @@ func start_day():
 
 func end_day():
 	pause = true
-	for i in range(START_DAY_HIRING_QUOTA):
-		if not employees_list:
-			break
-		var index = randi_range(0, employees_list.size()-1)
-		var employee = employees_list[index]
-		employees_list.remove_at(index)
-		employee.home_position.is_open = true
-		employee.queue_free()
+	if fired_amount < START_DAY_HIRING_QUOTA:
+		for i in range(START_DAY_HIRING_QUOTA-fired_amount):
+			if not employees_list:
+				break
+			var index = randi_range(0, employees_list.size()-1)
+			var employee = employees_list[index]
+			employees_list.remove_at(index)
+			employee.home_position.is_open = true
+			employee.queue_free()
 	# hire new if not filled
 	if hiring_quota_remaining > 0:
 		for i in range(hiring_quota_remaining):
