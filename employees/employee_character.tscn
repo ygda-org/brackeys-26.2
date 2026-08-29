@@ -25,6 +25,7 @@ script = ExtResource("2_88mo1")
 wait_time = 0.166
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=218294883]
+visible = false
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_88mo1")
 
@@ -35,6 +36,7 @@ neighbor_distance = 100.0
 
 [node name="TestingLight" type="DirectionalLight2D" parent="." unique_id=96344115]
 editor_only = true
+blend_mode = 2
 
 [node name="SideWallCheckCasts" type="Node2D" parent="." unique_id=919400360]
 
