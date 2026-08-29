@@ -123,5 +123,4 @@ func create_application():
 	for i in 2:
 		if(evil_modifier>0 and evil_modifier<4):
 			app.reliability-=1
-	print(app.reliability)
 	return app

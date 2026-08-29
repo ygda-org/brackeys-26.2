@@ -156,7 +156,6 @@ enum FirstNameMasc
 	JIM,
 	PETER,
 	ELI,
-	ELLIOT,
 }
 enum FirstNameFem
 {
@@ -175,7 +174,6 @@ enum FirstNameEnby
 {
 	ALEX,
 	SAM,
-	SALEM,
 	THEO,
 	LETHE,
 	JESSE,
