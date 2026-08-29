@@ -8,6 +8,7 @@
 shader = ExtResource("1_vj3i6")
 
 [node name="FiredIcon" type="Sprite2D" unique_id=286837054]
+z_index = 5
 material = SubResource("ShaderMaterial_1is0x")
 texture = ExtResource("1_1is0x")
 script = ExtResource("3_ybpa1")
