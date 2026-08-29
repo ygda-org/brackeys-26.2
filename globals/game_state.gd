@@ -8,6 +8,8 @@ const START_DAY_HIRING_QUOTA = 5
 signal day_started
 signal day_ended
 
+signal hire_failed
+
 signal day_failed
 
 var pause: bool = false
@@ -76,6 +78,9 @@ func end_day():
 	day_started.emit()
 
 func hire():
+	if hiring_quota_remaining <= 0:
+		hire_failed.emit()
+		return
 	var app = hiring_queue.pop_front()
 	var employee = EMPLOYEE.instantiate()
 	employee.application = app
