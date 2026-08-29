@@ -1,6 +1,6 @@
 extends Resource
 class_name Application
-# Job quality of 0 means invalid job, job quality of 1 means valid job
+## Job quality of 0 means invalid job, job quality of 1 means valid job
 const JOB_QUALITY = {
 	PastJobs.COMPUTER_SCIENTIST : 1,
 	PastJobs.GAME_DEVELOPER : 1, 
@@ -38,8 +38,8 @@ enum PastJobs {
 	SOCIALITE,
 	PENGUIN
 }
-# Skills with the same number are considered the same skill (Ex: 0 is programmer, coder, and programming expert. 
-# Skills with a value of -1 indicate a saboteur.
+## Skills with the same number are considered the same skill (Ex: 0 is programmer, coder, and programming expert. 
+## Skills with a value of -1 indicate a saboteur.
 const SKILL_DIFFERENCE = {
 	Skills.PROGRAMMER : 0,
 	Skills.CODER : 0,
@@ -174,7 +174,18 @@ enum FirstNameEnby
 	JESSE,
 	SAWYER,
 	OPAL,
-	GEORGI
+	GEORGI,
+	TYLER,
+	FOREST,
+	SAGE,
+	REESE,
+	MORGAN,
+	QUINN,
+	ROWAN,
+	COREY,
+	WREN,
+	SKYLAR,
+	FRANKIE,
 }
 enum LastName
 {
@@ -194,4 +205,5 @@ enum LastName
 @export var college: College
 @export var company_reason: CompanyReason
 @export var reliability: int
-@export var gender: int #0 is enby, 1 is male, 2 is female
+##0 is enby, 1 is male, 2 is female
+@export var gender: int 
