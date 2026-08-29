@@ -152,6 +152,7 @@ enum FirstNameMasc
 	JIM,
 	PETER,
 	ELI,
+	ELLIOT,
 }
 enum FirstNameFem
 {
@@ -163,6 +164,8 @@ enum FirstNameFem
 	ANNA,
 	SUSIE,
 	HANSIKA,
+	JILL,
+	KAREN,
 }
 enum FirstNameEnby
 {
@@ -197,7 +200,8 @@ enum LastName
 	PARKER,
 	NYX,
 	DOE,
-	WARD
+	WARD,
+	LEE,
 }
 @export var name: String
 @export var past_jobs: Array[PastJobs]
