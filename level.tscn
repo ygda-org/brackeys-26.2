@@ -288,3 +288,9 @@ color = Color(0.65628535, 0.6562854, 0.6562854, 1)
 [node name="Desk" parent="." unique_id=1584504477 instance=ExtResource("4_0b4ue")]
 visible = false
 position = Vector2(-2, -466)
+
+[node name="EmployeeTask" parent="." unique_id=1911486304 instance=ExtResource("2_vonw3")]
+position = Vector2(-34, 207)
+
+[node name="EmployeeTask2" parent="." unique_id=1275787606 instance=ExtResource("2_vonw3")]
+position = Vector2(-5, 234)

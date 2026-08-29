@@ -47,7 +47,7 @@ func _physics_process(delta):
 	$PunchHitbox.rotation = Vector2(Vector2i(1.3*global_position.direction_to(get_global_mouse_position()))).angle()
 	#if dir != Vector2(0,0):
 		#$VisionArm.rotation = lerpf($VisionArm.rotation, dir.angle(), delta * 20)
-	$PunchHitbox.look_at(get_global_mouse_position())
+	#$PunchHitbox.look_at(get_global_mouse_position())
 	var anim_string
 	var dir_save = dir
 	if not dir:
@@ -55,10 +55,11 @@ func _physics_process(delta):
 	anim_string = vec_to_string(dir)
 	if not anim_string:
 		return
-	if Input.is_action_just_pressed("punch"):
-		get_tree().create_timer(0.3).timeout.connect($PunchHitbox.set.bind("monitoring", true))
+	if Input.is_action_just_pressed("punch") and $PunchDur.is_stopped():
+		get_tree().create_timer(0.4).timeout.connect($PunchHitbox.set.bind("monitoring", true))
+		get_tree().create_timer(0.7).timeout.connect($PunchHitbox.set.bind("monitoring", false))
 		$PunchDur.start()
-		punch_vec = Vector2i(1.1*global_position.direction_to(get_global_mouse_position()))
+		punch_vec = Vector2i(1.44*global_position.direction_to(get_global_mouse_position()))
 		if not punch_vec:
 			punch_vec = Vector2i(1,0)
 		$Anim.play(vec_to_string(punch_vec) + "_punch")
@@ -91,5 +92,4 @@ func _on_employee_scan_body_entered(body):
 
 
 func _on_punch_dur_timeout():
-	$PunchHitbox.monitoring = false
 	$Anim.flip_h = false

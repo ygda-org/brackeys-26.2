@@ -254,7 +254,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5ejfk")
 }, {
-"duration": 1.0,
+"duration": 0.7,
 "texture": SubResource("AtlasTexture_jd2rm")
 }, {
 "duration": 1.0,
@@ -305,7 +305,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dx5ib")
 }, {
-"duration": 1.0,
+"duration": 0.7,
 "texture": SubResource("AtlasTexture_a2xo5")
 }, {
 "duration": 1.0,
@@ -356,7 +356,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7pqkx")
 }, {
-"duration": 1.0,
+"duration": 0.7,
 "texture": SubResource("AtlasTexture_uw77l")
 }, {
 "duration": 1.0,
@@ -407,7 +407,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hjies")
 }, {
-"duration": 1.0,
+"duration": 0.7,
 "texture": SubResource("AtlasTexture_mmwog")
 }, {
 "duration": 1.0,
@@ -424,8 +424,11 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kg8m"]
+radius = 48.010414
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
-size = Vector2(44, 13.5)
+size = Vector2(14, 13.5)
 
 [sub_resource type="Gradient" id="Gradient_boad6"]
 offsets = PackedFloat32Array(0, 0.6879699, 0.69548875)
@@ -456,7 +459,7 @@ shape = SubResource("CapsuleShape2D_rkbax")
 material = SubResource("CanvasItemMaterial_rkbax")
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_rkbax")
-animation = &"up_punch"
+animation = &"right_punch"
 autoplay = "down_idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=101055751]
@@ -485,7 +488,10 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArm/EmployeeScan" unique_id=338517568]
-polygon = PackedVector2Array(15, -1, 145, -125, 139, 99)
+polygon = PackedVector2Array(0, 0, 388, -145, 388, 145)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArm/EmployeeScan" unique_id=1981095763]
+shape = SubResource("CircleShape2D_5kg8m")
 
 [node name="PunchHitbox" type="Area2D" parent="." unique_id=603627785]
 collision_layer = 0
@@ -494,7 +500,7 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1732708328]
-position = Vector2(29, 10)
+position = Vector2(14, 0)
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]
@@ -517,7 +523,7 @@ texture = SubResource("GradientTexture2D_5kg8m")
 texture_scale = 0.5
 
 [node name="PunchDur" type="Timer" parent="." unique_id=738944240]
-wait_time = 1.166
+wait_time = 1.25
 one_shot = true
 
 [connection signal="body_entered" from="VisionArm/EmployeeScan" to="." method="_on_employee_scan_body_entered"]

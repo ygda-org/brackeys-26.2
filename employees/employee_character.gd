@@ -32,7 +32,7 @@ func _ready():
 	GameState.day_ended.connect($TaskIntermission.stop)
 	GameState.day_ended.connect($InTask.stop)
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	if in_firing:
 		return
 	if $NavigationAgent2D.is_navigation_finished():
@@ -64,7 +64,10 @@ func _physics_process(_delta):
 			print('I give up')
 	$Anim.direction = Vector2i(velocity.normalized() * 1.5)
 	velocity = velocity.normalized() * SPEED
-	move_and_slide()
+	var collision: KinematicCollision2D = move_and_collide(velocity*delta)
+	if collision and collision.get_collider() is Employee: # collided with another employee
+		$CollisionShape2D.disabled = true
+		get_tree().create_timer(0.5).timeout.connect($CollisionShape2D.set.bind("disabled", false))
 
 ## dir should be 1 or -1, side should be "Side" or "Vert"
 func check_wall_casts(dir: int, side: String):
@@ -112,6 +115,11 @@ func get_neutral_target_position():
 	return Vector2(0,0)
 
 func fired():
+	if in_firing:
+		return
+	var fired_icon = load("uid://bypla0ojpvyao").instantiate()
+	fired_icon.position.y -= 35
+	add_child(fired_icon)
 	$Anim/Timer.queue_free()
 	GameState.fired_amount += 1
 	if GameState.fired_amount > GameState.START_DAY_HIRING_QUOTA:

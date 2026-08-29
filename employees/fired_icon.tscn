@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bypla0ojpvyao"]
+
+[ext_resource type="Texture2D" uid="uid://b5h07gxii41yy" path="res://assets/fired.png" id="1_1is0x"]
+[ext_resource type="Shader" uid="uid://o5ec4rafn81y" path="res://employees/fired_icon.gdshader" id="1_vj3i6"]
+[ext_resource type="Script" uid="uid://dukvjbcfth38f" path="res://employees/fired_icon.gd" id="3_ybpa1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1is0x"]
+shader = ExtResource("1_vj3i6")
+
+[node name="FiredIcon" type="Sprite2D" unique_id=286837054]
+material = SubResource("ShaderMaterial_1is0x")
+texture = ExtResource("1_1is0x")
+script = ExtResource("3_ybpa1")

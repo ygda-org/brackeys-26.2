@@ -4,6 +4,7 @@ var evil_modifier : int
 var first_name : String
 var last_name : String
 var give_job : int
+var give_skills : int
 var give_college : int
 var give_reason : int
 var accepted : Array[bool] = [false,false,false,false] #amount of falses equal to amount of custom characters
@@ -57,9 +58,18 @@ func create_application():
 	else:
 		pass # inefficiency condition
 	# create 3 skills
-	app.skills.append(Application.Skills.values().pick_random())
-	app.skills.append(Application.Skills.values().pick_random())
-	app.skills.append(Application.Skills.values().pick_random())
+	for i in 3:
+		give_skills = randi_range(0,99)
+		if(give_skills<5):
+			app.skills.append(Application.Skills.values().get(randi_range(10,11)))
+		elif(give_skills<27):
+			app.skills.append(Application.Skills.values().get(randi_range(0,2)))
+		elif(give_skills<53):
+			app.skills.append(Application.Skills.values().get(randi_range(3,4)))
+		elif(give_skills<79):
+			app.skills.append(Application.Skills.values().get(randi_range(5,7)))
+		else:
+			app.skills.append(Application.Skills.values().get(randi_range(8,9)))
 	# checks for evil skills (any evil skills instantly kills the skill section)
 	if(app.SKILL_DIFFERENCE.get(app.skills[0])==-1):
 		app.reliability-=1
@@ -71,10 +81,8 @@ func create_application():
 		app.reliability-=1
 		evil_modifier+=1
 	else:
-		#checks to make sure skill 1, is different from skill 2, then if it is different from skill 3, confirming at least 2 different skills
-		if(app.SKILL_DIFFERENCE.get(app.skills[0])!=app.SKILL_DIFFERENCE.get(app.skills[1])):
-			app.reliability+=1
-		elif(app.SKILL_DIFFERENCE.get(app.skills[0])!=app.SKILL_DIFFERENCE.get(app.skills[2])):
+		#checks all skills are different
+		if(app.SKILL_DIFFERENCE.get(app.skills[0])!=app.SKILL_DIFFERENCE.get(app.skills[1]) and app.SKILL_DIFFERENCE.get(app.skills[0])!=app.SKILL_DIFFERENCE.get(app.skills[2]) and app.SKILL_DIFFERENCE.get(app.skills[1])!=app.SKILL_DIFFERENCE.get(app.skills[2])):
 			app.reliability+=1
 		else:
 			pass # inefficiency condition
@@ -86,7 +94,6 @@ func create_application():
 		app.college=app.College.values().get(randi_range(7,10))
 	else:
 		app.college=app.College.values().get(randi_range(11,12))
-	print(app.college)
 	# check whether college is good
 	if(app.COLLEGE_QUALITY.get(app.college)==2):
 		app.reliability+=1
@@ -113,7 +120,7 @@ func create_application():
 	elif(app.REASON_QUALITY.get(app.company_reason)==0):
 		app.reliability-=1
 		evil_modifier+=1
-	if(evil_modifier>0 and evil_modifier<4):
-		app.reliability-=1
-	
+	for i in 2:
+		if(evil_modifier>0 and evil_modifier<4):
+			app.reliability-=1
 	return app
