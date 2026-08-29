@@ -55,8 +55,9 @@ func _physics_process(delta):
 	anim_string = vec_to_string(dir)
 	if not anim_string:
 		return
-	if Input.is_action_just_pressed("punch"):
+	if Input.is_action_just_pressed("punch") and $PunchDur.is_stopped():
 		get_tree().create_timer(0.4).timeout.connect($PunchHitbox.set.bind("monitoring", true))
+		get_tree().create_timer(0.7).timeout.connect($PunchHitbox.set.bind("monitoring", false))
 		$PunchDur.start()
 		punch_vec = Vector2i(1.44*global_position.direction_to(get_global_mouse_position()))
 		if not punch_vec:
@@ -91,5 +92,4 @@ func _on_employee_scan_body_entered(body):
 
 
 func _on_punch_dur_timeout():
-	$PunchHitbox.monitoring = false
 	$Anim.flip_h = false
