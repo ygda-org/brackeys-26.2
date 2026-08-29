@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cu5d4okbwduef"]
+
+[ext_resource type="Script" uid="uid://bfxwbe87tvgs0" path="res://ui/hud/hud.gd" id="1_xmswo"]
+
+[sub_resource type="Gradient" id="Gradient_4d6w6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jyp3o"]
+gradient = SubResource("Gradient_4d6w6")
+
+[node name="Hud" type="CanvasLayer" unique_id=1698542637]
+script = ExtResource("1_xmswo")
+
+[node name="DayTimer" type="TextureProgressBar" parent="." unique_id=1450156580]
+offset_right = 40.0
+offset_bottom = 40.0
+step = 0.0
+fill_mode = 5
+texture_progress = SubResource("GradientTexture2D_jyp3o")
+
+[node name="QuotaBar" type="ProgressBar" parent="." unique_id=365670585]
+offset_left = 815.0
+offset_top = 1.0
+offset_right = 959.0
+offset_bottom = 28.0
+show_percentage = false
+
+[node name="HiringAmount" type="Label" parent="." unique_id=2098347358]
+offset_left = 651.0
+offset_top = 1.0
+offset_right = 808.0
+offset_bottom = 24.0
+text = "Need to hire: 5 more"
+
+[node name="AppsRemaining" type="Label" parent="." unique_id=1254123383]
+offset_left = 309.0
+offset_top = -1.0
+offset_right = 349.0
+offset_bottom = 22.0
+text = "Applications remaining: "

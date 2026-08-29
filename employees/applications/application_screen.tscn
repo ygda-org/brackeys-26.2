@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://x4ojoyvtckes"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1su5m"]
+font_size = 11
+
+[sub_resource type="LabelSettings" id="LabelSettings_fw80q"]
+font_size = 11
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhj7k"]
+font_size = 11
+
+[node name="Application_Screen" type="Control" unique_id=2020354855]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="Name" type="Label" parent="." unique_id=406576796]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+offset_left = -190.0
+offset_right = -92.0
+offset_bottom = 23.0
+text = "Name's Application for [COMPANY]"
+
+[node name="College Title" type="Label" parent="." unique_id=1050438086]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = 27.0
+offset_right = -8.0
+offset_bottom = 50.0
+text = "Education at [COLLEGE]"
+
+[node name="College Description" type="Label" parent="." unique_id=877378335]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = 52.0
+offset_right = 76.0
+offset_bottom = 106.0
+text = "yapping and yammering oh my oh my look at all this wonderful amazing super cool text and it's smaller and it wraps"
+label_settings = SubResource("LabelSettings_1su5m")
+autowrap_mode = 3
+
+[node name="Job 1" type="Label" parent="." unique_id=1053180315]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 110.0
+offset_right = -62.0
+offset_bottom = 133.0
+text = "Job 1"
+
+[node name="Job 2" type="Label" parent="." unique_id=949095160]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 66.0
+offset_top = 110.0
+offset_right = 104.0
+offset_bottom = 133.0
+text = "Job 2"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1200076707]
+position = Vector2(0, 108)
+zoom = Vector2(2.5, 2.5)
+
+[node name="Job 1 Description" type="Label" parent="." unique_id=1840249469]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 0
+offset_left = -160.0
+offset_top = 140.0
+offset_right = -20.0
+offset_bottom = 194.0
+text = "something generic about job 1 so we can use any text for any job"
+label_settings = SubResource("LabelSettings_fw80q")
+autowrap_mode = 3
+
+[node name="Job 2 Description" type="Label" parent="." unique_id=242574923]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 140.0
+offset_right = 160.0
+offset_bottom = 194.0
+text = "wonder what this one is"
+label_settings = SubResource("LabelSettings_xhj7k")
+autowrap_mode = 3

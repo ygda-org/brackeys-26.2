@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cjv347w3ty213"]
+
+[ext_resource type="Script" uid="uid://kgiy44665ay2" path="res://employees/tasks/employee_task.gd" id="1_bj23s"]
+
+[node name="EmployeeTask" type="Marker2D" unique_id=2065829293]
+script = ExtResource("1_bj23s")

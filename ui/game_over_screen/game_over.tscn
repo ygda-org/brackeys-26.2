@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bm863q8bmboqi"]
+
+[ext_resource type="Script" uid="uid://cksdvdrwjslfv" path="res://ui/game_over_screen/game_over.gd" id="1_jgpo5"]
+[ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="2_shmxg"]
+
+[node name="GameOver" type="Control" unique_id=1123743901]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jgpo5")
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1152334064]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2052183751]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Quota not met"
+
+[node name="JuicyButton" type="Button" parent="." unique_id=459937721]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 190.0
+offset_right = 650.0
+offset_bottom = 312.0
+text = "main menu"
+script = ExtResource("2_shmxg")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
+
+[connection signal="pressed" from="JuicyButton" to="." method="_on_juicy_button_pressed"]
