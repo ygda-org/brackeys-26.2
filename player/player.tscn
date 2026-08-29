@@ -424,6 +424,9 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kg8m"]
+radius = 48.010414
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
 size = Vector2(44, 13.5)
 
@@ -485,7 +488,10 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArm/EmployeeScan" unique_id=338517568]
-polygon = PackedVector2Array(15, -1, 145, -125, 139, 99)
+polygon = PackedVector2Array(0, 0, 388, -145, 388, 145)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArm/EmployeeScan" unique_id=1981095763]
+shape = SubResource("CircleShape2D_5kg8m")
 
 [node name="PunchHitbox" type="Area2D" parent="." unique_id=603627785]
 collision_layer = 0
