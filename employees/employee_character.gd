@@ -112,6 +112,9 @@ func get_neutral_target_position():
 	return Vector2(0,0)
 
 func fired():
+	GameState.fired_amount += 1
+	if GameState.fired_amount > GameState.START_DAY_HIRING_QUOTA:
+		GameState.hiring_quota_remaining += 1
 	in_firing = true
 	GameState.player_animation_lock = true
 	var punch_dir = Vector2(GameState.player.punch_vec)
