@@ -13,6 +13,9 @@ config_version=5
 config/name="Brackeys-26.2"
 run/main_scene="uid://b7hx7eym7wpfj"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0.60784316, 0.79607844, 0.8117647, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://dbbahv8sb6o5m"
 config/icon="res://assets/icon.svg"
 
 [audio]
