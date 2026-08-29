@@ -47,7 +47,7 @@ func _physics_process(delta):
 	$PunchHitbox.rotation = Vector2(Vector2i(1.3*global_position.direction_to(get_global_mouse_position()))).angle()
 	#if dir != Vector2(0,0):
 		#$VisionArm.rotation = lerpf($VisionArm.rotation, dir.angle(), delta * 20)
-	$PunchHitbox.look_at(get_global_mouse_position())
+	#$PunchHitbox.look_at(get_global_mouse_position())
 	var anim_string
 	var dir_save = dir
 	if not dir:

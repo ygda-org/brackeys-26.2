@@ -428,7 +428,7 @@ animations = [{
 radius = 48.010414
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
-size = Vector2(44, 13.5)
+size = Vector2(14, 13.5)
 
 [sub_resource type="Gradient" id="Gradient_boad6"]
 offsets = PackedFloat32Array(0, 0.6879699, 0.69548875)
@@ -500,7 +500,7 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1732708328]
-position = Vector2(29, 10)
+position = Vector2(14, 0)
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]
