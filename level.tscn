@@ -243,6 +243,7 @@ position = Vector2(0.5, -27.25)
 shape = SubResource("RectangleShape2D_dlbli")
 
 [node name="ExteriorOccluder" type="LightOccluder2D" parent="." unique_id=1889880130]
+visible = false
 occluder = SubResource("OccluderPolygon2D_vonw3")
 
 [node name="OfficeLayoutFloor" type="Sprite2D" parent="." unique_id=1667867848]
@@ -634,7 +635,93 @@ navigation_polygon = SubResource("NavigationPolygon_u52ul")
 [node name="Tasks" type="Node2D" parent="." unique_id=1401544399]
 
 [node name="EmployeeTask" parent="Tasks" unique_id=2065829293 instance=ExtResource("2_vonw3")]
-position = Vector2(21, 207)
+position = Vector2(-103, -443)
+affect_amount = 5
+
+[node name="EmployeeTask2" parent="Tasks" unique_id=1946370147 instance=ExtResource("2_vonw3")]
+position = Vector2(57, -192)
+task_type = 1
+
+[node name="EmployeeTask3" parent="Tasks" unique_id=1344578022 instance=ExtResource("2_vonw3")]
+position = Vector2(-44, -190)
+affect_amount = 1
+
+[node name="EmployeeTask4" parent="Tasks" unique_id=1405257889 instance=ExtResource("2_vonw3")]
+position = Vector2(-100, 128)
+task_type = 2
+affect_amount = 5
+
+[node name="EmployeeTask5" parent="Tasks" unique_id=2093644815 instance=ExtResource("2_vonw3")]
+position = Vector2(87, 127)
+affect_amount = 5
+
+[node name="EmployeeTask6" parent="Tasks" unique_id=1774363298 instance=ExtResource("2_vonw3")]
+position = Vector2(61, 127)
+task_type = 1
+
+[node name="EmployeeTask7" parent="Tasks" unique_id=1659613242 instance=ExtResource("2_vonw3")]
+position = Vector2(-225, 129)
+task_type = 1
+
+[node name="EmployeeTask8" parent="Tasks" unique_id=555483543 instance=ExtResource("2_vonw3")]
+position = Vector2(227, 129)
+task_type = 1
+
+[node name="EmployeeTask9" parent="Tasks" unique_id=1650073210 instance=ExtResource("2_vonw3")]
+position = Vector2(-51, 128)
+affect_amount = 7
+
+[node name="EmployeeTask10" parent="Tasks" unique_id=2134682952 instance=ExtResource("2_vonw3")]
+position = Vector2(-251, -260)
+task_type = 2
+affect_amount = 5
+
+[node name="EmployeeTask11" parent="Tasks" unique_id=2028773390 instance=ExtResource("2_vonw3")]
+position = Vector2(-206, -258)
+affect_amount = 4
+
+[node name="EmployeeTask12" parent="Tasks" unique_id=1974641533 instance=ExtResource("2_vonw3")]
+position = Vector2(249, -252)
+task_type = 2
+affect_amount = 5
+
+[node name="EmployeeTask13" parent="Tasks" unique_id=622500016 instance=ExtResource("2_vonw3")]
+position = Vector2(197, -252)
+affect_amount = 4
+
+[node name="EmployeeTask14" parent="Tasks" unique_id=2088424001 instance=ExtResource("2_vonw3")]
+position = Vector2(196, -197)
+affect_amount = 4
+
+[node name="EmployeeTask15" parent="Tasks" unique_id=1590090189 instance=ExtResource("2_vonw3")]
+position = Vector2(255, -196)
+task_type = 2
+affect_amount = 5
+
+[node name="EmployeeTask16" parent="Tasks" unique_id=2117935809 instance=ExtResource("2_vonw3")]
+position = Vector2(-253, -195)
+task_type = 2
+affect_amount = 5
+
+[node name="EmployeeTask17" parent="Tasks" unique_id=675233067 instance=ExtResource("2_vonw3")]
+position = Vector2(-203, -197)
+affect_amount = 4
+
+[node name="EmployeeTask18" parent="Tasks" unique_id=1874348026 instance=ExtResource("2_vonw3")]
+position = Vector2(-147, -318)
+affect_amount = 3
+
+[node name="EmployeeTask19" parent="Tasks" unique_id=245375061 instance=ExtResource("2_vonw3")]
+position = Vector2(-96, -318)
+task_type = 1
+
+[node name="EmployeeTask20" parent="Tasks" unique_id=1167774008 instance=ExtResource("2_vonw3")]
+position = Vector2(95, -316)
+affect_amount = 3
+
+[node name="EmployeeTask21" parent="Tasks" unique_id=1950011889 instance=ExtResource("2_vonw3")]
+position = Vector2(135, -316)
+task_type = 1
 
 [node name="HomePositions" type="Node2D" parent="." unique_id=1556565440]
 
@@ -662,26 +749,8 @@ position = Vector2(60, -73)
 [node name="HomePosition8" parent="HomePositions" unique_id=1457714033 instance=ExtResource("3_oi3di")]
 position = Vector2(227, -73)
 
-[node name="HomePosition9" parent="HomePositions" unique_id=502965694 instance=ExtResource("3_oi3di")]
-position = Vector2(-223, 130)
-
-[node name="HomePosition10" parent="HomePositions" unique_id=1383593088 instance=ExtResource("3_oi3di")]
-position = Vector2(-73, 130)
-
-[node name="HomePosition11" parent="HomePositions" unique_id=62451378 instance=ExtResource("3_oi3di")]
-position = Vector2(70, 128)
-
-[node name="HomePosition12" parent="HomePositions" unique_id=745434660 instance=ExtResource("3_oi3di")]
-position = Vector2(220, 129)
-
 [node name="Desk" parent="." unique_id=1584504477 instance=ExtResource("4_0b4ue")]
 position = Vector2(0, -466)
-
-[node name="EmployeeTask" parent="." unique_id=1911486304 instance=ExtResource("2_vonw3")]
-position = Vector2(-50, 128)
-
-[node name="EmployeeTask2" parent="." unique_id=1275787606 instance=ExtResource("2_vonw3")]
-position = Vector2(54, 129)
 
 [connection signal="area_entered" from="DeskImage/Area2D" to="DeskImage" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="OfficeLayoutSwitch/Area2D" to="OfficeLayoutSwitch" method="_on_area_2d_area_entered"]
