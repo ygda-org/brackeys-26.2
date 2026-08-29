@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://maik53mxl575"]
 
 [ext_resource type="Script" uid="uid://uy5yr6ffnjfe" path="res://ui/papers/papers.gd" id="1_3l3wd"]
+[ext_resource type="Texture2D" uid="uid://lkp81lwlj61h" path="res://assets/characters/portraits/portrait_1.PNG" id="2_vrf7e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wy1v"]
 bg_color = Color(0.34, 0.34, 0.34, 1)
@@ -44,6 +45,16 @@ offset_top = 214.0
 offset_right = 872.0
 offset_bottom = 319.0
 text = "DECLINE"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=468512062]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 45.0
+offset_right = 358.0
+offset_bottom = 104.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_vrf7e")
+expand_mode = 5
 
 [connection signal="pressed" from="HireButton" to="." method="_on_hire_button_pressed"]
 [connection signal="pressed" from="RejectButton" to="." method="_on_reject_button_pressed"]
