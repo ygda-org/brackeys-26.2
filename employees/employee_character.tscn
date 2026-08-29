@@ -11,7 +11,8 @@ light_mode = 2
 size = Vector2(16, 25)
 
 [node name="EmployeeCharacter" type="CharacterBody2D" unique_id=1144723912]
-collision_layer = 3
+collision_layer = 19
+collision_mask = 17
 script = ExtResource("1_frejn")
 
 [node name="Anim" type="Sprite2D" parent="." unique_id=1291678730]
