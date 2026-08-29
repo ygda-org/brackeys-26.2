@@ -9,5 +9,5 @@ past_jobs = Array[int]([12, 9])
 skills = Array[int]([5, 6, 7])
 college = 6
 company_reason = 7
-reliability = -3
+reliability = -2
 metadata/_custom_type_script = "uid://coylabq8ccrb8"

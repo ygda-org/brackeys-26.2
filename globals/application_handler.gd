@@ -4,14 +4,13 @@ var evil_modifier : int
 var firstname : String
 var lastname : String
 static var totalapps : int
-var accepted : Array[bool] = [false,false,false] #amount of falses equal to amount of custom characters
+var accepted : Array[bool] = [false,false,false,false] #amount of falses equal to amount of custom characters
 func create_application():
-	totalapps+=1
 	var app=Application.new()
 	#check for special name
 	var choice: int
-	if (randi_range(0, 99)<100 and totalapps>10):
-		choice=randi_range(0,2) #second number=amount of custom characters
+	if (randi_range(0, 99)<3):
+		choice=randi_range(0,3) #second number=amount of custom characters-1
 		if(choice==0 and accepted[0]==false): #Hatsune Miku
 			accepted[0]=true
 			app=load("res://employees/applications/special applications/miku.tres")
@@ -23,6 +22,10 @@ func create_application():
 		elif(choice==2 and accepted[2]==false): #Lucia Bar
 			accepted[2]=true
 			app=load("res://employees/applications/special applications/lucia.tres")
+			return app
+		elif(choice==3 and accepted[3]==false):
+			accepted[3]=true
+			app=load("res://employees/applications/special applications/towercide.tres")
 			return app
 	#set name
 	firstname=app.FirstName.find_key(randi_range(0,app.FirstName.size()-1))
