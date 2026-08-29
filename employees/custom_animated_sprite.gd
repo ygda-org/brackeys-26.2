@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var char_num: String = str(randi_range(1,2))
+@onready var char_num: String = str(randi_range(1,1))
 
 var direction = Vector2i.ZERO
 var old_direction = Vector2i.ZERO
@@ -9,7 +9,7 @@ const REGIONS = {Vector2i(1,0): 128, Vector2i(-1,0): 128,
 Vector2i(0,1): 0, Vector2i(0,-1): 256}
 
 func _ready():
-	texture = load("res://assets/characters/sprites/portrait " + char_num + " walk.png")
+	texture = load("res://assets/characters/sprites/portrait_" + char_num + "_walk.png")
 
 func _process(_delta):
 	flip_h = direction.x < 0
