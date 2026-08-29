@@ -10,7 +10,7 @@
 script = ExtResource("1_3wy1v")
 
 [node name="Player" parent="." unique_id=1482995803 instance=ExtResource("3_xwkvk")]
-position = Vector2(92, 190)
+position = Vector2(1, 130)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=216632159]
 color = Color(0.17211533, 0.1721153, 0.1721153, 1)

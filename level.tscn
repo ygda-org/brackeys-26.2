@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfuf580udqoo8"]
 
-[ext_resource type="Texture2D" uid="uid://dsebfmf4mtudk" path="res://assets/prog_art/office_layout.png" id="1_u52ul"]
+[ext_resource type="Texture2D" uid="uid://d3eebiu1w14n6" path="res://assets/office_layout/office_room_layout.png" id="1_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://cjv347w3ty213" path="res://employees/tasks/employee_task.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://n8ht182vl4lw" path="res://employees/home_position.tscn" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://d337eveunyedk" path="res://level/desk.tscn" id="4_0b4ue"]
@@ -18,31 +18,25 @@ cull_mode = 1
 polygon = PackedVector2Array(16, -211, 16, 53, 129, 53, 129, -11, 23, -11, 23, -47, 129, -47, 129, -111, 23, -111, 23, -147, 129, -147, 129, -211)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
-size = Vector2(6, 165)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
-size = Vector2(4, 56)
+size = Vector2(8, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
-size = Vector2(7, 616)
+size = Vector2(7, 526)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
-size = Vector2(6, 165)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgc5p"]
-size = Vector2(4, 56)
+size = Vector2(8, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u52ul"]
-size = Vector2(7, 616)
+size = Vector2(7, 526)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkopx"]
-size = Vector2(328, 63)
+size = Vector2(332, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g3tss"]
-size = Vector2(550, 64)
+size = Vector2(564, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fca4"]
-size = Vector2(36, 30)
+size = Vector2(37, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fy01"]
 size = Vector2(28, 19)
@@ -60,7 +54,7 @@ size = Vector2(106.005005, 64)
 size = Vector2(106.005005, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_km5ld"]
-size = Vector2(106, 64)
+size = Vector2(106, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2t4f"]
 size = Vector2(106.005005, 64)
@@ -69,13 +63,13 @@ size = Vector2(106.005005, 64)
 size = Vector2(106.005005, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2orkt"]
-size = Vector2(106.005005, 64)
+size = Vector2(106.005005, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aicyk"]
-size = Vector2(9, 264)
+size = Vector2(7, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6cx8"]
-size = Vector2(9, 264)
+size = Vector2(7, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8b0r0"]
 size = Vector2(106, 64)
@@ -84,7 +78,7 @@ size = Vector2(106, 64)
 size = Vector2(106, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5j5c"]
-size = Vector2(106, 64)
+size = Vector2(113, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5pxul"]
 size = Vector2(106, 64)
@@ -93,41 +87,14 @@ size = Vector2(106, 64)
 size = Vector2(106, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eubwq"]
-size = Vector2(106, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c15r"]
-size = Vector2(30, 36)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvnaw"]
-size = Vector2(30, 36)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ait7k"]
-size = Vector2(8, 94)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyskc"]
-size = Vector2(8, 94)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef5sy"]
-size = Vector2(136, 83)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_42xju"]
-size = Vector2(112, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7sqt"]
-size = Vector2(8, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dc3b2"]
-size = Vector2(112, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jj8p3"]
-size = Vector2(8, 30)
+size = Vector2(113, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tfgf"]
-size = Vector2(153, 64)
+size = Vector2(146, 64)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_u52ul"]
-vertices = PackedVector2Array(258.5, 67.5, 258.5, 238.5, 217.5, 185.5, 217.5, 92.5, 152.5, 67.5, 143.5, 67.5, 149.5, -217.5, 152.5, -217.5, 152.5, -132.5, 258.5, -132.5, 258.5, -125.5, 152.5, -125.5, 152.5, -32.5, 258.5, -32.5, 258.5, -25.5, 152.5, -25.5, 143.5, -25.5, 37.5, -25.5, 37.5, -32.5, 143.5, -32.5, 143.5, -125.5, 37.5, -125.5, 37.5, -132.5, 143.5, -132.5, 143.5, -225.5, 149.5, -340.5, -153.5, -340.5, -0.5, -225.5, -145.5, -132.5, -69.5, -132.5, -69.5, -125.5, -145.5, -125.5, -145.5, -32.5, -69.5, -32.5, -69.5, -25.5, -145.5, -25.5, 88.5, 92.5, 88.5, 91.5, -1.5, 67.5, -221.5, 91.5, -145.5, 67.5, -221.5, 184.5, -169.5, 184.5, -169.5, 214.5, -132.5, 214.5, -132.5, 184.5, -92.5, 184.5, -92.5, 214.5, -55.5, 214.5, -55.5, 203.5, 51.5, 203.5, 51.5, 214.5, 88.5, 214.5, 88.5, 185.5, 128.5, 185.5, 128.5, 215.5, 165.5, 215.5, 165.5, 185.5, -156.5, -25.5, -262.5, -25.5, -262.5, -32.5, -156.49219, -32.5, -156.49219, -125.5, -262.5, -125.5, -262.5, -132.5, -156.49219, -132.5, -156.49219, -217.5, -153.38281, -217.5, -153.38281, -313.5, -153.5, -313.5, -262.5, 238.5, -262.5, 67.5, -156.5, 67.5, -145.5, -225.5, -1.5, -225.5, -0.5, 67.5)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(4, 3, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(8, 9, 10), PackedInt32Array(8, 10, 11), PackedInt32Array(12, 13, 14), PackedInt32Array(12, 14, 15), PackedInt32Array(15, 4, 5), PackedInt32Array(15, 5, 16), PackedInt32Array(12, 15, 16), PackedInt32Array(16, 17, 18), PackedInt32Array(16, 18, 19), PackedInt32Array(12, 16, 19), PackedInt32Array(11, 12, 19), PackedInt32Array(11, 19, 20), PackedInt32Array(8, 11, 20), PackedInt32Array(20, 21, 22), PackedInt32Array(20, 22, 23), PackedInt32Array(8, 20, 23), PackedInt32Array(6, 8, 23), PackedInt32Array(6, 23, 24), PackedInt32Array(25, 6, 24), PackedInt32Array(26, 25, 24), PackedInt32Array(26, 24, 27), PackedInt32Array(28, 29, 30), PackedInt32Array(28, 30, 31), PackedInt32Array(32, 33, 34), PackedInt32Array(32, 34, 35), PackedInt32Array(3, 36, 37), PackedInt32Array(38, 3, 37), PackedInt32Array(38, 37, 39), PackedInt32Array(40, 38, 39), PackedInt32Array(41, 42, 43), PackedInt32Array(44, 45, 46), PackedInt32Array(44, 46, 47), PackedInt32Array(48, 49, 50), PackedInt32Array(48, 50, 51), PackedInt32Array(52, 53, 54), PackedInt32Array(52, 54, 55), PackedInt32Array(56, 57, 2), PackedInt32Array(58, 59, 60), PackedInt32Array(58, 60, 61), PackedInt32Array(62, 63, 64), PackedInt32Array(62, 64, 65), PackedInt32Array(65, 66, 67), PackedInt32Array(68, 69, 26), PackedInt32Array(68, 26, 27), PackedInt32Array(56, 2, 1), PackedInt32Array(56, 1, 70), PackedInt32Array(55, 56, 70), PackedInt32Array(52, 55, 70), PackedInt32Array(51, 52, 70), PackedInt32Array(48, 51, 70), PackedInt32Array(47, 48, 70), PackedInt32Array(44, 47, 70), PackedInt32Array(43, 44, 70), PackedInt32Array(41, 43, 70), PackedInt32Array(41, 70, 71), PackedInt32Array(39, 41, 71), PackedInt32Array(39, 71, 72), PackedInt32Array(40, 39, 72), PackedInt32Array(35, 40, 72), PackedInt32Array(35, 72, 58), PackedInt32Array(35, 58, 61), PackedInt32Array(32, 35, 61), PackedInt32Array(31, 32, 61), PackedInt32Array(31, 61, 62), PackedInt32Array(28, 31, 62), PackedInt32Array(28, 62, 65), PackedInt32Array(28, 65, 67), PackedInt32Array(73, 28, 67), PackedInt32Array(73, 67, 68), PackedInt32Array(74, 73, 68), PackedInt32Array(74, 68, 27), PackedInt32Array(74, 27, 75), PackedInt32Array(38, 74, 75), PackedInt32Array(3, 38, 75), PackedInt32Array(3, 75, 5)])
+vertices = PackedVector2Array(-0.5, 118.5, 258.5, 145.5, -259.5, 145.5, -142.5, 118.5, -259.5, -169.5, -259.5, -217.15625, -154.61719, -215.22656, -153.5, -169.5, 149.5, -217.5, 258.5, -217.5, 258.5, -169.5, 155.5, -169.5, 155.5, -76.5, 258.5, -76.5, 258.5, -69.5, 155.5, -69.5, 155.5, 23.5, 258.5, 23.5, 258.5, 30.5, 155.5, 30.5, 155.5, 118.5, 258.5, 118.5, 144.5, 118.5, 144.5, 30.5, 38.5, 30.5, 38.5, 23.5, 144.5, 23.5, 144.5, -69.5, 38.5, -69.5, 38.5, -76.5, 144.5, -76.5, 144.5, -169.5, -142.5, -76.5, -36.5, -76.5, -36.5, -69.5, -142.5, -69.5, -142.5, 23.5, -36.5, 23.5, -36.5, 30.5, -142.5, 30.5, -259.5, 118.5, -153.5, 118.5, -153.5, 30.5, -259.5, 30.5, -259.5, 23.5, -153.5, 23.5, -153.5, -69.5, -259.5, -69.5, -259.5, -76.5, -153.5, -76.5, -142.5, -169.5, -150.5, -284.5, -150.5, -340.5, 149.5, -340.5, -154.07031, -284.5, 2.5, -169.5, -0.5, -169.5, 2.5, 118.5)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2), PackedInt32Array(4, 5, 6), PackedInt32Array(7, 4, 6), PackedInt32Array(8, 9, 10), PackedInt32Array(8, 10, 11), PackedInt32Array(12, 13, 14), PackedInt32Array(12, 14, 15), PackedInt32Array(16, 17, 18), PackedInt32Array(16, 18, 19), PackedInt32Array(20, 21, 1), PackedInt32Array(20, 1, 22), PackedInt32Array(19, 20, 22), PackedInt32Array(19, 22, 23), PackedInt32Array(16, 19, 23), PackedInt32Array(23, 24, 25), PackedInt32Array(23, 25, 26), PackedInt32Array(16, 23, 26), PackedInt32Array(15, 16, 26), PackedInt32Array(15, 26, 27), PackedInt32Array(12, 15, 27), PackedInt32Array(27, 28, 29), PackedInt32Array(27, 29, 30), PackedInt32Array(12, 27, 30), PackedInt32Array(11, 12, 30), PackedInt32Array(11, 30, 31), PackedInt32Array(8, 11, 31), PackedInt32Array(32, 33, 34), PackedInt32Array(32, 34, 35), PackedInt32Array(36, 37, 38), PackedInt32Array(36, 38, 39), PackedInt32Array(2, 40, 41), PackedInt32Array(3, 2, 41), PackedInt32Array(39, 3, 41), PackedInt32Array(39, 41, 42), PackedInt32Array(36, 39, 42), PackedInt32Array(42, 43, 44), PackedInt32Array(42, 44, 45), PackedInt32Array(36, 42, 45), PackedInt32Array(35, 36, 45), PackedInt32Array(35, 45, 46), PackedInt32Array(32, 35, 46), PackedInt32Array(46, 47, 48), PackedInt32Array(46, 48, 49), PackedInt32Array(32, 46, 49), PackedInt32Array(50, 32, 49), PackedInt32Array(50, 49, 7), PackedInt32Array(51, 52, 53), PackedInt32Array(51, 53, 8), PackedInt32Array(6, 54, 51), PackedInt32Array(6, 51, 8), PackedInt32Array(6, 8, 31), PackedInt32Array(6, 31, 55), PackedInt32Array(50, 7, 6), PackedInt32Array(56, 50, 6), PackedInt32Array(56, 6, 55), PackedInt32Array(56, 55, 57), PackedInt32Array(0, 56, 57), PackedInt32Array(1, 0, 57), PackedInt32Array(1, 57, 22)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-168, -355, 164, -355, 164, -232, 273, -232, 273, 253, -277, 253, -277, -232, -168, -232)])
 sample_partition_type = 1
 parsed_geometry_type = 1
@@ -140,173 +107,133 @@ agent_radius = 14.5
 z_index = -1
 
 [node name="ExteriorOccluder" type="LightOccluder2D" parent="." unique_id=1889880130]
+visible = false
 occluder = SubResource("OccluderPolygon2D_vonw3")
 
 [node name="OfficeLayout" type="Sprite2D" parent="." unique_id=1667867848]
-position = Vector2(-2, 0)
-texture = ExtResource("1_u52ul")
+position = Vector2(1, -165)
+texture = ExtResource("1_0b4ue")
 
 [node name="CenterLeftOccluder" type="LightOccluder2D" parent="." unique_id=1345590477]
+visible = false
 occluder = SubResource("OccluderPolygon2D_u52ul")
 
 [node name="CenterRightOccluder" type="LightOccluder2D" parent="." unique_id=503856065]
+visible = false
 occluder = SubResource("OccluderPolygon2D_oi3di")
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1582519654 groups=["nav_blocker"]]
 collision_layer = 5
 
 [node name="LeftBoundary1" type="CollisionShape2D" parent="Walls" unique_id=1289879644]
-position = Vector2(-169, -501.5)
+position = Vector2(-169, -475)
 shape = SubResource("RectangleShape2D_oi3di")
 
-[node name="LeftBoundary2" type="CollisionShape2D" parent="Walls" unique_id=1218684969]
-position = Vector2(-170, -327)
-shape = SubResource("RectangleShape2D_0b4ue")
-
 [node name="LeftBoundary3" type="CollisionShape2D" parent="Walls" unique_id=1845159507]
-position = Vector2(-280.5, 9)
+position = Vector2(-277.5, -103)
 shape = SubResource("RectangleShape2D_f2txt")
 
 [node name="RightBoundary1" type="CollisionShape2D" parent="Walls" unique_id=221067333]
-position = Vector2(165, -501.5)
+position = Vector2(171, -475)
 shape = SubResource("RectangleShape2D_vonw3")
 
-[node name="RightBoundary2" type="CollisionShape2D" parent="Walls" unique_id=1871357975]
-position = Vector2(166, -327)
-shape = SubResource("RectangleShape2D_fgc5p")
-
 [node name="RightBoundary3" type="CollisionShape2D" parent="Walls" unique_id=413801417]
-position = Vector2(276.5, 9)
+position = Vector2(279.5, -103)
 shape = SubResource("RectangleShape2D_u52ul")
 
 [node name="TopBoundary" type="CollisionShape2D" parent="Walls" unique_id=1383741237]
-position = Vector2(-2, -552.5)
+position = Vector2(1, -552.5)
 shape = SubResource("RectangleShape2D_xkopx")
 
 [node name="BottomBoundary" type="CollisionShape2D" parent="Walls" unique_id=1416887623]
-position = Vector2(-2, 285)
+position = Vector2(1, 192)
 shape = SubResource("RectangleShape2D_g3tss")
 
 [node name="Cabinet1" type="CollisionShape2D" parent="Walls" unique_id=956192854]
-position = Vector2(-148, -506)
+position = Vector2(-146.5, -506)
 shape = SubResource("RectangleShape2D_6fca4")
 
 [node name="Cabinet2" type="CollisionShape2D" parent="Walls" unique_id=1954821031]
-position = Vector2(-116, -511.5)
+position = Vector2(-114, -511.5)
 shape = SubResource("RectangleShape2D_0fy01")
 
 [node name="TopLeftCubicle" type="CollisionShape2D" parent="Walls" unique_id=1707678484]
-position = Vector2(-222.375, -265.5)
+position = Vector2(-219.5, -332.5)
 shape = SubResource("RectangleShape2D_1ainy")
 
 [node name="TopRightCubicle" type="CollisionShape2D" parent="Walls" unique_id=1887867158]
-position = Vector2(218.5025, -265.5)
+position = Vector2(221.5, -332.5)
 shape = SubResource("RectangleShape2D_ud35u")
 
 [node name="LeftCubicle1" type="CollisionShape2D" parent="Walls" unique_id=684334441]
-position = Vector2(-223.9975, -179.0025)
+position = Vector2(-221, -123)
 shape = SubResource("RectangleShape2D_5xq6g")
 
 [node name="LeftCubicle2" type="CollisionShape2D" parent="Walls" unique_id=437271762]
-position = Vector2(-223.9975, -79.0025)
+position = Vector2(-221, -23)
 shape = SubResource("RectangleShape2D_n6hdu")
 
 [node name="LeftCubicle3" type="CollisionShape2D" parent="Walls" unique_id=190343926]
-position = Vector2(-224, 21)
+position = Vector2(-221, 74.5)
 shape = SubResource("RectangleShape2D_km5ld")
 
 [node name="RightCubicle1" type="CollisionShape2D" parent="Walls" unique_id=649378544]
-position = Vector2(220.0025, -179.0025)
+position = Vector2(223, -123)
 shape = SubResource("RectangleShape2D_i2t4f")
 
 [node name="RightCubicle2" type="CollisionShape2D" parent="Walls" unique_id=691177773]
-position = Vector2(220.0025, -79.0025)
+position = Vector2(223, -23)
 shape = SubResource("RectangleShape2D_8cye3")
 
 [node name="RightCubicle3" type="CollisionShape2D" parent="Walls" unique_id=1866705457]
-position = Vector2(220.0025, 20.997498)
+position = Vector2(223, 74.5)
 shape = SubResource("RectangleShape2D_2orkt")
 
 [node name="CenterLeftCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=2144254513]
-position = Vector2(-20.5, -79)
+position = Vector2(-18.5, -55)
 shape = SubResource("RectangleShape2D_aicyk")
 
 [node name="CenterRightCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=578489079]
-position = Vector2(18.5, -79)
+position = Vector2(20.5, -55)
 shape = SubResource("RectangleShape2D_y6cx8")
 
 [node name="CenterLeftCubicle1" type="CollisionShape2D" parent="Walls" unique_id=1862468094]
-position = Vector2(-78, -179)
+position = Vector2(-75, -123)
 shape = SubResource("RectangleShape2D_8b0r0")
 
 [node name="CenterLeftCubicle2" type="CollisionShape2D" parent="Walls" unique_id=35982662]
-position = Vector2(-78, -79)
+position = Vector2(-75, -23)
 shape = SubResource("RectangleShape2D_h6smj")
 
 [node name="CenterLeftCubicle3" type="CollisionShape2D" parent="Walls" unique_id=2107331542]
-position = Vector2(-78, 21)
+position = Vector2(-71.5, 74.5)
 shape = SubResource("RectangleShape2D_v5j5c")
 
 [node name="CenterRightCubicle1" type="CollisionShape2D" parent="Walls" unique_id=1490098305]
-position = Vector2(76, -179)
+position = Vector2(77, -123)
 shape = SubResource("RectangleShape2D_5pxul")
 
 [node name="CenterRightCubicle2" type="CollisionShape2D" parent="Walls" unique_id=355364320]
-position = Vector2(76, -79)
+position = Vector2(77, -23)
 shape = SubResource("RectangleShape2D_fedht")
 
 [node name="CenterRightCubicle3" type="CollisionShape2D" parent="Walls" unique_id=345733644]
-position = Vector2(76, 21)
+position = Vector2(73.5, 74.5)
 shape = SubResource("RectangleShape2D_eubwq")
 
-[node name="Desk1" type="CollisionShape2D" parent="Walls" unique_id=897523750]
-position = Vector2(-40, -129)
-shape = SubResource("RectangleShape2D_4c15r")
-
-[node name="Desk2" type="CollisionShape2D" parent="Walls" unique_id=376184801]
-position = Vector2(-40, -29)
-shape = SubResource("RectangleShape2D_xvnaw")
-
-[node name="SeatLeftWall" type="CollisionShape2D" parent="Walls" unique_id=228590455]
-position = Vector2(-74, 153)
-shape = SubResource("RectangleShape2D_ait7k")
-
-[node name="SeatRightWall" type="CollisionShape2D" parent="Walls" unique_id=1925730659]
-position = Vector2(70, 153)
-shape = SubResource("RectangleShape2D_lyskc")
-
-[node name="Seat" type="CollisionShape2D" parent="Walls" unique_id=957395431]
-position = Vector2(-2, 147.5)
-shape = SubResource("RectangleShape2D_ef5sy")
-
-[node name="LeftThingWall" type="CollisionShape2D" parent="Walls" unique_id=492420021]
-position = Vector2(-151, 138)
-shape = SubResource("RectangleShape2D_42xju")
-
-[node name="LeftThingThing" type="CollisionShape2D" parent="Walls" unique_id=1724396236]
-position = Vector2(-151, 185)
-shape = SubResource("RectangleShape2D_v7sqt")
-
-[node name="RightThingWall" type="CollisionShape2D" parent="Walls" unique_id=1455830052]
-position = Vector2(147, 139)
-shape = SubResource("RectangleShape2D_dc3b2")
-
-[node name="RightThingThing" type="CollisionShape2D" parent="Walls" unique_id=1688206495]
-position = Vector2(147, 186)
-shape = SubResource("RectangleShape2D_jj8p3")
-
 [node name="LeftRoomBoundary" type="CollisionShape2D" parent="Walls" unique_id=1641346168]
-position = Vector2(-95, -387)
+position = Vector2(-92, -387)
 shape = SubResource("RectangleShape2D_4tfgf")
 
 [node name="RightRoomBoundary" type="CollisionShape2D" parent="Walls" unique_id=598416931]
-position = Vector2(91.5, -387)
+position = Vector2(94, -387)
 shape = SubResource("RectangleShape2D_4tfgf")
 
 [node name="NPCNavRegion" type="NavigationRegion2D" parent="." unique_id=1718504740]
 navigation_polygon = SubResource("NavigationPolygon_u52ul")
 
 [node name="Tasks" type="Node2D" parent="." unique_id=1401544399]
+visible = false
 
 [node name="EmployeeTask" parent="Tasks" unique_id=2065829293 instance=ExtResource("2_vonw3")]
 position = Vector2(21, 207)
@@ -350,12 +277,14 @@ position = Vector2(116, 189)
 position = Vector2(176, 190)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1200601995]
+visible = false
 z_index = -4
-offset_left = -628.0
+offset_left = 2923.0
 offset_top = -759.0
-offset_right = 574.0
+offset_right = 4125.0
 offset_bottom = 461.0
 color = Color(0.65628535, 0.6562854, 0.6562854, 1)
 
 [node name="Desk" parent="." unique_id=1584504477 instance=ExtResource("4_0b4ue")]
+visible = false
 position = Vector2(-2, -466)
