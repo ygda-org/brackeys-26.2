@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Application" format=3 uid="uid://6wo2rvfqxuag"]
+
+[ext_resource type="Script" uid="uid://coylabq8ccrb8" path="res://employees/applications/base_application.gd" id="1_soa85"]
+
+[resource]
+script = ExtResource("1_soa85")
+name = "TARA GLASS"
+past_jobs = Array[int]([12, 9])
+skills = Array[int]([5, 6, 7])
+college = 6
+company_reason = 7
+reliability = -3
+metadata/_custom_type_script = "uid://coylabq8ccrb8"

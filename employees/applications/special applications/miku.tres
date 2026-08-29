@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Application" format=3 uid="uid://cp1dxrg6507u0"]
+
+[ext_resource type="Script" uid="uid://coylabq8ccrb8" path="res://employees/applications/base_application.gd" id="1_opsd8"]
+
+[resource]
+script = ExtResource("1_opsd8")
+name = "HATSUNE MIKU"
+past_jobs = Array[int]([6, 14])
+skills = Array[int]([3, 9, 11])
+college = 5
+company_reason = 5
+reliability = 1
+metadata/_custom_type_script = "uid://coylabq8ccrb8"

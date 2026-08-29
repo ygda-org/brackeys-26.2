@@ -51,7 +51,6 @@ func start_day():
 	productivity_points = 0
 	for i in range(application_amount):
 		hiring_queue.append(ApplicationHandler.create_application())
-		print(hiring_queue[i].name)
 
 func end_day():
 	pause = true

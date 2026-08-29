@@ -3,8 +3,25 @@ var unique_skill_count : int
 var evil_modifier : int
 var firstname : String
 var lastname : String
+static var totalapps : int
+var accepted : Array[bool] = [false,false]
 func create_application():
+	totalapps+=1
 	var app=Application.new()
+	#check for special name
+	var choice: int
+	if (randi_range(0, 99)<100 and totalapps>10):
+		choice=randi_range(0,1)
+		if(choice==0 and accepted[0]==false): #hatsune miku
+			accepted[0]=true
+			app=load("res://employees/applications/special applications/miku.tres")
+			print(app.name)
+			return app
+		elif(choice==1 and accepted[1]==false): # Tara Glass
+			accepted[1]=true
+			app=load("res://employees/applications/special applications/towerglass.tres")
+			print(app.name)
+			return app
 	#set name
 	firstname=app.FirstName.find_key(randi_range(0,app.FirstName.size()-1))
 	lastname=app.LastName.find_key(randi_range(0,app.LastName.size()-1))
