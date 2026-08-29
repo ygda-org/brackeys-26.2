@@ -6,7 +6,7 @@ func _ready():
 	$VolumeGrid/MasterSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$VolumeGrid/MusicSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
 	$VolumeGrid/SFXSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
-	$VolumeGrid/AmbienceSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Linear")))
+	$VolumeGrid/AmbienceSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Ambience")))
 
 func _on_master_slider_value_changed(value):
 	change_bus_volume("Master", value)
