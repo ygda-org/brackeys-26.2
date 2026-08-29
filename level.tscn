@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://cfuf580udqoo8"]
 
+[ext_resource type="Texture2D" uid="uid://cs87lqsmypqq5" path="res://assets/office_layout/big_desk.png" id="1_i2t4f"]
 [ext_resource type="Texture2D" uid="uid://ccvnqiffi8dmd" path="res://assets/office_layout/office_floor.png" id="2_1ainy"]
+[ext_resource type="Script" uid="uid://e06jivd6gakv" path="res://desk_image.gd" id="2_8cye3"]
 [ext_resource type="Texture2D" uid="uid://bfbdqiel4evct" path="res://assets/office_layout/office_back.png" id="2_n6hdu"]
 [ext_resource type="PackedScene" uid="uid://cjv347w3ty213" path="res://employees/tasks/employee_task.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://n8ht182vl4lw" path="res://employees/home_position.tscn" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://d337eveunyedk" path="res://level/desk.tscn" id="4_0b4ue"]
 [ext_resource type="Script" uid="uid://bhpmuf8nwwvrd" path="res://office_layout_switch.gd" id="4_km5ld"]
 [ext_resource type="Texture2D" uid="uid://bmu4vanmbult7" path="res://assets/office_layout/office_switch.png" id="4_n6hdu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aosy"]
+size = Vector2(102, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlbli"]
+size = Vector2(31, 39.5)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vonw3"]
 cull_mode = 2
@@ -76,6 +84,12 @@ polygon = PackedVector2Array(-129, -211, -16, -211, -16, 53, -129, 53, -129, -11
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oi3di"]
 cull_mode = 1
 polygon = PackedVector2Array(16, -211, 16, 53, 129, 53, 129, -11, 23, -11, 23, -47, 129, -47, 129, -111, 23, -111, 23, -147, 129, -147, 129, -211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x388h"]
+size = Vector2(102, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wtct"]
+size = Vector2(31, 20.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
 size = Vector2(8, 218)
@@ -156,7 +170,7 @@ size = Vector2(106.005005, 36)
 size = Vector2(7, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6cx8"]
-size = Vector2(7, 177)
+size = Vector2(7, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8b0r0"]
 size = Vector2(106, 41.5)
@@ -189,7 +203,7 @@ size = Vector2(113, 41)
 size = Vector2(146, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuqa8"]
-size = Vector2(44, 59.5)
+size = Vector2(44, 43.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tfgf"]
 size = Vector2(146, 41)
@@ -211,6 +225,23 @@ agent_radius = 14.5
 [node name="Level" type="Node2D" unique_id=707170212]
 z_index = -1
 
+[node name="DeskImage" type="Sprite2D" parent="." unique_id=407644010]
+position = Vector2(0, -491)
+texture = ExtResource("1_i2t4f")
+script = ExtResource("2_8cye3")
+
+[node name="Area2D" type="Area2D" parent="DeskImage" unique_id=19548461]
+collision_layer = 0
+collision_mask = 48
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskImage/Area2D" unique_id=1416108909]
+position = Vector2(0, 19.5)
+shape = SubResource("RectangleShape2D_4aosy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeskImage/Area2D" unique_id=1393427900]
+position = Vector2(0.5, -27.25)
+shape = SubResource("RectangleShape2D_dlbli")
+
 [node name="ExteriorOccluder" type="LightOccluder2D" parent="." unique_id=1889880130]
 occluder = SubResource("OccluderPolygon2D_vonw3")
 
@@ -220,7 +251,7 @@ position = Vector2(0, -147)
 texture = ExtResource("2_1ainy")
 
 [node name="OfficeLayoutBack" type="Sprite2D" parent="." unique_id=2146115657]
-z_index = -1
+z_index = -2
 position = Vector2(1, -165)
 texture = ExtResource("2_n6hdu")
 
@@ -356,6 +387,16 @@ occluder = SubResource("OccluderPolygon2D_oi3di")
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1582519654 groups=["nav_blocker"]]
 z_index = 5
 collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=521111821]
+position = Vector2(0, -463.5)
+shape = SubResource("RectangleShape2D_x388h")
+debug_color = Color(0.16862746, 0, 0.7411765, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=2051591772]
+position = Vector2(0.5, -493.75)
+shape = SubResource("RectangleShape2D_4wtct")
+debug_color = Color(0.16862746, 0, 0.7411765, 0.41960785)
 
 [node name="LeftBoundary1" type="CollisionShape2D" parent="Walls" unique_id=1289879644]
 position = Vector2(-169, -475)
@@ -518,7 +559,7 @@ shape = SubResource("RectangleShape2D_aicyk")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="CenterRightCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=578489079]
-position = Vector2(20.5, -43.5)
+position = Vector2(20.5, -32)
 shape = SubResource("RectangleShape2D_y6cx8")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
@@ -573,7 +614,7 @@ shape = SubResource("RectangleShape2D_qw2y7")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="LeftRoomBoundary2" type="CollisionShape2D" parent="Walls" unique_id=1808618805]
-position = Vector2(-143, -426.25)
+position = Vector2(-143, -418.25)
 shape = SubResource("RectangleShape2D_uuqa8")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
@@ -635,7 +676,7 @@ position = Vector2(70, 128)
 position = Vector2(220, 129)
 
 [node name="Desk" parent="." unique_id=1584504477 instance=ExtResource("4_0b4ue")]
-position = Vector2(-2, -466)
+position = Vector2(0, -466)
 
 [node name="EmployeeTask" parent="." unique_id=1911486304 instance=ExtResource("2_vonw3")]
 position = Vector2(-50, 128)
@@ -643,4 +684,5 @@ position = Vector2(-50, 128)
 [node name="EmployeeTask2" parent="." unique_id=1275787606 instance=ExtResource("2_vonw3")]
 position = Vector2(54, 129)
 
+[connection signal="area_entered" from="DeskImage/Area2D" to="DeskImage" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="OfficeLayoutSwitch/Area2D" to="OfficeLayoutSwitch" method="_on_area_2d_area_entered"]
