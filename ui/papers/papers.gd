@@ -34,6 +34,8 @@ func load_application():
 	choose_portrait()
 
 func choose_portrait():
+	print("gamble")
+	
 	var current_portrait : int = 0
 	
 	if(current_app.gender==0):

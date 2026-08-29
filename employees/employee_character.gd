@@ -5,7 +5,7 @@ signal motivation_reset
 
 var application: Application
 
-const SPEED = 150
+const SPEED = 100
 
 var max_motivation: int = 4
 ## motivation is the number of positive tasks an employee will do without the watchful gaze of their superviser to reset them
@@ -17,6 +17,8 @@ var home_position: Marker2D
 var current_task: Task
 
 var is_initial_employee: bool = false
+
+var in_firing: bool = false
 
 func _ready():
 	position = Vector2(1000,0)
@@ -31,6 +33,8 @@ func _ready():
 	GameState.day_ended.connect($InTask.stop)
 
 func _physics_process(_delta):
+	if in_firing:
+		return
 	if $NavigationAgent2D.is_navigation_finished():
 		if $InTask.is_stopped() and current_task: # start task
 			$InTask.wait_time = current_task.task_length
@@ -108,7 +112,13 @@ func get_neutral_target_position():
 	return Vector2(0,0)
 
 func fired():
+	in_firing = true
 	GameState.player_animation_lock = true
+	var punch_dir = Vector2(GameState.player.punch_vec)
+	var pos_tween = get_tree().create_tween()
+	pos_tween.set_ease(Tween.EASE_OUT)
+	$Anim.rotation = PI/2
+	pos_tween.tween_property($Anim, "position", $Anim.position + punch_dir*35, 1.5)
 	var tween1 = get_tree().create_tween()
 	tween1.set_parallel()
 	tween1.set_trans(Tween.TRANS_CUBIC)
@@ -124,7 +134,12 @@ func fired():
 	await tween2.finished
 	GameState.employees_list.remove_at(GameState.employees_list.find(self))
 	GameState.player_animation_lock = false
-	queue_free()
+	home_position.is_open = true
+	if current_task:
+		current_task.is_occupied = false
+	var tween_final = get_tree().create_tween()
+	tween_final.tween_property(self, "modulate", Color(0.665, 0.665, 0.665, 0.0), 1.0)
+	tween_final.tween_callback(queue_free)
 
 
 

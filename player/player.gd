@@ -7,6 +7,8 @@ const DECELERATION = 3000
 
 var old_dir: Vector2 = Vector2(0,0)
 
+var punch_vec = Vector2i(1,0)
+
 func _ready():
 	GameState.camera = $Camera2D
 	GameState.player = self
@@ -24,9 +26,6 @@ func _physics_process(delta):
 			GameState.main.get_node("CanvasModulate").visible = false
 			pass
 		
-	if Input.is_action_just_pressed("punch"):
-		$PunchHitbox.monitoring = true
-		get_tree().create_timer(0.25).timeout.connect($PunchHitbox.set.bind("monitoring", false))
 	var dir = Input.get_vector("left", "right", "up", "down")
 	if dir.x:
 		velocity.x = move_toward(velocity.x, dir.x * MAX_SPEED, ACCELERATION * delta * acceleration_curve.sample(abs(velocity.x)/MAX_SPEED))
@@ -41,7 +40,11 @@ func _physics_process(delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0.0, DECELERATION * delta)
 	velocity = velocity.limit_length(MAX_SPEED)
+	if not $PunchDur.is_stopped():
+		velocity = Vector2.ZERO
 	move_and_slide()
+	$VisionArm.look_at(get_global_mouse_position())#rotation = lerpf($VisionArm.rotation, global_position.direction_to(get_global_mouse_position()).angle(), delta * 20)
+	$PunchHitbox.rotation = Vector2(Vector2i(1.3*global_position.direction_to(get_global_mouse_position()))).angle()
 	if dir != Vector2(0,0):
 		$VisionArm.rotation = lerpf($VisionArm.rotation, dir.angle(), delta * 20)
 	$PunchHitbox.look_at(get_global_mouse_position())
@@ -49,6 +52,26 @@ func _physics_process(delta):
 	var dir_save = dir
 	if not dir:
 		dir = old_dir
+	anim_string = vec_to_string(dir)
+	if not anim_string:
+		return
+	if Input.is_action_just_pressed("punch"):
+		get_tree().create_timer(0.3).timeout.connect($PunchHitbox.set.bind("monitoring", true))
+		$PunchDur.start()
+		punch_vec = Vector2i(1.1*global_position.direction_to(get_global_mouse_position()))
+		if not punch_vec:
+			punch_vec = Vector2i(1,0)
+		$Anim.play(vec_to_string(punch_vec) + "_punch")
+		if "left" in $Anim.animation:
+			$Anim.flip_h = true
+	if not dir_save:
+		anim_string += "_idle"
+	if $PunchDur.is_stopped():
+		$Anim.play(anim_string)
+	old_dir = dir
+
+func vec_to_string(dir):
+	var anim_string
 	if dir.y > 0:
 		anim_string = "down"
 	elif dir.y < 0:
@@ -57,12 +80,7 @@ func _physics_process(delta):
 		anim_string = "right"
 	elif dir.x < 0:
 		anim_string = "left"
-	if not anim_string:
-		return
-	if not dir_save:
-		anim_string += "_idle"
-	$Anim.play(anim_string)
-	old_dir = dir
+	return anim_string
 
 func _on_punch_hitbox_body_entered(body):
 	body.fired()
@@ -70,3 +88,8 @@ func _on_punch_hitbox_body_entered(body):
 
 func _on_employee_scan_body_entered(body):
 	body.reset_motivation()
+
+
+func _on_punch_dur_timeout():
+	$PunchHitbox.monitoring = false
+	$Anim.flip_h = false
