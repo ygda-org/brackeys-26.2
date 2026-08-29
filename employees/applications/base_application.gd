@@ -1,6 +1,6 @@
 extends Resource
 class_name Application
-## Job quality of 0 means invalid job, job quality of 1 means valid job
+## Job quality of 0 means invalid job, job quality of 1 means valid job,
 const JOB_QUALITY = {
 	PastJobs.COMPUTER_SCIENTIST : 1,
 	PastJobs.GAME_DEVELOPER : 1, 
@@ -18,6 +18,8 @@ const JOB_QUALITY = {
 	PastJobs.CASHIER : 0,
 	PastJobs.SOCIALITE : 0,
 	PastJobs.PENGUIN : 0,
+	PastJobs.SPY : -1,
+	PastJobs.FBI_AGENT : -1
 	}
 enum PastJobs {
 	COMPUTER_SCIENTIST,
@@ -36,7 +38,9 @@ enum PastJobs {
 	SECURITY_GUARD,
 	CASHIER,
 	SOCIALITE,
-	PENGUIN
+	PENGUIN,
+	SPY,
+	FBI_AGENT
 }
 ## Skills with the same number are considered the same skill (Ex: 0 is programmer, coder, and programming expert. 
 ## Skills with a value of -1 indicate a saboteur.

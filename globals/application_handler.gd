@@ -1,9 +1,11 @@
 extends Node
 var unique_skill_count : int
 var evil_modifier : int
-var firstname : String
-var lastname : String
-static var totalapps : int
+var first_name : String
+var last_name : String
+var give_job : int
+var give_college : int
+var give_reason : int
 var accepted : Array[bool] = [false,false,false,false] #amount of falses equal to amount of custom characters
 func create_application():
 	var app=Application.new()
@@ -30,15 +32,22 @@ func create_application():
 	#set gender and gendered name
 	app.gender=randi_range(0,2)
 	if(app.gender==0):
-		firstname=app.FirstNameEnby.find_key(randi_range(0,app.FirstNameEnby.size()-1))
+		first_name=app.FirstNameEnby.find_key(randi_range(0,app.FirstNameEnby.size()-1))
 	elif(app.gender==1):
-		firstname=app.FirstNameMasc.find_key(randi_range(0,app.FirstNameMasc.size()-1))
+		first_name=app.FirstNameMasc.find_key(randi_range(0,app.FirstNameMasc.size()-1))
 	elif(app.gender==2):
-		firstname=app.FirstNameFem.find_key(randi_range(0,app.FirstNameFem.size()-1))
-	lastname=app.LastName.find_key(randi_range(0,app.LastName.size()-1))
-	app.name=firstname+" "+lastname
+		first_name=app.FirstNameFem.find_key(randi_range(0,app.FirstNameFem.size()-1))
+	last_name=app.LastName.find_key(randi_range(0,app.LastName.size()-1))
+	app.name=first_name+" "+last_name
 	# create two past jobs
-	app.past_jobs.append(Application.PastJobs.values().pick_random())
+	for i in 2:
+		give_job=randi_range(0,99)
+		if(give_job<30):
+			app.past_jobs.append(Application.PastJobs.values().get(randi_range(0,8)))
+		elif(give_job<40): 
+			app.past_jobs.append(Application.PastJobs.values().get(randi_range(16,17)))
+		else:
+			app.past_jobs.append(Application.PastJobs.values().get(randi_range(9,15)))
 	app.past_jobs.append(Application.PastJobs.values().pick_random())
 	# check past jobs for whether they're good, add reliability score
 	if (app.JOB_QUALITY.get(app.past_jobs[0])==1):
@@ -69,8 +78,15 @@ func create_application():
 			app.reliability+=1
 		else:
 			pass # inefficiency condition
-	# create college
-	app.college=app.College.values().pick_random()
+	# create college, weighted ~30/55/15
+	give_college=randi_range(0,99)
+	if(give_college<30):
+		app.college=app.College.values().get(randi_range(0,6))
+	elif(give_college<85):
+		app.college=app.College.values().get(randi_range(7,10))
+	else:
+		app.college=app.College.values().get(randi_range(11,12))
+	print(app.college)
 	# check whether college is good
 	if(app.COLLEGE_QUALITY.get(app.college)==2):
 		app.reliability+=1
@@ -81,8 +97,14 @@ func create_application():
 		evil_modifier+=1
 	else:
 		pass #error
-	# create why you wanted to attend
-	app.company_reason=app.CompanyReason.values().pick_random()
+	# create why you wanted to attend, weighted ~30/55/15
+	give_reason=randi_range(0,99)
+	if(give_reason<30):
+		app.company_reason=app.CompanyReason.values().get(randi_range(0,5))
+	elif(give_reason<85):
+		app.company_reason=app.CompanyReason.values().get(randi_range(6,8))
+	else:
+		app.company_reason=app.CompanyReason.values().get(randi_range(8,9))
 	# check whether it's good
 	if(app.REASON_QUALITY.get(app.company_reason)==2):
 		app.reliability+=1
