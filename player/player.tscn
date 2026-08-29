@@ -441,17 +441,20 @@ height = 200
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwd6l"]
+size = Vector2(13, 1)
+
 [node name="Player" type="CharacterBody2D" unique_id=1482995803]
 z_index = 1
 material = SubResource("CanvasItemMaterial_xwkvk")
 script = ExtResource("1_rkbax")
 acceleration_curve = SubResource("Curve_u52ul")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614029055]
+[node name="LeftBody" type="CollisionShape2D" parent="." unique_id=1614029055]
 position = Vector2(-7, 6)
 shape = SubResource("CapsuleShape2D_rkbax")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=44287828]
+[node name="RightBody" type="CollisionShape2D" parent="." unique_id=44287828]
 position = Vector2(7, 6)
 shape = SubResource("CapsuleShape2D_rkbax")
 
@@ -525,6 +528,22 @@ texture_scale = 0.5
 [node name="PunchDur" type="Timer" parent="." unique_id=738944240]
 wait_time = 1.25
 one_shot = true
+
+[node name="HeadYSort" type="Area2D" parent="." unique_id=1011917251]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadYSort" unique_id=1914460814]
+position = Vector2(0, -11.5)
+shape = SubResource("RectangleShape2D_jwd6l")
+
+[node name="FeetYSort" type="Area2D" parent="HeadYSort" unique_id=1584220115]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadYSort/FeetYSort" unique_id=838525309]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_jwd6l")
 
 [connection signal="body_entered" from="VisionArm/EmployeeScan" to="." method="_on_employee_scan_body_entered"]
 [connection signal="body_entered" from="PunchHitbox" to="." method="_on_punch_hitbox_body_entered"]

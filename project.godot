@@ -86,6 +86,7 @@ open_application={
 2d_physics/layer_1="Walls"
 2d_physics/layer_2="Employee Detection"
 2d_physics/layer_3="Walls 2"
+2d_physics/layer_4="Layer 4"
 
 [physics]
 
