@@ -58,7 +58,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("punch"):
 		get_tree().create_timer(0.4).timeout.connect($PunchHitbox.set.bind("monitoring", true))
 		$PunchDur.start()
-		punch_vec = Vector2i(1.1*global_position.direction_to(get_global_mouse_position()))
+		punch_vec = Vector2i(1.44*global_position.direction_to(get_global_mouse_position()))
 		if not punch_vec:
 			punch_vec = Vector2i(1,0)
 		$Anim.play(vec_to_string(punch_vec) + "_punch")
