@@ -14,8 +14,6 @@ func _ready():
 	GameState.player = self
 
 func _physics_process(delta):
-	if GameState.player_animation_lock:
-		return
 	if Input.is_action_just_pressed("open_application") and GameState.near_desk:
 		if $CanvasLayer.visible:
 			$CanvasLayer.visible = false
@@ -27,7 +25,8 @@ func _physics_process(delta):
 			GameState.player_animation_lock = true
 			GameState.main.get_node("CanvasModulate").visible = false
 			pass
-		
+	if GameState.player_animation_lock:
+		return
 	var dir = Input.get_vector("left", "right", "up", "down")
 	if dir.x:
 		velocity.x = move_toward(velocity.x, dir.x * MAX_SPEED, ACCELERATION * delta * acceleration_curve.sample(abs(velocity.x)/MAX_SPEED))
