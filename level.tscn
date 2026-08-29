@@ -40,13 +40,13 @@ size = Vector2(106.5, 57.65625)
 size = Vector2(106.5, 70.828125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaehd"]
-size = Vector2(106, 70.41406)
+size = Vector2(105, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td4uw"]
 size = Vector2(106, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5f7e"]
-size = Vector2(105, 70)
+size = Vector2(106, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8y3u"]
 size = Vector2(106, 71)
@@ -81,13 +81,13 @@ polygon = PackedVector2Array(16, -211, 16, 53, 129, 53, 129, -11, 23, -11, 23, -
 size = Vector2(8, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
-size = Vector2(7, 526)
+size = Vector2(7, 549)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
 size = Vector2(8, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u52ul"]
-size = Vector2(7, 526)
+size = Vector2(7, 549)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkopx"]
 size = Vector2(332, 63)
@@ -153,22 +153,22 @@ size = Vector2(106.005005, 41)
 size = Vector2(106.005005, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aicyk"]
-size = Vector2(7, 223)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6cx8"]
 size = Vector2(7, 200)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6cx8"]
+size = Vector2(7, 177)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8b0r0"]
-size = Vector2(106, 41)
+size = Vector2(106, 41.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6smj"]
 size = Vector2(106, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5j5c"]
-size = Vector2(113, 41)
+size = Vector2(113, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj6e6"]
-size = Vector2(83, 5)
+size = Vector2(83, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h3vt"]
 size = Vector2(69.5, 5)
@@ -195,7 +195,7 @@ size = Vector2(44, 59.5)
 size = Vector2(146, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
-size = Vector2(180, 37)
+size = Vector2(180, 43)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_u52ul"]
 vertices = PackedVector2Array(106.5, -184.5, 261.5, -169.5, 155.5, -169.5, -0.5, 118.5, 261.5, 145.5, -259.5, 145.5, 261.5, -284.5, 152.5, -284.5, 106.5, -279.5, 155.5, -76.5, 261.5, -76.5, 261.5, -69.5, 155.5, -69.5, 155.5, 23.5, 261.5, 23.5, 261.5, 30.5, 155.5, 30.5, 155.5, 118.5, 261.5, 118.5, 144.5, 118.5, 144.5, 30.5, 38.5, 30.5, 38.5, 23.5, 144.5, 23.5, 144.5, -69.5, 38.5, -69.5, 38.5, -76.5, 144.5, -76.5, 144.5, -169.5, 2.5, -169.5, -102.5, -184.5, -142.5, -76.5, -36.5, -76.5, -36.5, -69.5, -142.5, -69.5, -142.5, 23.5, -36.5, 23.5, -36.5, 53.5, -142.5, 53.5, -259.5, 134.5, -157.5, 134.5, -142.5, 118.5, -157.5, 118.5, -153.5, 118.5, -153.5, 52.5, -259.5, 52.5, -259.5, 23.5, -153.5, 23.5, -153.5, -69.5, -259.5, -69.5, -259.5, -76.5, -153.5, -76.5, -142.5, -169.5, -153.5, -169.5, -259.5, -169.5, -259.5, -284.5, -150.5, -284.5, -150.5, -340.5, 152.5, -340.5, -102.5, -279.5, -0.5, -169.5, 2.5, 118.5)
@@ -287,7 +287,7 @@ shape = SubResource("RectangleShape2D_samc1")
 debug_color = Color(0.9940719, 0.7054887, 1, 0.41960785)
 
 [node name="LeftCubicleDesk10" type="CollisionShape2D" parent="OfficeLayoutSwitch/Area2D" unique_id=1808377849]
-position = Vector2(146, 147.79297)
+position = Vector2(145.5, 148)
 shape = SubResource("RectangleShape2D_oaehd")
 debug_color = Color(0.9940719, 0.7054887, 1, 0.41960785)
 
@@ -297,7 +297,7 @@ shape = SubResource("RectangleShape2D_td4uw")
 debug_color = Color(0.9940719, 0.7054887, 1, 0.41960785)
 
 [node name="LeftCubicleDesk12" type="CollisionShape2D" parent="OfficeLayoutSwitch/Area2D" unique_id=2086010238]
-position = Vector2(-6.5, 48)
+position = Vector2(-6, 48)
 shape = SubResource("RectangleShape2D_r5f7e")
 debug_color = Color(0.9940719, 0.7054887, 1, 0.41960785)
 
@@ -344,10 +344,12 @@ debug_color = Color(0.9940719, 0.7054887, 1, 0.41960785)
 [node name="Node" type="Node" parent="." unique_id=256323622]
 
 [node name="CenterLeftOccluder" type="LightOccluder2D" parent="." unique_id=1345590477]
+visible = false
 position = Vector2(1, 56)
 occluder = SubResource("OccluderPolygon2D_u52ul")
 
 [node name="CenterRightOccluder" type="LightOccluder2D" parent="." unique_id=503856065]
+visible = false
 position = Vector2(1, 56)
 occluder = SubResource("OccluderPolygon2D_oi3di")
 
@@ -361,7 +363,7 @@ shape = SubResource("RectangleShape2D_oi3di")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="LeftBoundary3" type="CollisionShape2D" parent="Walls" unique_id=1845159507]
-position = Vector2(-277.5, -103)
+position = Vector2(-277.5, -91.5)
 shape = SubResource("RectangleShape2D_f2txt")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
@@ -371,7 +373,7 @@ shape = SubResource("RectangleShape2D_vonw3")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="RightBoundary3" type="CollisionShape2D" parent="Walls" unique_id=413801417]
-position = Vector2(279.5, -103)
+position = Vector2(279.5, -91.5)
 shape = SubResource("RectangleShape2D_u52ul")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
@@ -511,17 +513,17 @@ shape = SubResource("RectangleShape2D_2orkt")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="CenterLeftCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=2144254513]
-position = Vector2(-18.5, -43.5)
+position = Vector2(-18.5, -32)
 shape = SubResource("RectangleShape2D_aicyk")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="CenterRightCubicleWall" type="CollisionShape2D" parent="Walls" unique_id=578489079]
-position = Vector2(20.5, -55)
+position = Vector2(20.5, -43.5)
 shape = SubResource("RectangleShape2D_y6cx8")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="CenterLeftCubicle1" type="CollisionShape2D" parent="Walls" unique_id=1862468094]
-position = Vector2(-75, -111)
+position = Vector2(-75, -111.25)
 shape = SubResource("RectangleShape2D_8b0r0")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
@@ -531,12 +533,12 @@ shape = SubResource("RectangleShape2D_h6smj")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="CenterLeftCubicle3" type="CollisionShape2D" parent="Walls" unique_id=2107331542]
-position = Vector2(-71.5, 88.5)
+position = Vector2(-71.5, 86)
 shape = SubResource("RectangleShape2D_v5j5c")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="CenterLeftCubicle4" type="CollisionShape2D" parent="Walls" unique_id=200383629]
-position = Vector2(-75.5, 111.5)
+position = Vector2(-75.5, 109)
 shape = SubResource("RectangleShape2D_fj6e6")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
@@ -581,7 +583,7 @@ shape = SubResource("RectangleShape2D_4tfgf")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="RightRoomBoundary2" type="CollisionShape2D" parent="Walls" unique_id=1917236475]
-position = Vector2(2, -217.5)
+position = Vector2(2, -220.5)
 shape = SubResource("RectangleShape2D_0b4ue")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
