@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://maik53mxl575"]
 
+[ext_resource type="Script" uid="uid://uy5yr6ffnjfe" path="res://ui/papers/papers.gd" id="1_3l3wd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wy1v"]
+bg_color = Color(0.34, 0.34, 0.34, 1)
+
 [node name="Papers" type="Control" unique_id=1765573664]
 layout_mode = 3
 anchors_preset = 15
@@ -7,17 +12,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3l3wd")
 
 [node name="Panel" type="Panel" parent="." unique_id=6313317]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -388.5
-offset_top = -197.0
-offset_right = 388.5
-offset_bottom = 197.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3wy1v")
+
+[node name="ApplicationText" type="Label" parent="." unique_id=635950298]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "TEST"
+
+[node name="HireButton" type="Button" parent="." unique_id=728168719]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 90.0
+offset_right = 870.0
+offset_bottom = 185.0
+text = "ACCEPT"
+
+[node name="RejectButton" type="Button" parent="." unique_id=1211115798]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 214.0
+offset_right = 872.0
+offset_bottom = 319.0
+text = "DECLINE"
+
+[connection signal="pressed" from="HireButton" to="." method="_on_hire_button_pressed"]
+[connection signal="pressed" from="RejectButton" to="." method="_on_reject_button_pressed"]

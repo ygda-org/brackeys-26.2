@@ -14,6 +14,16 @@ func _ready():
 func _physics_process(delta):
 	if GameState.player_animation_lock:
 		return
+	if Input.is_action_just_pressed("open_application") and GameState.near_desk:
+		if $CanvasLayer.visible:
+			$CanvasLayer.visible = false
+			GameState.main.get_node("CanvasModulate").visible = true
+			pass
+		else:
+			$CanvasLayer.visible = true
+			GameState.main.get_node("CanvasModulate").visible = false
+			pass
+		
 	if Input.is_action_just_pressed("punch"):
 		$PunchHitbox.monitoring = true
 		get_tree().create_timer(0.25).timeout.connect($PunchHitbox.set.bind("monitoring", false))

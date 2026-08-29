@@ -269,6 +269,7 @@ shape = SubResource("RectangleShape2D_rkbax")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=813548592]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1862645313]
+visible = false
 
 [node name="Papers" parent="CanvasLayer" unique_id=1765573664 instance=ExtResource("7_boad6")]
 
