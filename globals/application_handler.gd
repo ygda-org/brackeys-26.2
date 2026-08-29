@@ -1,9 +1,14 @@
 extends Node
 var unique_skill_count : int
 var evil_modifier : int
-
+var firstname : String
+var lastname : String
 func create_application():
 	var app=Application.new()
+	#set name
+	firstname=app.FirstName.find_key(randi_range(0,app.FirstName.size()-1))
+	lastname=app.LastName.find_key(randi_range(0,app.LastName.size()-1))
+	app.name=firstname+" "+lastname
 	# create two past jobs
 	app.past_jobs.append(Application.PastJobs.values().pick_random())
 	app.past_jobs.append(Application.PastJobs.values().pick_random())

@@ -142,7 +142,32 @@ enum CompanyReason
 	ASKED_TO,
 	UNTRUSTWORTHY
 }
-@export var person_name: String
+enum FirstName
+{
+	BOB,
+	SARAH,
+	JOHN,
+	JON,
+	RITHICK,
+	LILA,
+	ARTHUR,
+	LEAH,
+	JIM,
+	PETER,
+}
+enum LastName
+{
+	SMITH,
+	JONES,
+	TAYLOR,
+	NGUYEN,
+	BAKER,
+	PARKER,
+	NYX,
+	DOE,
+	WARD
+}
+@export var name: String
 @export var past_jobs: Array[PastJobs]
 @export var skills: Array[Skills]
 @export var college: College
