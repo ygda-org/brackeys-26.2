@@ -19,10 +19,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("open_application") and GameState.near_desk:
 		if $CanvasLayer.visible:
 			$CanvasLayer.visible = false
+			GameState.player_animation_lock = false
 			GameState.main.get_node("CanvasModulate").visible = true
 			pass
 		else:
 			$CanvasLayer.visible = true
+			GameState.player_animation_lock = true
 			GameState.main.get_node("CanvasModulate").visible = false
 			pass
 		
