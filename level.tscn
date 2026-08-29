@@ -18,7 +18,7 @@ size = Vector2(31, 39.5)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vonw3"]
 cull_mode = 2
-polygon = PackedVector2Array(17, -419, 164, -419, 164, -521, -164, -521, -164, -419, -17, -419, -17, -355, -166, -355, -166, -232, -275, -232, -275, -211, -169, -211, -169, -147, -275, -147, -275, -111, -169, -111, -169, -47, -275, -47, -275, -11, -169, -11, -169, 53, -275, 53, -275, 253, 275, 253, 275, 53, 169, 53, 169, -11, 275, -11, 275, -47, 169, -47, 169, -111, 275, -111, 275, -147, 169, -147, 169, -211, 275, -211, 275, -232, 166, -232, 166, -355, 17, -355)
+polygon = PackedVector2Array(17, -419, 164, -419, 164, -521, -164, -521, -164, -419, -17, -419, -17, -355, -166, -355, -166, -281, -275, -281, -274, -155, -168, -155, -168, -91, -275, -91, -275, -55, -168, -55, -168, 9, -274, 9, -274, 45, -168, 45, -168, 104, -274, 104, -275, 160, 276, 160, 276, 103, 170, 103, 169, 45, 276, 45, 273, 9, 170, 9, 170, -55, 276, -55, 276, -91, 170, -91, 170, -155, 276, -155, 276, -299, 167, -299, 166, -355, 17, -355)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1ainy"]
 load_path = "res://.godot/imported/office_front.png-0006930c263996bfa9c760b865f74a65.ctex"
@@ -375,16 +375,15 @@ debug_color = Color(0.9940719, 0.7054887, 1, 0.41960785)
 [node name="Node" type="Node" parent="." unique_id=256323622]
 
 [node name="CenterLeftOccluder" type="LightOccluder2D" parent="." unique_id=1345590477]
-visible = false
 position = Vector2(1, 56)
 occluder = SubResource("OccluderPolygon2D_u52ul")
 
 [node name="CenterRightOccluder" type="LightOccluder2D" parent="." unique_id=503856065]
-visible = false
 position = Vector2(1, 56)
 occluder = SubResource("OccluderPolygon2D_oi3di")
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1582519654 groups=["nav_blocker"]]
+visible = false
 z_index = 5
 collision_layer = 5
 
@@ -629,6 +628,7 @@ shape = SubResource("RectangleShape2D_0b4ue")
 debug_color = Color(0.16924733, 5.390644e-06, 0.7429988, 0.41960785)
 
 [node name="NPCNavRegion" type="NavigationRegion2D" parent="." unique_id=1718504740]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_u52ul")
 
 [node name="Tasks" type="Node2D" parent="." unique_id=1401544399]
