@@ -12,7 +12,7 @@ bg_color = Color(0.5411765, 0.6901961, 0.3764706, 1)
 
 [resource]
 default_font_size = 8
-Label/colors/font_color = Color(0.02246533, 2.1658838e-07, 0.21664271, 1)
+Label/colors/font_color = Color(0.12941177, 0.12941177, 0.13725491, 1)
 Label/font_sizes/font_size = 13
 Label/fonts/font = SubResource("SystemFont_i2t4f")
 Label/styles/normal = null
