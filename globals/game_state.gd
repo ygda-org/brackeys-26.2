@@ -2,7 +2,7 @@ extends Node
 
 const EMPLOYEE = preload("uid://cmbb1fu0dvb01")
 
-const DAY_LENGTH = 50.0
+const DAY_LENGTH = 60.0
 const START_DAY_HIRING_QUOTA = 5
 
 signal day_started

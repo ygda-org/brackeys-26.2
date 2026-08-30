@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bm863q8bmboqi"]
 
 [ext_resource type="Script" uid="uid://cksdvdrwjslfv" path="res://ui/game_over_screen/game_over.gd" id="1_jgpo5"]
-[ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="2_shmxg"]
+[ext_resource type="Texture2D" uid="uid://cdld7ddm24tvt" path="res://ui/screenWhereYouDiegeuohreiuhpeophoeopehporhposrhepsherpor(1).png" id="2_jgpo5"]
+[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="3_shmxg"]
 
 [node name="GameOver" type="Control" unique_id=1123743901]
 layout_mode = 3
@@ -13,27 +14,24 @@ grow_vertical = 2
 script = ExtResource("1_jgpo5")
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1152334064]
-self_modulate = Color(1, 1, 1, 0)
 z_index = 2
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="." unique_id=2052183751]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1026862313]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
-text = "Quota not met"
+offset_bottom = 40.0
+texture = ExtResource("2_jgpo5")
 
-[node name="JuicyButton" type="Button" parent="." unique_id=459937721]
+[node name="Label" type="Label" parent="." unique_id=2052183751]
 layout_mode = 0
-offset_left = 311.0
-offset_top = 190.0
-offset_right = 650.0
-offset_bottom = 312.0
-text = "main menu"
-script = ExtResource("2_shmxg")
-metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
-
-[connection signal="pressed" from="JuicyButton" to="." method="_on_juicy_button_pressed"]
+offset_left = 305.0
+offset_top = 37.0
+offset_right = 660.0
+offset_bottom = 104.0
+theme = ExtResource("3_shmxg")
+theme_override_font_sizes/font_size = 50
+text = "Quota not met"
