@@ -36,7 +36,7 @@ var pos_task_list: Array[Task] = []
 var home_positions = []
 
 var productivity_points: int = 0
-var production_requirement: float = 0#25
+var production_requirement: float = 25
 
 var hiring_quota_remaining: int = START_DAY_HIRING_QUOTA
 var hiring_queue: Array[Application]
