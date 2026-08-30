@@ -132,6 +132,7 @@ func get_positive_target_position():
 func fired():
 	if in_firing:
 		return
+	GameState.employees_list.remove_at(GameState.employees_list.find(self))
 	$CollisionShape2D.set_deferred("disabled", true)
 	var fired_icon = load("uid://bypla0ojpvyao").instantiate()
 	fired_icon.position.y -= 35
@@ -160,7 +161,6 @@ func fired():
 	tween2.tween_property(GameState.camera, "zoom", Vector2(2.5,2.5), 0.3)
 	tween2.tween_property(GameState.camera, "global_position", GameState.camera.get_parent().global_position, 0.3)
 	await tween2.finished
-	GameState.employees_list.remove_at(GameState.employees_list.find(self))
 	GameState.player_animation_lock = false
 	home_position.is_open = true
 	if current_task:

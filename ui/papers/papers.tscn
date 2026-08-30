@@ -1,8 +1,36 @@
 [gd_scene format=3 uid="uid://maik53mxl575"]
 
+[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="1_0cv20"]
 [ext_resource type="Script" uid="uid://uy5yr6ffnjfe" path="res://ui/papers/papers.gd" id="1_3l3wd"]
 [ext_resource type="Texture2D" uid="uid://bmu4n8o7mb1mk" path="res://assets/ui/retro_window_24x24.png" id="2_edn4c"]
 [ext_resource type="Texture2D" uid="uid://lkp81lwlj61h" path="res://assets/characters/portraits/portrait_4.png" id="2_vrf7e"]
+
+[sub_resource type="Gradient" id="Gradient_0cv20"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(3.2247603e-06, 0.6194931, 0.37000325, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kjsl2"]
+gradient = SubResource("Gradient_0cv20")
+width = 250
+height = 100
+
+[sub_resource type="Gradient" id="Gradient_u8tnl"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.5702763, 0, 0.10319371, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0cv20"]
+gradient = SubResource("Gradient_u8tnl")
+width = 250
+height = 100
+
+[sub_resource type="Gradient" id="Gradient_kjsl2"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.5603888, 0.493146, 0.29248893, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u8tnl"]
+gradient = SubResource("Gradient_kjsl2")
+width = 250
+height = 100
 
 [node name="Papers" type="Control" unique_id=1765573664]
 layout_mode = 3
@@ -11,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_0cv20")
 script = ExtResource("1_3l3wd")
 
 [node name="Panel" type="NinePatchRect" parent="." unique_id=1537883910]
@@ -18,39 +47,76 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -378.0
+offset_top = -235.0
+offset_right = 494.0
+offset_bottom = 348.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_edn4c")
 region_rect = Rect2(24, 16, 24, 48)
 
 [node name="ApplicationText" type="Label" parent="." unique_id=635950298]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 19.0
+offset_top = 21.0
+offset_right = 487.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 24
 text = "TEST"
+autowrap_mode = 3
 
 [node name="HireButton" type="Button" parent="." unique_id=728168719]
 layout_mode = 0
-offset_left = 613.0
-offset_top = 90.0
-offset_right = 870.0
-offset_bottom = 185.0
+offset_left = 630.0
+offset_top = 88.0
+offset_right = 888.0
+offset_bottom = 196.0
+icon = SubResource("GradientTexture2D_kjsl2")
+clip_text = true
+
+[node name="Label" type="Label" parent="HireButton" unique_id=150299719]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 33.0
+offset_right = 175.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 25
 text = "ACCEPT"
 
 [node name="RejectButton" type="Button" parent="." unique_id=1211115798]
 layout_mode = 0
-offset_left = 633.0
-offset_top = 214.0
-offset_right = 872.0
-offset_bottom = 319.0
+offset_left = 630.0
+offset_top = 218.0
+offset_right = 888.0
+offset_bottom = 326.0
+icon = SubResource("GradientTexture2D_0cv20")
+
+[node name="Label" type="Label" parent="RejectButton" unique_id=1115835666]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 36.0
+offset_right = 179.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 25
 text = "DECLINE"
 
 [node name="HandbookButton" type="Button" parent="." unique_id=1165269228]
 layout_mode = 0
-offset_left = 632.0
+offset_left = 630.0
 offset_top = 349.0
-offset_right = 848.0
-offset_bottom = 448.0
+offset_right = 888.0
+offset_bottom = 457.0
+icon = SubResource("GradientTexture2D_u8tnl")
+
+[node name="Label" type="Label" parent="HandbookButton" unique_id=979249210]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 41.0
+offset_right = 207.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 25
 text = "HANDBOOK"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=468512062]
@@ -62,6 +128,16 @@ offset_bottom = 304.0
 scale = Vector2(5, 5)
 texture = ExtResource("2_vrf7e")
 expand_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=1402873375]
+visible = false
+layout_mode = 0
+offset_left = 132.0
+offset_top = 252.0
+offset_right = 551.0
+offset_bottom = 293.0
+theme_override_font_sizes/font_size = 30
+text = "Hiring quota already reached!"
 
 [connection signal="pressed" from="HireButton" to="." method="_on_hire_button_pressed"]
 [connection signal="pressed" from="RejectButton" to="." method="_on_reject_button_pressed"]

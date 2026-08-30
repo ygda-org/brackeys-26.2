@@ -6,8 +6,8 @@ func _ready():
 	GameState.day_started.connect(_on_day_started)
 
 func _process(delta):
-	$HiringAmount.text = "Need to hire: " + str(GameState.hiring_quota_remaining) + " more"
-	$AppsRemaining.text = "Applications remaining: " + str(GameState.hiring_queue.size())
+	$Panel/HiringAmount.text = "Need to hire: " + str(GameState.hiring_quota_remaining) + " more"
+	$Panel/AppsRemaining.text = "Applications remaining: " + str(GameState.hiring_queue.size())
 	$QuotaBar.value = GameState.productivity_points
 	$DayTimer.value = $DayTimer.value - delta
 	if $DayTimer.value < 0.1 and not GameState.pause:

@@ -6,6 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://cs8jke68ho7q4" path="res://assets/ui/clock_back.png" id="2_w75iv"]
 [ext_resource type="Texture2D" uid="uid://0s4owjav8nv3" path="res://assets/ui/progress_bar.png" id="3_e0nub"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imuuq"]
+bg_color = Color(0.78521717, 0.7852172, 0.78521705, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Hud" type="CanvasLayer" unique_id=1698542637]
 script = ExtResource("1_xmswo")
 
@@ -19,20 +31,6 @@ value = 100.0
 fill_mode = 5
 texture_over = ExtResource("2_imuuq")
 texture_progress = ExtResource("2_w75iv")
-
-[node name="HiringAmount" type="Label" parent="." unique_id=2098347358]
-offset_left = 651.0
-offset_top = 1.0
-offset_right = 808.0
-offset_bottom = 24.0
-text = "Need to hire: 5 more"
-
-[node name="AppsRemaining" type="Label" parent="." unique_id=1254123383]
-offset_left = 309.0
-offset_top = -1.0
-offset_right = 349.0
-offset_bottom = 22.0
-text = "Applications remaining: "
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1858177723]
 z_index = 1
@@ -55,3 +53,26 @@ offset_bottom = 25.0
 theme = ExtResource("2_4d6w6")
 value = 50.0
 show_percentage = false
+
+[node name="Panel" type="Panel" parent="." unique_id=2035374515]
+offset_left = 240.0
+offset_right = 721.0
+offset_bottom = 36.0
+theme = ExtResource("2_4d6w6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_imuuq")
+
+[node name="HiringAmount" type="Label" parent="Panel" unique_id=2098347358]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 8.0
+offset_right = 470.0
+offset_bottom = 31.0
+text = "Need to hire: 5 more"
+
+[node name="AppsRemaining" type="Label" parent="Panel" unique_id=1254123383]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 195.0
+offset_bottom = 31.0
+text = "Applications remaining: "

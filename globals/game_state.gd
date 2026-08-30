@@ -2,7 +2,7 @@ extends Node
 
 const EMPLOYEE = preload("uid://cmbb1fu0dvb01")
 
-const DAY_LENGTH = 50.0
+const DAY_LENGTH = 60.0
 const START_DAY_HIRING_QUOTA = 5
 
 signal day_started
@@ -40,7 +40,7 @@ var production_requirement: float = 25
 
 var hiring_quota_remaining: int = START_DAY_HIRING_QUOTA
 var hiring_queue: Array[Application]
-var application_amount: int = 15
+var application_amount: int = 35
 
 var last_portrait : int
 
