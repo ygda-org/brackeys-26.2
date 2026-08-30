@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dll7ep3f86h36" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
 [ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="2_omy8q"]
 [ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="3_omy8q"]
+[ext_resource type="Script" uid="uid://duqj1ulgnm0xb" path="res://ui/main_menu/settings.gd" id="4_i5wg5"]
+[ext_resource type="Texture2D" uid="uid://bmu4n8o7mb1mk" path="res://assets/ui/retro_window_24x24.png" id="5_3c04x"]
+[ext_resource type="Script" uid="uid://bqfxa4u81deja" path="res://ui/main_menu/credits.gd" id="6_joh67"]
 
 [sub_resource type="Animation" id="Animation_i5wg5"]
 length = 0.001
@@ -139,6 +142,7 @@ script = ExtResource("2_omy8q")
 metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 
 [node name="YGDAIntro" type="Control" parent="." unique_id=2046822149]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -162,5 +166,153 @@ offset_right = 544.0
 offset_bottom = 334.0
 texture = ExtResource("3_omy8q")
 
+[node name="Settings" type="Control" parent="." unique_id=142025883]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_i5wg5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Settings" unique_id=825695698]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 172.0
+offset_right = 404.33334
+offset_bottom = 270.33334
+scale = Vector2(3, 3)
+texture = ExtResource("5_3c04x")
+region_rect = Rect2(0, 0, 72, 72)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="VolumeGrid" type="GridContainer" parent="Settings" unique_id=76761378]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 218.0
+offset_right = 632.0
+offset_bottom = 322.0
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="Settings/VolumeGrid" unique_id=954576466]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="Settings/VolumeGrid" unique_id=59478109]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="MusicLabel" type="Label" parent="Settings/VolumeGrid" unique_id=1654941203]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="Settings/VolumeGrid" unique_id=2145224556]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="SFXLabel" type="Label" parent="Settings/VolumeGrid" unique_id=851624032]
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="Settings/VolumeGrid" unique_id=1499847724]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="AmbienceLabel" type="Label" parent="Settings/VolumeGrid" unique_id=1766030196]
+layout_mode = 2
+text = "Ambience"
+
+[node name="AmbienceSlider" type="HSlider" parent="Settings/VolumeGrid" unique_id=1173575368]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="ReturnButton" type="Button" parent="Settings" unique_id=2107529289]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 347.0
+offset_right = 590.0
+offset_bottom = 445.0
+text = "return"
+script = ExtResource("2_omy8q")
+metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
+
+[node name="Credits" type="Control" parent="." unique_id=630156400]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_joh67")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Credits" unique_id=1095860102]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 119.0
+offset_right = 405.33334
+offset_bottom = 233.66666
+scale = Vector2(3, 3)
+texture = ExtResource("5_3c04x")
+region_rect = Rect2(0, 0, 72, 72)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="Label" type="Label" parent="Credits" unique_id=1343544526]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 166.0
+offset_right = 967.0
+offset_bottom = 683.0
+text = "Artists:
+PomeloTea
+89cutefrogs
+adventurine
+threecats
+sssorie
+lockedrock
+
+Sound Designers:
+Ramsey
+Miku lover"
+
+[node name="Label2" type="Label" parent="Credits" unique_id=520398502]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 163.0
+offset_right = 753.0
+offset_bottom = 680.0
+text = "Godot Engine
+
+Programmers:
+Penguinja
+Theophylaktos
+Alkinkyx
+Threecatsinatrenchcoat1
+MrPuffyWuff"
+
+[node name="Button" type="Button" parent="Credits" unique_id=1285806284]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 128.0
+offset_right = 670.0
+offset_bottom = 154.0
+
 [connection signal="pressed" from="Menu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Menu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="value_changed" from="Settings/VolumeGrid/MasterSlider" to="Settings" method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Settings/VolumeGrid/MusicSlider" to="Settings" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Settings/VolumeGrid/SFXSlider" to="Settings" method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="Settings/VolumeGrid/AmbienceSlider" to="Settings" method="_on_ambience_slider_value_changed"]
+[connection signal="pressed" from="Settings/ReturnButton" to="Settings" method="_on_return_button_pressed"]
+[connection signal="pressed" from="Credits/Button" to="Credits" method="_on_button_pressed"]

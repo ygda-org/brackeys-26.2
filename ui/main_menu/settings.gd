@@ -1,8 +1,6 @@
 extends Control
 
 func _ready():
-	$Fade.self_modulate = Color(0,0,0,0)
-	
 	$VolumeGrid/MasterSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$VolumeGrid/MusicSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
 	$VolumeGrid/SFXSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
@@ -31,4 +29,4 @@ func fade_out(seconds : int):
 	tween.tween_property($Fade, "self_modulate", Color(0,0,0,1),seconds)
 
 func _on_return_button_pressed():
-	
+	visible = false
