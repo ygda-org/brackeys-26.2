@@ -2,10 +2,21 @@
 
 [ext_resource type="Script" uid="uid://dll7ep3f86h36" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
 [ext_resource type="Script" uid="uid://bovnl3o1f7ip1" path="res://ui/juicy_button/juicy_button.gd" id="2_omy8q"]
+[ext_resource type="PackedScene" uid="uid://d0wcp780qo1xd" path="res://ui/juicy_button/JuicyButton.tscn" id="2_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://cyvogp1u546nc" path="res://assets/icon.svg" id="3_omy8q"]
+[ext_resource type="Texture2D" uid="uid://dn2b7d42yl6eh" path="res://assets/ui/title_buttons/IMG_2569.PNG" id="3_qao3l"]
 [ext_resource type="Script" uid="uid://duqj1ulgnm0xb" path="res://ui/main_menu/settings.gd" id="4_i5wg5"]
+[ext_resource type="Texture2D" uid="uid://r50ubk71wwp3" path="res://assets/ui/title_buttons/IMG_2570.PNG" id="4_lknku"]
 [ext_resource type="Texture2D" uid="uid://bmu4n8o7mb1mk" path="res://assets/ui/retro_window_24x24.png" id="5_3c04x"]
+[ext_resource type="Texture2D" uid="uid://dm5muimqrnltb" path="res://assets/ui/title_buttons/IMG_2572.PNG" id="5_u2jyo"]
+[ext_resource type="Texture2D" uid="uid://dt2muad0v5rif" path="res://assets/ui/title_buttons/IMG_2571.PNG" id="6_bpbph"]
 [ext_resource type="Script" uid="uid://bqfxa4u81deja" path="res://ui/main_menu/credits.gd" id="6_joh67"]
+[ext_resource type="Texture2D" uid="uid://bqqgcmdntrpxv" path="res://assets/ui/title_buttons/IMG_2574.PNG" id="7_qewnw"]
+[ext_resource type="Texture2D" uid="uid://c753q1lootbdi" path="res://assets/ui/title_buttons/IMG_2573.PNG" id="8_db6af"]
+[ext_resource type="Texture2D" uid="uid://5mevpew4r51a" path="res://assets/ui/Title screen.png" id="12_xio0d"]
+[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="13_qao3l"]
+[ext_resource type="Texture2D" uid="uid://osotjc5wctbt" path="res://assets/ui/YGDA Logo.png" id="15_lknku"]
+[ext_resource type="Script" uid="uid://bkdvn0cjwbt1q" path="res://ui/main_menu/logo.gd" id="15_u2jyo"]
 
 [sub_resource type="Animation" id="Animation_i5wg5"]
 length = 0.001
@@ -80,6 +91,97 @@ _data = {
 &"ygda_intro": SubResource("Animation_3c04x")
 }
 
+[sub_resource type="Gradient" id="Gradient_bpbph"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bpbph"]
+gradient = SubResource("Gradient_bpbph")
+width = 27
+height = 27
+
+[sub_resource type="Gradient" id="Gradient_qewnw"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.27314264, 0.27314216, 0.27314198, 0.23137255)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qewnw"]
+gradient = SubResource("Gradient_qewnw")
+width = 27
+height = 27
+
+[sub_resource type="Gradient" id="Gradient_db6af"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.36508796, 0.36508796, 0.36508796, 0.827451)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_db6af"]
+gradient = SubResource("Gradient_db6af")
+width = 27
+height = 27
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2jyo"]
+atlas = ExtResource("15_lknku")
+region = Rect2(0, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpbph"]
+atlas = ExtResource("15_lknku")
+region = Rect2(192, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qewnw"]
+atlas = ExtResource("15_lknku")
+region = Rect2(0, 128, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db6af"]
+atlas = ExtResource("15_lknku")
+region = Rect2(192, 128, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkggs"]
+atlas = ExtResource("15_lknku")
+region = Rect2(0, 256, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bnxd"]
+atlas = ExtResource("15_lknku")
+region = Rect2(192, 256, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xnla"]
+atlas = ExtResource("15_lknku")
+region = Rect2(0, 384, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln2ma"]
+atlas = ExtResource("15_lknku")
+region = Rect2(192, 384, 192, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5kg8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2jyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpbph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qewnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db6af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkggs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bnxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xnla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln2ma")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 12.0
+}]
+
 [node name="MainMenu" type="Control" unique_id=849729289]
 layout_mode = 3
 anchors_preset = 15
@@ -88,6 +190,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uhj5c")
+
+[node name="BG" type="TextureRect" parent="." unique_id=608180902]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+texture = ExtResource("12_xio0d")
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1178994610]
 self_modulate = Color(1, 1, 1, 0)
@@ -102,44 +210,35 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Menu" unique_id=464848701]
+[node name="PlayButton" parent="Menu" unique_id=1244729408 instance=ExtResource("2_tf5ef")]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 70.0
-offset_right = 903.0
-offset_bottom = 127.0
-text = "get employed simulator :kirb_fear:"
+offset_left = 298.0
+offset_top = 265.0
+offset_right = 629.0
+offset_bottom = 345.0
+texture_normal = ExtResource("3_qao3l")
+texture_pressed = ExtResource("3_qao3l")
+texture_hover = ExtResource("4_lknku")
 
-[node name="PlayButton" type="Button" parent="Menu" unique_id=211602542]
+[node name="SettingsButton" parent="Menu" unique_id=1681692025 instance=ExtResource("2_tf5ef")]
 layout_mode = 0
-offset_left = 347.0
-offset_top = 190.0
-offset_right = 521.0
-offset_bottom = 277.0
-text = "get employed simulator"
-script = ExtResource("2_omy8q")
-metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
+offset_left = 307.0
+offset_top = 347.0
+offset_right = 619.0
+offset_bottom = 429.0
+texture_normal = ExtResource("5_u2jyo")
+texture_pressed = ExtResource("5_u2jyo")
+texture_hover = ExtResource("6_bpbph")
 
-[node name="SettingsButton" type="Button" parent="Menu" unique_id=134973713]
+[node name="CreditsButton" parent="Menu" unique_id=410065408 instance=ExtResource("2_tf5ef")]
 layout_mode = 0
-offset_left = 350.0
-offset_top = 293.0
-offset_right = 507.0
-offset_bottom = 346.0
-text = "twek them settings"
-script = ExtResource("2_omy8q")
-metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
-
-[node name="CreditsButton" type="Button" parent="Menu" unique_id=564956852]
-layout_mode = 0
-offset_left = 248.0
-offset_top = 362.0
-offset_right = 616.0
-offset_bottom = 449.0
-text = "what nerds worked on this game well just click
-thisbutton to find out"
-script = ExtResource("2_omy8q")
-metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
+offset_left = 306.0
+offset_top = 436.0
+offset_right = 625.0
+offset_bottom = 506.0
+texture_normal = ExtResource("7_qewnw")
+texture_pressed = ExtResource("7_qewnw")
+texture_hover = ExtResource("8_db6af")
 
 [node name="YGDAIntro" type="Control" parent="." unique_id=2046822149]
 visible = false
@@ -167,10 +266,10 @@ offset_bottom = 334.0
 texture = ExtResource("3_omy8q")
 
 [node name="Settings" type="Control" parent="." unique_id=142025883]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("13_qao3l")
 script = ExtResource("4_i5wg5")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Settings" unique_id=825695698]
@@ -178,7 +277,7 @@ layout_mode = 0
 offset_left = 267.0
 offset_top = 172.0
 offset_right = 404.33334
-offset_bottom = 270.33334
+offset_bottom = 220.0
 scale = Vector2(3, 3)
 texture = ExtResource("5_3c04x")
 region_rect = Rect2(0, 0, 72, 72)
@@ -228,38 +327,45 @@ step = 0.05
 value = 0.5
 
 [node name="AmbienceLabel" type="Label" parent="Settings/VolumeGrid" unique_id=1766030196]
+visible = false
 layout_mode = 2
 text = "Ambience"
 
 [node name="AmbienceSlider" type="HSlider" parent="Settings/VolumeGrid" unique_id=1173575368]
+visible = false
 layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 0.5
 
-[node name="ReturnButton" type="Button" parent="Settings" unique_id=2107529289]
+[node name="ReturnButton" type="TextureButton" parent="Settings" unique_id=1178724745]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 347.0
-offset_right = 590.0
-offset_bottom = 445.0
-text = "return"
+offset_left = 643.0
+offset_top = 181.0
+offset_right = 670.0
+offset_bottom = 208.0
+texture_normal = SubResource("GradientTexture2D_bpbph")
+texture_pressed = SubResource("GradientTexture2D_qewnw")
+texture_hover = SubResource("GradientTexture2D_db6af")
 script = ExtResource("2_omy8q")
 metadata/_custom_type_script = "uid://bovnl3o1f7ip1"
 
 [node name="Credits" type="Control" parent="." unique_id=630156400]
 visible = false
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -95.0
+offset_top = 74.0
+offset_right = -55.0
+offset_bottom = 114.0
+theme = ExtResource("13_qao3l")
 script = ExtResource("6_joh67")
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="Credits" unique_id=1095860102]
 layout_mode = 0
 offset_left = 268.0
-offset_top = 119.0
-offset_right = 405.33334
-offset_bottom = 233.66666
+offset_top = 118.0
+offset_right = 467.33334
+offset_bottom = 201.33334
 scale = Vector2(3, 3)
 texture = ExtResource("5_3c04x")
 region_rect = Rect2(0, 0, 72, 72)
@@ -282,13 +388,7 @@ ThreeCatsInATrenchCoat
 soireepeche
 lockedrock3
 
-Sound Designers:
-cavedin
-yoyoyonono
-altieri
-fwugneo
-casualgamera
-scienceisprettycool"
+"
 
 [node name="Label2" type="Label" parent="Credits" unique_id=520398502]
 layout_mode = 0
@@ -296,9 +396,7 @@ offset_left = 280.0
 offset_top = 163.0
 offset_right = 753.0
 offset_bottom = 680.0
-text = "Godot Engine
-
-Programmers:
+text = "Programmers:
 Penguinja
 Theophylaktos
 Alkinyx
@@ -307,10 +405,49 @@ MrPuffyWuff"
 
 [node name="Button" type="Button" parent="Credits" unique_id=1285806284]
 layout_mode = 0
-offset_left = 643.0
-offset_top = 128.0
-offset_right = 670.0
+offset_left = 830.0
+offset_top = 127.0
+offset_right = 857.0
 offset_bottom = 154.0
+
+[node name="Label3" type="Label" parent="Credits" unique_id=733052888]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 167.0
+offset_right = 849.0
+offset_bottom = 346.0
+text = "Sound Designers:
+cavedin
+yoyoyonono
+altieri
+fwugneo
+casualgamera
+scienceisprettycool"
+
+[node name="Label4" type="Label" parent="Credits" unique_id=1353498964]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 328.0
+offset_right = 665.0
+offset_bottom = 346.0
+text = "https://godotengine.org/license/"
+
+[node name="Logo" type="Node2D" parent="." unique_id=1583261274]
+visible = false
+script = ExtResource("15_u2jyo")
+
+[node name="ColorRect" type="ColorRect" parent="Logo" unique_id=1158619545]
+offset_left = -157.0
+offset_top = -116.0
+offset_right = 1126.0
+offset_bottom = 636.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Logo" unique_id=1381819710]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(480, 280)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_5kg8m")
 
 [connection signal="pressed" from="Menu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,4 +1,4 @@
-class_name JuicyButton extends Button
+class_name JuicyButton extends TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,7 +8,7 @@ func _ready():
 	
 	pivot_offset_ratio = Vector2(0.5,0.5)
 
-func juicy_pressed(button : Button):
+func juicy_pressed(button : TextureButton):
 	SFX.play(SFX.Id.BUTTON_CLICK)
 	var tween : Tween = button.create_tween()
 	tween.tween_property(button, "scale", Vector2(1 - 0.05,1 - 0.05), 0.025)
@@ -17,11 +17,11 @@ func juicy_pressed(button : Button):
 	SFX.play(SFX.Id.BUTTON_CLICK)
 	await get_tree().create_timer(0.25).timeout
 	
-func juicy_entered(button : Button):
+func juicy_entered(button : TextureButton):
 	SFX.play(SFX.Id.BUTTON_HOVER)
 	var tween : Tween = button.create_tween()
 	tween.tween_property(button, "scale", Vector2(1 + 0.05,1 + 0.05), 0.05)
 
-func juicy_exited(button : Button):
+func juicy_exited(button : TextureButton):
 	var tween : Tween = button.create_tween()
 	tween.tween_property(button, "scale", Vector2(1.0,1.0), 0.05)

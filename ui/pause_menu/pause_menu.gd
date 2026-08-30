@@ -1,10 +1,6 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	visible = false
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -12,15 +8,16 @@ func _process(delta):
 		toggle_pause()
 
 func toggle_pause():
+	$Settings.visible = true
 	if get_tree().paused == true:
 		SFX.unpause_all(true, 10.0)
-		visible = false
+		get_parent().visible = false
 		get_tree().paused = false
 		print("unpause")
 		
 	elif get_tree().paused == false:
 		SFX.pause_all(true, 10.0)
-		visible = true
+		get_parent().visible = true
 		get_tree().paused = true
 		print("pause")
 		
@@ -47,3 +44,7 @@ func change_bus_volume(bus, linear_value):
 	var db_value = linear_to_db(linear_value)
 	var bus_index = AudioServer.get_bus_index(bus)
 	AudioServer.set_bus_volume_db(bus_index, db_value)
+
+
+func _on_return_button_pressed():
+	toggle_pause()
