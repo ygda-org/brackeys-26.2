@@ -469,10 +469,10 @@ autoplay = "down_idle"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=101055751]
 zoom = Vector2(2.5, 2.5)
 process_callback = 0
-limit_left = -284
+limit_left = -281
 limit_top = -584
-limit_right = 280
-limit_bottom = 317
+limit_right = 283
+limit_bottom = 224
 position_smoothing_enabled = true
 position_smoothing_speed = 12.0
 
