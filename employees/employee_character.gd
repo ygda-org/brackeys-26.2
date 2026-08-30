@@ -130,6 +130,7 @@ func get_positive_target_position():
 func fired():
 	if in_firing:
 		return
+	$CollisionShape2D.disabled = true
 	var fired_icon = load("uid://bypla0ojpvyao").instantiate()
 	fired_icon.position.y -= 35
 	add_child(fired_icon)
