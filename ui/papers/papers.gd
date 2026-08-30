@@ -45,6 +45,8 @@ func load_application():
 	choose_portrait()
 
 func choose_portrait():
+	if current_app.portrait_num == 0:
+		current_app.portrait_num = 1
 	$TextureRect.texture = load(portraits[current_app.portrait_num])
 		
 	if GameState.last_portrait == null:

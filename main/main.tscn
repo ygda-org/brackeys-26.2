@@ -31,13 +31,13 @@ visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=2044091051 instance=ExtResource("6_kfbq2")]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=607535231]
-
-[node name="BetweenDayFlash" parent="CanvasLayer2" unique_id=90868380 instance=ExtResource("6_4dugh")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1167400898]
 stream = ExtResource("7_4dugh")
 volume_db = -5.0
 autoplay = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=607535231]
+
+[node name="BetweenDayFlash" parent="CanvasLayer2" unique_id=90868380 instance=ExtResource("6_4dugh")]
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

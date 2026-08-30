@@ -59,10 +59,10 @@ region_rect = Rect2(24, 16, 24, 48)
 [node name="ApplicationText" type="Label" parent="." unique_id=635950298]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 0
-offset_left = 19.0
-offset_top = 21.0
-offset_right = 487.0
-offset_bottom = 54.0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 485.0
+offset_bottom = 51.0
 theme_override_font_sizes/font_size = 24
 text = "TEST"
 autowrap_mode = 3
@@ -136,7 +136,7 @@ offset_left = 132.0
 offset_top = 252.0
 offset_right = 551.0
 offset_bottom = 293.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "Hiring quota already reached!"
 
 [connection signal="pressed" from="HireButton" to="." method="_on_hire_button_pressed"]

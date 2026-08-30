@@ -64,6 +64,7 @@ func start_day():
 
 func end_day():
 	pause = true
+	print(employees_list)
 	if fired_amount < START_DAY_HIRING_QUOTA:
 		for i in range(START_DAY_HIRING_QUOTA-fired_amount):
 			if not employees_list:
