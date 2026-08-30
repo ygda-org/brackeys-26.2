@@ -40,7 +40,7 @@ var production_requirement: float = 25
 
 var hiring_quota_remaining: int = START_DAY_HIRING_QUOTA
 var hiring_queue: Array[Application]
-var application_amount: int = 15
+var application_amount: int = 35
 
 var last_portrait : int
 

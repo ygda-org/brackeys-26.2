@@ -57,13 +57,15 @@ texture = ExtResource("2_edn4c")
 region_rect = Rect2(24, 16, 24, 48)
 
 [node name="ApplicationText" type="Label" parent="." unique_id=635950298]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 0
 offset_left = 19.0
 offset_top = 21.0
-offset_right = 59.0
-offset_bottom = 44.0
+offset_right = 487.0
+offset_bottom = 54.0
 theme_override_font_sizes/font_size = 24
 text = "TEST"
+autowrap_mode = 3
 
 [node name="HireButton" type="Button" parent="." unique_id=728168719]
 layout_mode = 0
