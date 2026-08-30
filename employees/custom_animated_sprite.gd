@@ -10,6 +10,8 @@ Vector2i(0,1): 0, Vector2i(0,-1): 256}
 
 func _ready():
 	texture = load("res://assets/characters/sprites/portrait_" + char_num + "_walk.png")
+	if not texture:
+		texture = load("uid://2jk3dljxlmrm")
 
 func _process(_delta):
 	flip_h = direction.x < 0
