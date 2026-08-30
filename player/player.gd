@@ -15,6 +15,8 @@ func _ready():
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("open_application"):
+		if $CanvasLayer2.visible:
+			$CanvasLayer2.visible = false
 		if $CanvasLayer.visible:
 			$CanvasLayer.visible = false
 			GameState.player_animation_lock = false
@@ -95,3 +97,5 @@ func _on_employee_scan_body_entered(body):
 
 func _on_punch_dur_timeout():
 	$Anim.flip_h = false
+func display_book():
+	$CanvasLayer2.visible=true

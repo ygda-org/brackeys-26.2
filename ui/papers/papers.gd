@@ -73,3 +73,5 @@ func _on_hire_button_pressed() -> void:
 func _on_reject_button_pressed() -> void:
 	GameState.hiring_queue.pop_front()
 	current_app = null
+func _on_handbook_button_pressed() -> void:
+	GameState.player.display_book()
