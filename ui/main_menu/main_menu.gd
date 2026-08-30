@@ -7,6 +7,8 @@ func _ready():
 	$Fade.self_modulate = Color(0,0,0,0)
 	$YGDAIntro/YGDAIntroAnimPlayer.play("ygda_intro")
 	SFX.play(SFX.Id.YGDA_STING)
+	await get_tree().create_timer(2).timeout
+	$AudioStreamPlayer.play()
 
 func fade_out(seconds : int):
 	$Fade.self_modulate = Color(0,0,0,0)
