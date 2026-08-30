@@ -16,7 +16,9 @@ func _ready():
 func _physics_process(delta):
 	if Input.is_action_just_pressed("open_application"):
 		if $CanvasLayer2.visible:
+			SFX.play(SFX.Id.PAGE)
 			$CanvasLayer2.visible = false
+			$CanvasLayer.visible = true
 		elif $CanvasLayer.visible:
 			$CanvasLayer.visible = false
 			GameState.player_animation_lock = false
@@ -24,6 +26,7 @@ func _physics_process(delta):
 			pass
 		else:
 			if GameState.near_desk:
+				SFX.play(SFX.Id.PHONE)
 				$CanvasLayer.visible = true
 				GameState.player_animation_lock = true
 				GameState.main.get_node("CanvasModulate").visible = false
@@ -44,6 +47,8 @@ func _physics_process(delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0.0, DECELERATION * delta)
 	velocity = velocity.limit_length(MAX_SPEED)
+	if (not velocity.x==0 or not velocity.y==0):
+		SFX.play(SFX.Id.WALKING)
 	if not $PunchDur.is_stopped():
 		velocity = Vector2.ZERO
 	move_and_slide()
@@ -60,6 +65,7 @@ func _physics_process(delta):
 	if not anim_string:
 		return
 	if Input.is_action_just_pressed("punch") and $PunchDur.is_stopped():
+		SFX.play(SFX.Id.WOOSH)
 		get_tree().create_timer(0.4).timeout.connect($PunchHitbox.set.bind("monitoring", true))
 		get_tree().create_timer(0.7).timeout.connect($PunchHitbox.set.bind("monitoring", false))
 		$PunchDur.start()
@@ -88,6 +94,7 @@ func vec_to_string(dir):
 	return anim_string
 
 func _on_punch_hitbox_body_entered(body):
+	SFX.play(SFX.Id.PUNCH)
 	body.fired()
 
 
@@ -98,4 +105,6 @@ func _on_employee_scan_body_entered(body):
 func _on_punch_dur_timeout():
 	$Anim.flip_h = false
 func display_book():
+	SFX.play(SFX.Id.PAGE)
 	$CanvasLayer2.visible=true
+	$CanvasLayer.visible=false

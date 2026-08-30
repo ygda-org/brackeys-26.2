@@ -54,6 +54,7 @@ func choose_portrait():
 
 func _on_hire_button_pressed() -> void:
 	GameState.hire()
+	SFX.play(SFX.Id.HIRE)
 	current_app = null
 
 

@@ -30,7 +30,9 @@ enum Id {
 	TYPING,
 	WALKING,
 	PHONE,
-	PUNCH
+	PUNCH,
+	WOOSH,
+	PAGE,
 }
 
 ## [code]TRUE[/code]: Print debug messages [br]

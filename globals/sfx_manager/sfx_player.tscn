@@ -5,6 +5,13 @@
 [ext_resource type="AudioStream" uid="uid://345kk1rag2l5" path="res://assets/sfx/button_click.mp3" id="3_4xqb4"]
 [ext_resource type="AudioStream" uid="uid://c750oubw2vrjf" path="res://assets/sfx/button_hover.wav" id="4_4xqb4"]
 [ext_resource type="AudioStream" uid="uid://cpk800notmles" path="res://assets/sfx/ygda_sting.wav" id="5_o2cuk"]
+[ext_resource type="AudioStream" uid="uid://cjm28uldfbjd5" path="res://assets/sfx/bell_confirm.mp3" id="6_70uvm"]
+[ext_resource type="AudioStream" uid="uid://ch64fav23a5gw" path="res://assets/sfx/employee_typing.mp3" id="7_iwkng"]
+[ext_resource type="AudioStream" uid="uid://bxvxpiab67tdv" path="res://assets/sfx/walk_carpet.mp3" id="8_iwkng"]
+[ext_resource type="AudioStream" uid="uid://b11kidrmfo3k4" path="res://assets/sfx/phone_ring.mp3" id="9_2juvr"]
+[ext_resource type="AudioStream" uid="uid://daxueagiadu3w" path="res://assets/sfx/punch.mp3" id="10_hdcr0"]
+[ext_resource type="AudioStream" uid="uid://df6kw37b6sfs0" path="res://assets/sfx/whoosh_for_punch.wav" id="11_iwkng"]
+[ext_resource type="AudioStream" uid="uid://dk6tiqgwonuu0" path="res://assets/sfx/arizona5paperturn.mp3" id="12_0skdd"]
 
 [sub_resource type="Resource" id="Resource_d6bbf"]
 script = ExtResource("2_xmiic")
@@ -25,11 +32,69 @@ bus = "SFX"
 stream = ExtResource("5_o2cuk")
 metadata/_custom_type_script = "uid://brt0dygmwve00"
 
+[sub_resource type="Resource" id="Resource_j5isx"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("6_70uvm")
+volume_variance = 1.5
+pitch_variance = 0.05
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[sub_resource type="Resource" id="Resource_70uvm"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("7_iwkng")
+volume_variance = 1.5
+pitch_variance = 0.05
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[sub_resource type="Resource" id="Resource_iwkng"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("8_iwkng")
+volume_variance = 1.5
+pitch_variance = 0.05
+min_delay = 0.3
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[sub_resource type="Resource" id="Resource_0skdd"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("9_2juvr")
+volume_variance = 1.5
+pitch_variance = 0.05
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[sub_resource type="Resource" id="Resource_2juvr"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("10_hdcr0")
+volume_variance = 1.5
+pitch_variance = 0.05
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[sub_resource type="Resource" id="Resource_jqwlu"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("11_iwkng")
+volume_variance = 1.5
+pitch_variance = 0.05
+min_delay = 1.0
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
+[sub_resource type="Resource" id="Resource_hdcr0"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("12_0skdd")
+volume_variance = 1.5
+pitch_variance = 0.05
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
 [node name="SfxPlayer" type="Node" unique_id=1859485083]
 process_mode = 3
 script = ExtResource("1_d6bbf")
 id_to_setting = Dictionary[int, ExtResource("2_xmiic")]({
 0: SubResource("Resource_d6bbf"),
 1: SubResource("Resource_o2cuk"),
-2: SubResource("Resource_aso10")
+2: SubResource("Resource_aso10"),
+4: SubResource("Resource_j5isx"),
+5: SubResource("Resource_70uvm"),
+6: SubResource("Resource_iwkng"),
+7: SubResource("Resource_0skdd"),
+8: SubResource("Resource_2juvr"),
+9: SubResource("Resource_jqwlu"),
+10: SubResource("Resource_hdcr0")
 })

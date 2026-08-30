@@ -13,6 +13,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mtvw0")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1372733285]
+layout_mode = 0
+offset_right = 987.0
+offset_bottom = 573.0
+color = Color(0.3826249, 0.2674836, 0.18287012, 1)
+
 [node name="BookBG" type="TextureRect" parent="." unique_id=1762500370]
 layout_mode = 0
 offset_right = 960.0
@@ -90,10 +96,3 @@ Good reasons for wanting to join our company follow it, or follow our mission st
 Avoid applicants with potentially negative reasons:
 Asked To, Untrustworthy"
 autowrap_mode = 3
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1372733285]
-layout_mode = 0
-offset_left = 116.0
-offset_top = 39.0
-offset_right = 117.0
-offset_bottom = 40.0
