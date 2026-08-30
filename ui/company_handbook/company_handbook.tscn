@@ -21,10 +21,10 @@ texture = ExtResource("1_pgbx8")
 
 [node name="PastJobs" type="Label" parent="." unique_id=642999836]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 35.0
-offset_right = 433.0
-offset_bottom = 194.0
+offset_left = 92.0
+offset_top = 33.0
+offset_right = 410.0
+offset_bottom = 305.0
 theme = ExtResource("3_mtvw0")
 text = "Please hire people with
 relevant experience.
@@ -54,10 +54,10 @@ OSHA employees"
 
 [node name="Skills" type="Label" parent="." unique_id=1600498268]
 layout_mode = 0
-offset_left = 236.0
-offset_top = 35.0
-offset_right = 553.0
-offset_bottom = 362.0
+offset_left = 199.0
+offset_top = 32.0
+offset_right = 516.0
+offset_bottom = 359.0
 theme = ExtResource("3_mtvw0")
 text = "Each applicant must name at least three seperate skills.
 Some 'skills' are just different phrasings, and do NOT count.
@@ -86,10 +86,10 @@ Crime Doer"
 
 [node name="Colleges" type="Label" parent="." unique_id=1171681576]
 layout_mode = 0
-offset_left = 507.0
-offset_top = 56.0
-offset_right = 824.0
-offset_bottom = 383.0
+offset_left = 498.0
+offset_top = 35.0
+offset_right = 815.0
+offset_bottom = 362.0
 theme = ExtResource("3_mtvw0")
 text = "We try to only accept the highest quality
 universities. They are:
@@ -118,9 +118,9 @@ John College"
 [node name="Reasons" type="Label" parent="." unique_id=488663719]
 layout_mode = 0
 offset_left = 695.0
-offset_top = 53.0
+offset_top = 33.0
 offset_right = 1012.0
-offset_bottom = 380.0
+offset_bottom = 360.0
 theme = ExtResource("3_mtvw0")
 text = "Our company motto is \"Trust Not, Fear Not, 
 Fail Not\". Good reasons for wanting to join 
