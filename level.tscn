@@ -646,7 +646,7 @@ navigation_polygon = SubResource("NavigationPolygon_u52ul")
 
 [node name="EmployeeTask" parent="Tasks" unique_id=2065829293 instance=ExtResource("2_vonw3")]
 position = Vector2(-103, -443)
-affect_amount = 5
+affect_amount = 10
 
 [node name="EmployeeTask2" parent="Tasks" unique_id=1946370147 instance=ExtResource("2_vonw3")]
 position = Vector2(57, -192)
@@ -654,16 +654,16 @@ task_type = 1
 
 [node name="EmployeeTask3" parent="Tasks" unique_id=1344578022 instance=ExtResource("2_vonw3")]
 position = Vector2(-44, -190)
-affect_amount = 1
+affect_amount = 2
 
 [node name="EmployeeTask4" parent="Tasks" unique_id=1405257889 instance=ExtResource("2_vonw3")]
 position = Vector2(-100, 128)
 task_type = 2
-affect_amount = 5
+affect_amount = 8
 
 [node name="EmployeeTask5" parent="Tasks" unique_id=2093644815 instance=ExtResource("2_vonw3")]
 position = Vector2(87, 127)
-affect_amount = 5
+affect_amount = 2
 
 [node name="EmployeeTask6" parent="Tasks" unique_id=1774363298 instance=ExtResource("2_vonw3")]
 position = Vector2(61, 127)
@@ -684,38 +684,38 @@ affect_amount = 7
 [node name="EmployeeTask10" parent="Tasks" unique_id=2134682952 instance=ExtResource("2_vonw3")]
 position = Vector2(-251, -260)
 task_type = 2
-affect_amount = 5
+affect_amount = 8
 
 [node name="EmployeeTask11" parent="Tasks" unique_id=2028773390 instance=ExtResource("2_vonw3")]
 position = Vector2(-206, -258)
-affect_amount = 4
+affect_amount = 6
 
 [node name="EmployeeTask12" parent="Tasks" unique_id=1974641533 instance=ExtResource("2_vonw3")]
 position = Vector2(249, -252)
 task_type = 2
-affect_amount = 5
+affect_amount = 8
 
 [node name="EmployeeTask13" parent="Tasks" unique_id=622500016 instance=ExtResource("2_vonw3")]
 position = Vector2(197, -252)
-affect_amount = 4
+affect_amount = 6
 
 [node name="EmployeeTask14" parent="Tasks" unique_id=2088424001 instance=ExtResource("2_vonw3")]
 position = Vector2(196, -197)
-affect_amount = 4
+affect_amount = 6
 
 [node name="EmployeeTask15" parent="Tasks" unique_id=1590090189 instance=ExtResource("2_vonw3")]
 position = Vector2(255, -196)
 task_type = 2
-affect_amount = 5
+affect_amount = 8
 
 [node name="EmployeeTask16" parent="Tasks" unique_id=2117935809 instance=ExtResource("2_vonw3")]
 position = Vector2(-253, -195)
 task_type = 2
-affect_amount = 5
+affect_amount = 8
 
 [node name="EmployeeTask17" parent="Tasks" unique_id=675233067 instance=ExtResource("2_vonw3")]
 position = Vector2(-203, -197)
-affect_amount = 4
+affect_amount = 6
 
 [node name="EmployeeTask18" parent="Tasks" unique_id=1874348026 instance=ExtResource("2_vonw3")]
 position = Vector2(-147, -318)

@@ -7,7 +7,7 @@ var application: Application
 
 const SPEED = 100
 
-var max_motivation: int = 4
+var max_motivation: int = 2
 ## motivation is the number of positive tasks an employee will do without the watchful gaze of their superviser to reset them
 @onready var motivation: int = max_motivation
 
@@ -178,7 +178,7 @@ func _on_task_intermission_timeout():
 	if rando > abs(float(reliability)/2.0):
 		current_task = get_neutral_target_position()
 	else:
-		if reliability < 0:
+		if reliability < 0 and GameState.day_num != 1:
 			current_task = get_sabotage_target_position()
 		else:
 			current_task = get_positive_target_position()
@@ -190,12 +190,12 @@ func _on_task_intermission_timeout():
 func _on_in_task_timeout():
 	$TaskIndicator.texture = null
 	current_task.is_occupied = false
+	GameState.productivity_points += current_task.affect_amount * (current_task.task_type-1)
 	current_task = null
 	motivation -= 1
-	GameState.productivity_points += 15
 	$NavigationAgent2D.target_position = home_position.position
 	start_intermission()
 
 func start_intermission():
-	$TaskIntermission.wait_time = randf_range(25, 40) - motivation * 5
+	$TaskIntermission.wait_time = randf_range(25, 35) - motivation * 10
 	$TaskIntermission.start()
