@@ -20,129 +20,76 @@ offset_bottom = 540.0
 texture = ExtResource("1_pgbx8")
 
 [node name="PastJobs" type="Label" parent="." unique_id=642999836]
+custom_minimum_size = Vector2(380, 0)
 layout_mode = 0
-offset_left = 92.0
-offset_top = 33.0
-offset_right = 410.0
-offset_bottom = 305.0
+offset_left = 96.0
+offset_top = 38.0
+offset_right = 476.0
+offset_bottom = 472.0
 theme = ExtResource("3_mtvw0")
-text = "Please hire people with
-relevant experience.
-Relevant jobs:
-Computer Scientist
-Game Developer
-Digital Artist
-Storyboard Artist
-Quality Assurer
-Playtester
-Soundtrack Designer
-SFX Designer
-Coder
-
-Irrelevant jobs:
-Mathematician
-Youtuber
-Accountant
-Security Guard
-Cashier
-Socialite
-Penguin
+text = "Hire those with relevant experience.
+RELEVANT JOBS:
+Computer Scientist, Game, Developer, Digital Artist, Storyboard Artist, Quality Assurer, Playtester,
+Soundtrack Designer, SFX Designer, Coder
 
 DO NOT ACCEPT:
-FBI Agents
-OSHA employees"
+FBI Agents, OSHA employees
+
+All other jobs are irrelevant."
+autowrap_mode = 3
 
 [node name="Skills" type="Label" parent="." unique_id=1600498268]
+custom_minimum_size = Vector2(380, 0)
 layout_mode = 0
-offset_left = 199.0
-offset_top = 32.0
-offset_right = 516.0
-offset_bottom = 359.0
+offset_left = 94.0
+offset_top = 290.0
+offset_right = 474.0
+offset_bottom = 862.0
 theme = ExtResource("3_mtvw0")
 text = "Each applicant must name at least three seperate skills.
-Some 'skills' are just different phrasings, and do NOT count.
-Accept only those with three skills:
-Programmers might say:
-Programmer
-Coder
-Programming Expert
-
-Artists might say:
-Artist
-Digital Artist
-
-People skilled in mathematics might say:
-Mathematics Expert
-Math Whiz
-Mathematician
-
-Great collaborators might say:
-Communicator
-Talkative
+Some skills are just different phrasings, and do NOT count.
+Accept only those with three different skills.
 
 Some people pass off crime as a skill. These are:
 Tool Reallocator
 Crime Doer"
+autowrap_mode = 3
 
 [node name="Colleges" type="Label" parent="." unique_id=1171681576]
+custom_minimum_size = Vector2(380, 0)
 layout_mode = 0
-offset_left = 498.0
-offset_top = 35.0
-offset_right = 815.0
-offset_bottom = 362.0
+offset_left = 493.0
+offset_top = 36.0
+offset_right = 879.0
+offset_bottom = 286.0
 theme = ExtResource("3_mtvw0")
-text = "We try to only accept the highest quality
-universities. They are:
-
-Prestige U.
-James Baker U.
-Citadel U.
-Knowledge U.
-Serpent U.
-Helios Tech.
-Spirit College
+text = "We only accept the highest quality universities. They are:
+Prestige U., James Baker U., Citadel U., Knowledge U., Serpent U., Helios Tech., Spirit College
 
 Acceptable, but not outstanding Universities: 
-College U.
-Community College
-Heart College
-Mountain Tech
+College U., Community College, Heart College, Mountain Tech
 
-There are a few prominent degree mills.
-People get fake bachelors and masters
-from them, so they do not have skills.
+Avoid degree mills where people get fake degrees.
 DO NOT ACCEPT:
-Community U.
-John College"
+Community U., John College"
+autowrap_mode = 3
 
 [node name="Reasons" type="Label" parent="." unique_id=488663719]
+custom_minimum_size = Vector2(380, 0)
 layout_mode = 0
-offset_left = 695.0
-offset_top = 33.0
-offset_right = 1012.0
-offset_bottom = 360.0
+offset_left = 491.0
+offset_top = 288.0
+offset_right = 876.0
+offset_bottom = 538.0
 theme = ExtResource("3_mtvw0")
-text = "Our company motto is \"Trust Not, Fear Not, 
-Fail Not\". Good reasons for wanting to join 
-our company follow it, or or mission statement:
-\"Encourage orderly game-design and a 
-disciplined workplace.\"
-Good reasons:
-	Distrustful
-	Fearless
-	Organized
-	Game Designer
-	Disciplined
-	Flawless
+text = "Our company motto is,
+\"Trust Not, Fear Not, Fail Not.\" 
+Good reasons for wanting to join our company follow it, or follow our mission statement,
+\"Encourage orderly game-design and a disciplined workplace.\"
 
-Bad Reasons:
-	Talented
-	Motivated
-	Trusting
-
-Disloyal Reasons:
-	Asked To
-	Untrustworthy"
+Avoid applicants with potentially negative reasons:
+Asked To, Untrustworthy"
+autowrap_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1372733285]
 layout_mode = 0

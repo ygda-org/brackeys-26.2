@@ -255,12 +255,11 @@ position = Vector2(0.5, -27.25)
 shape = SubResource("RectangleShape2D_dlbli")
 
 [node name="ExteriorOccluder" type="LightOccluder2D" parent="." unique_id=1889880130]
-visible = false
 occluder = SubResource("OccluderPolygon2D_vonw3")
 
 [node name="OfficeLayoutFloor" type="Sprite2D" parent="." unique_id=1667867848]
 z_index = -2
-position = Vector2(-1, -129)
+position = Vector2(1, -165)
 texture = ExtResource("2_1ainy")
 
 [node name="OfficeLayoutBack" type="Sprite2D" parent="." unique_id=2146115657]
