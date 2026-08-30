@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var char_num: String = str(randi_range(1,1))
+@onready var char_num: String = str(get_parent().application.portrait_num)
 
 var direction = Vector2i.ZERO
 var old_direction = Vector2i.ZERO

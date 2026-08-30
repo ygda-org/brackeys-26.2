@@ -43,27 +43,14 @@ func load_application():
 	choose_portrait()
 
 func choose_portrait():
-	print("gamble")
-	
-	var current_portrait : int = 0
-	
-	if(current_app.gender==0):
-		current_portrait = randi_range(1,7)
-		$TextureRect.texture = load(portraits[current_portrait])
-	elif(current_app.gender==1):
-		current_portrait = randi_range(1,3)
-		$TextureRect.texture = load(portraits[current_portrait])
-	elif(current_app.gender==2):
-		current_portrait = randi_range(4, 7)
-		$TextureRect.texture = load(portraits[current_portrait])
+	$TextureRect.texture = load(portraits[current_app.portrait_num])
 		
 	if GameState.last_portrait == null:
-		GameState.last_portrait = current_portrait
-
-	elif current_portrait == GameState.last_portrait:
-		choose_portrait()
+		GameState.last_portrait = current_app.portrait_num
+	#elif current_app.portrait_num == GameState.last_portrait: # got rid of this since annoying
+	#	choose_portrait()
 	else:
-		GameState.last_portrait = current_portrait
+		GameState.last_portrait = current_app.portrait_num
 
 func _on_hire_button_pressed() -> void:
 	GameState.hire()

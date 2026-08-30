@@ -213,3 +213,5 @@ enum LastName
 @export var reliability: int
 ##0 is enby, 1 is male, 2 is female
 @export var gender: int 
+
+var portrait_num: int

@@ -123,4 +123,18 @@ func create_application():
 	for i in 2:
 		if(evil_modifier>0 and evil_modifier<4):
 			app.reliability-=1
+	choose_portrait(app)
 	return app
+
+func choose_portrait(current_app: Application):
+	print("gamble")
+	
+	var current_portrait : int = 0
+	
+	if(current_app.gender==0):
+		current_portrait = randi_range(1,7)
+	elif(current_app.gender==1):
+		current_portrait = randi_range(1,3)
+	elif(current_app.gender==2):
+		current_portrait = randi_range(4, 7)
+	current_app.portrait_num = current_portrait
