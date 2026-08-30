@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://cdoh12ptj5w3g"
+path="res://.godot/imported/font_new.png-ef40c834794130e8a227b49ec8587ac3.fontdata"
+
+[deps]
+
+source_file="res://ui/font_new.png"
+dest_files=["res://.godot/imported/font_new.png-ef40c834794130e8a227b49ec8587ac3.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("0-127")
+kerning_pairs=PackedStringArray("easjbCuGnDWACEPAyOSHegmrxcgkDvxNOcdAnSRpo eadvOhuChSHAnEgPbTmrpcckbcxsonp +1", "Plehipllsuilarkiciw Pleilsiuzngiricalol -2", "ti it -3", "preuakncrsh rscgahne +1", "l i -5", "il l -4", "dmi fvi -1")
+columns=10
+rows=13
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2
