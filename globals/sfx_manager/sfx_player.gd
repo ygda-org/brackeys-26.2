@@ -25,6 +25,12 @@ enum Id {
 	BUTTON_CLICK,
 	BUTTON_HOVER,
 	YGDA_STING,
+	BEEP,
+	HIRE, #bell confirm
+	TYPING,
+	WALKING,
+	PHONE,
+	PUNCH
 }
 
 ## [code]TRUE[/code]: Print debug messages [br]
