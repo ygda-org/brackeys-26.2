@@ -79,11 +79,11 @@ size = Vector2(550.125, 62.414063)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u52ul"]
 cull_mode = 2
-polygon = PackedVector2Array(-129, -211, -16, -211, -16, 53, -129, 53, -129, -11, -23, -11, -23, -47, -129, -47, -129, -111, -23, -111, -23, -147, -129, -147)
+polygon = PackedVector2Array(-129, -211, -16, -211, -16, 48, -129, 48, -129, -11, -23, -11, -23, -47, -129, -47, -129, -111, -23, -111, -23, -147, -129, -147)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oi3di"]
 cull_mode = 1
-polygon = PackedVector2Array(16, -211, 16, 53, 129, 53, 129, -11, 23, -11, 23, -47, 129, -47, 129, -111, 23, -111, 23, -147, 129, -147, 129, -211)
+polygon = PackedVector2Array(16, -211, 16, 48, 129, 48, 129, -11, 23, -11, 23, -47, 129, -47, 129, -111, 23, -111, 23, -147, 129, -147, 129, -211)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x388h"]
 size = Vector2(102, 39)
