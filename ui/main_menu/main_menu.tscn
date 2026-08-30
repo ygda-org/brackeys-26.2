@@ -276,14 +276,18 @@ offset_bottom = 683.0
 text = "Artists:
 PomeloTea
 89cutefrogs
-adventurine
-threecats
-sssorie
-lockedrock
+rota-fortunae
+ThreeCatsInATrenchCoat
+soireepeche
+lockedrock3
 
 Sound Designers:
-Ramsey
-Miku lover"
+cavedin
+yoyoyonono
+altieri
+fwugneo
+casualgamera
+scienceisprettycool"
 
 [node name="Label2" type="Label" parent="Credits" unique_id=520398502]
 layout_mode = 0
@@ -296,8 +300,8 @@ text = "Godot Engine
 Programmers:
 Penguinja
 Theophylaktos
-Alkinkyx
-Threecatsinatrenchcoat1
+Alkinyx
+ThreeCatsInATrenchCoat
 MrPuffyWuff"
 
 [node name="Button" type="Button" parent="Credits" unique_id=1285806284]
