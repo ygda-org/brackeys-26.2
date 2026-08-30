@@ -2,7 +2,7 @@ extends Node
 
 const EMPLOYEE = preload("uid://cmbb1fu0dvb01")
 
-const DAY_LENGTH = 60.0
+const DAY_LENGTH = 90.0
 const START_DAY_HIRING_QUOTA = 5
 
 var day_num: int = 1
@@ -81,6 +81,7 @@ func end_day():
 			await get_tree().create_timer(0.5).timeout
 	player_animation_lock = true
 	day_num += 1
+	production_requirement += 5
 	tween_day.emit()
 
 func hire():
