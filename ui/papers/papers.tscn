@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://maik53mxl575"]
 
 [ext_resource type="Script" uid="uid://uy5yr6ffnjfe" path="res://ui/papers/papers.gd" id="1_3l3wd"]
-[ext_resource type="Texture2D" uid="uid://lkp81lwlj61h" path="res://assets/characters/portraits/portrait_4.PNG" id="2_vrf7e"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wy1v"]
-bg_color = Color(0.34, 0.34, 0.34, 1)
+[ext_resource type="Texture2D" uid="uid://bmu4n8o7mb1mk" path="res://assets/ui/retro_window_24x24.png" id="2_edn4c"]
+[ext_resource type="Texture2D" uid="uid://lkp81lwlj61h" path="res://assets/characters/portraits/portrait_4.png" id="2_vrf7e"]
 
 [node name="Papers" type="Control" unique_id=1765573664]
 layout_mode = 3
@@ -15,14 +13,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3l3wd")
 
-[node name="Panel" type="Panel" parent="." unique_id=6313317]
+[node name="Panel" type="NinePatchRect" parent="." unique_id=1537883910]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_3wy1v")
+texture = ExtResource("2_edn4c")
+region_rect = Rect2(24, 16, 24, 48)
 
 [node name="ApplicationText" type="Label" parent="." unique_id=635950298]
 layout_mode = 0
@@ -56,10 +55,10 @@ text = "HANDBOOK"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=468512062]
 layout_mode = 0
-offset_left = 298.0
-offset_top = 45.0
-offset_right = 358.0
-offset_bottom = 104.0
+offset_left = 29.0
+offset_top = 244.99998
+offset_right = 89.0
+offset_bottom = 304.0
 scale = Vector2(5, 5)
 texture = ExtResource("2_vrf7e")
 expand_mode = 5
