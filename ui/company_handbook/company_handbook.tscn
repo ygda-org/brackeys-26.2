@@ -38,7 +38,7 @@ RELEVANT JOBS:
 Computer Scientist, Game, Developer, Digital Artist, Storyboard Artist, Quality Assurer, Playtester,
 Soundtrack Designer, SFX Designer, Coder
 
-DO NOT ACCEPT:
+Despite their best efforts, there is no warrant for our arrest. Do not accept:
 FBI Agents, OSHA employees
 
 All other jobs are irrelevant."
@@ -75,7 +75,7 @@ Prestige U., James Baker U., Citadel U., Knowledge U., Serpent U., Helios Tech.,
 Acceptable, but not outstanding Universities: 
 College U., Community College, Heart College, Mountain Tech
 
-Avoid degree mills where people get fake degrees.
+Avoid degree mills where people get fake degrees. These are only acceptable in upper management.
 DO NOT ACCEPT:
 Community U., John College"
 autowrap_mode = 3
@@ -93,6 +93,6 @@ text = "Our company motto is,
 Good reasons for wanting to join our company follow it, or follow our mission statement,
 \"Encourage orderly game-design and a disciplined workplace.\"
 
-Avoid applicants with potentially negative reasons:
+Avoid applicants who may be sent by certain agencies:
 Asked To, Untrustworthy"
 autowrap_mode = 3
