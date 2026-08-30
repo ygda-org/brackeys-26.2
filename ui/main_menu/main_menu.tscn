@@ -266,6 +266,7 @@ offset_bottom = 334.0
 texture = ExtResource("3_omy8q")
 
 [node name="Settings" type="Control" parent="." unique_id=142025883]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
