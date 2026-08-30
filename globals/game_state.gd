@@ -64,7 +64,6 @@ func start_day():
 
 func end_day():
 	pause = true
-	print(employees_list)
 	if fired_amount < START_DAY_HIRING_QUOTA:
 		for i in range(START_DAY_HIRING_QUOTA-fired_amount):
 			if not employees_list:
@@ -72,7 +71,8 @@ func end_day():
 			var index = randi_range(0, employees_list.size()-1)
 			var employee = employees_list[index]
 			employees_list.remove_at(index)
-			employee.home_position.is_open = true
+			if employee and employee.home_position:
+				employee.home_position.is_open = true
 			employee.queue_free()
 	# hire new if not filled
 	if hiring_quota_remaining > 0:
