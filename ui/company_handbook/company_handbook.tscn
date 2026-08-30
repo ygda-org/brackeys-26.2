@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ee82q2oxdtrw" path="res://ui/company_handbook/company_handbook.gd" id="1_mtvw0"]
 [ext_resource type="Texture2D" uid="uid://cdmglarjgm7wi" path="res://assets/ui/company_book/book_bg.png" id="1_pgbx8"]
-[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/company_handbook/handbook_theme.tres" id="3_mtvw0"]
+[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="3_mtvw0"]
 
 [node name="CompanyHandbook" type="Control" unique_id=237309918]
 layout_mode = 3
@@ -143,3 +143,10 @@ Bad Reasons:
 Disloyal Reasons:
 	Asked To
 	Untrustworthy"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1372733285]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 39.0
+offset_right = 117.0
+offset_bottom = 40.0

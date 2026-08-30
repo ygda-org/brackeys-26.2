@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cu5d4okbwduef"]
 
 [ext_resource type="Script" uid="uid://bfxwbe87tvgs0" path="res://ui/hud/hud.gd" id="1_xmswo"]
+[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="2_4d6w6"]
 
 [sub_resource type="Gradient" id="Gradient_4d6w6"]
 
@@ -22,6 +23,7 @@ offset_left = 815.0
 offset_top = 1.0
 offset_right = 959.0
 offset_bottom = 28.0
+theme = ExtResource("2_4d6w6")
 show_percentage = false
 
 [node name="HiringAmount" type="Label" parent="." unique_id=2098347358]

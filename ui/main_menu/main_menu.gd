@@ -20,6 +20,8 @@ func _on_play_button_pressed():
 
 
 func _on_settings_button_pressed():
-	fade_out(1)
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("uid://c81oaw6kaqufp")
+	$Settings.visible = true
+
+
+func _on_credits_button_pressed():
+	$Credits.visible = true
