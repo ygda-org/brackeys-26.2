@@ -204,6 +204,9 @@ enum LastName
 	DOE,
 	WARD,
 	LEE,
+	ARMEIS,
+	MORIA,
+	GAMEDEV,
 }
 @export var name: String
 @export var past_jobs: Array[PastJobs]

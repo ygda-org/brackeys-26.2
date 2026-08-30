@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://daxueagiadu3w" path="res://assets/sfx/punch.mp3" id="10_hdcr0"]
 [ext_resource type="AudioStream" uid="uid://df6kw37b6sfs0" path="res://assets/sfx/whoosh_for_punch.wav" id="11_iwkng"]
 [ext_resource type="AudioStream" uid="uid://dk6tiqgwonuu0" path="res://assets/sfx/arizona5paperturn.mp3" id="12_0skdd"]
+[ext_resource type="AudioStream" uid="uid://blggpy3rptjgb" path="res://assets/sfx/az5beep3LONGGGGGGG.mp3" id="13_2juvr"]
 
 [sub_resource type="Resource" id="Resource_d6bbf"]
 script = ExtResource("2_xmiic")
@@ -83,6 +84,11 @@ volume_variance = 1.5
 pitch_variance = 0.05
 metadata/_custom_type_script = "uid://brt0dygmwve00"
 
+[sub_resource type="Resource" id="Resource_pg1wy"]
+script = ExtResource("2_xmiic")
+stream = ExtResource("13_2juvr")
+metadata/_custom_type_script = "uid://brt0dygmwve00"
+
 [node name="SfxPlayer" type="Node" unique_id=1859485083]
 process_mode = 3
 script = ExtResource("1_d6bbf")
@@ -90,6 +96,7 @@ id_to_setting = Dictionary[int, ExtResource("2_xmiic")]({
 0: SubResource("Resource_d6bbf"),
 1: SubResource("Resource_o2cuk"),
 2: SubResource("Resource_aso10"),
+3: SubResource("Resource_pg1wy"),
 4: SubResource("Resource_j5isx"),
 5: SubResource("Resource_70uvm"),
 6: SubResource("Resource_iwkng"),
