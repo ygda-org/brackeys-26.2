@@ -30,7 +30,7 @@ func _process(_delta):
 		else:
 			$Timer.stop()
 		region_rect.position.x = new_region
-	old_direction = direction
+		old_direction = direction
 
 func _on_timer_timeout():
 	region_rect.position.x += 16
