@@ -515,9 +515,9 @@ visible = false
 [node name="Papers" parent="CanvasLayer" unique_id=1765573664 instance=ExtResource("7_boad6")]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=724859744]
+visible = false
 
 [node name="CompanyHandbook" parent="CanvasLayer2" unique_id=237309918 instance=ExtResource("11_2ieo8")]
-visible = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1783321839]
 avoidance_enabled = true

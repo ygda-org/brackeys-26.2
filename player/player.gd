@@ -17,7 +17,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("open_application"):
 		if $CanvasLayer2.visible:
 			$CanvasLayer2.visible = false
-		if $CanvasLayer.visible:
+		elif $CanvasLayer.visible:
 			$CanvasLayer.visible = false
 			GameState.player_animation_lock = false
 			GameState.main.get_node("CanvasModulate").visible = true
