@@ -14,6 +14,7 @@ var max_motivation: int = 4
 ## every employee has a home position (like their desk) which they return to after finishing a task
 var home_position: Marker2D
 
+const INDICATOR_TEXTURES = ["uid://ciu0klxfw8fa3", "uid://dmwu0i5u1d4vx", "uid://bviwc6i7roers"]
 var current_task: Task
 
 var is_initial_employee: bool = false
@@ -38,6 +39,7 @@ func _physics_process(delta):
 	if $NavigationAgent2D.is_navigation_finished():
 		if $InTask.is_stopped() and current_task: # start task
 			$InTask.wait_time = current_task.task_length
+			$TaskIndicator.texture = load(INDICATOR_TEXTURES[current_task.task_type])
 			$InTask.start()
 		$Anim.direction = Vector2i(0,0)
 		return
@@ -130,7 +132,7 @@ func get_positive_target_position():
 func fired():
 	if in_firing:
 		return
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.set_deferred("disabled", true)
 	var fired_icon = load("uid://bypla0ojpvyao").instantiate()
 	fired_icon.position.y -= 35
 	add_child(fired_icon)
@@ -172,7 +174,7 @@ func fired():
 
 func _on_task_intermission_timeout():
 	var reliability = application.reliability
-	var rando = randi_range(0,4)
+	var rando = randf_range(0,4)
 	if rando > abs(reliability):
 		current_task = get_neutral_target_position()
 	else:
@@ -186,6 +188,7 @@ func _on_task_intermission_timeout():
 		$TaskIntermission.start()
 
 func _on_in_task_timeout():
+	$TaskIndicator.texture = null
 	current_task.is_occupied = false
 	current_task = null
 	motivation -= 1

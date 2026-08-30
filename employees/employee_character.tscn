@@ -73,6 +73,10 @@ one_shot = true
 [node name="TaskIntermission" type="Timer" parent="." unique_id=248515668]
 one_shot = true
 
+[node name="TaskIndicator" type="Sprite2D" parent="." unique_id=980862711]
+z_index = 5
+position = Vector2(0, -17)
+
 [connection signal="timeout" from="Anim/Timer" to="Anim" method="_on_timer_timeout"]
 [connection signal="timeout" from="InTask" to="." method="_on_in_task_timeout"]
 [connection signal="timeout" from="TaskIntermission" to="." method="_on_task_intermission_timeout"]
