@@ -112,7 +112,20 @@ func get_sabotage_target_position():
 
 ## returns a position for an employee to get up and go to, like a water cooler
 func get_neutral_target_position():
-	return Vector2(0,0)
+	GameState.neutral_task_list.shuffle()
+	for task: Task in GameState.neutral_task_list:
+		if not task.is_occupied:
+			task.is_occupied = true
+			return task
+	return null
+
+func get_positive_target_position():
+	GameState.pos_task_list.shuffle()
+	for task: Task in GameState.pos_task_list:
+		if not task.is_occupied:
+			task.is_occupied = true
+			return task
+	return null
 
 func fired():
 	if in_firing:
@@ -157,7 +170,15 @@ func fired():
 
 
 func _on_task_intermission_timeout():
-	current_task = get_sabotage_target_position()
+	var reliability = application.reliability
+	var rando = randi_range(0,4)
+	if rando > abs(reliability):
+		current_task = get_neutral_target_position()
+	else:
+		if reliability < 0:
+			current_task = get_sabotage_target_position()
+		else:
+			current_task = get_positive_target_position()
 	if current_task:
 		$NavigationAgent2D.target_position = current_task.position
 	else:
