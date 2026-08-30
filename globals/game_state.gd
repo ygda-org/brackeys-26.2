@@ -43,7 +43,7 @@ var production_requirement: float = 25
 
 var hiring_quota_remaining: int = START_DAY_HIRING_QUOTA
 var hiring_queue: Array[Application]
-var application_amount: int = 35
+var application_amount: int = 100
 
 var last_portrait : int
 
@@ -88,7 +88,11 @@ func hire():
 	if hiring_quota_remaining <= 0:
 		hire_failed.emit()
 		return
-	var app = hiring_queue.pop_front()
+	var app
+	if hiring_queue.size() < 1:
+		app = ApplicationHandler.create_application()
+	else:
+		app = hiring_queue.pop_front()
 	var employee = EMPLOYEE.instantiate()
 	employee.application = app
 	main.add_child(employee)

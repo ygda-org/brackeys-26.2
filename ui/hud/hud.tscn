@@ -51,8 +51,8 @@ offset_top = 4.0
 offset_right = 953.0
 offset_bottom = 25.0
 theme = ExtResource("2_4d6w6")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 value = 50.0
-show_percentage = false
 
 [node name="Panel" type="Panel" parent="." unique_id=2035374515]
 offset_left = 240.0
