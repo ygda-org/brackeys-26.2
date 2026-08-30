@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cksdvdrwjslfv" path="res://ui/game_over_screen/game_over.gd" id="1_jgpo5"]
 [ext_resource type="Texture2D" uid="uid://cdld7ddm24tvt" path="res://ui/screenWhereYouDiegeuohreiuhpeophoeopehporhposrhepsherpor(1).png" id="2_jgpo5"]
 [ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="3_shmxg"]
+[ext_resource type="AudioStream" uid="uid://bww7x5p8bus6v" path="res://assets/music/Sifting and Checking Export FINAL.mp3" id="4_ueotm"]
 
 [node name="GameOver" type="Control" unique_id=1123743901]
 layout_mode = 3
@@ -35,3 +36,9 @@ offset_bottom = 104.0
 theme = ExtResource("3_shmxg")
 theme_override_font_sizes/font_size = 50
 text = "Quota not met"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1159748375]
+stream = ExtResource("4_ueotm")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

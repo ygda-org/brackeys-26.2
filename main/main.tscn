@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cu5d4okbwduef" path="res://ui/hud/hud.tscn" id="4_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://d12xatyl171qw" path="res://main/between_day_flash.tscn" id="6_4dugh"]
 [ext_resource type="PackedScene" uid="uid://bt36bnfrc05q4" path="res://ui/pause_menu/pause_menu.tscn" id="6_kfbq2"]
+[ext_resource type="AudioStream" uid="uid://bps7fgxh3gbrg" path="res://assets/music/menu_2_loop(1).mp3" id="7_4dugh"]
 
 [node name="Main" type="Node2D" unique_id=1068375960]
 script = ExtResource("1_3wy1v")
@@ -33,3 +34,10 @@ visible = false
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=607535231]
 
 [node name="BetweenDayFlash" parent="CanvasLayer2" unique_id=90868380 instance=ExtResource("6_4dugh")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1167400898]
+stream = ExtResource("7_4dugh")
+volume_db = -5.0
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

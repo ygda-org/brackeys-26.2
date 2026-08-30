@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bww7x5p8bus6v"
+path="res://.godot/imported/Sifting and Checking Export FINAL.mp3-f57bec4a483b23e5e6a7e0f321397e54.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Sifting and Checking Export FINAL.mp3"
+dest_files=["res://.godot/imported/Sifting and Checking Export FINAL.mp3-f57bec4a483b23e5e6a7e0f321397e54.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -174,7 +174,7 @@ func fired():
 
 func _on_task_intermission_timeout():
 	var reliability = application.reliability
-	var rando = randf_range(-1,4)
+	var rando = randf_range(1,4) - motivation
 	if rando > abs(float(reliability)/2.0):
 		current_task = get_neutral_target_position()
 	else:
