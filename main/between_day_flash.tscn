@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d12xatyl171qw"]
+
+[ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="1_fd2o4"]
+[ext_resource type="Script" uid="uid://b0bhkbh0rcsu6" path="res://main/between_day_flash.gd" id="1_yj8o0"]
+
+[node name="BetweenDayFlash" type="Control" unique_id=90868380]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fd2o4")
+script = ExtResource("1_yj8o0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1753845265]
+layout_mode = 0
+offset_left = -132.0
+offset_top = -85.0
+offset_right = 1160.0
+offset_bottom = 711.0
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1700934503]
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=575890106]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6467341, 0.646777, 0.66489685, 1)
+text = "Day"

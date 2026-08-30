@@ -5,8 +5,11 @@ const EMPLOYEE = preload("uid://cmbb1fu0dvb01")
 const DAY_LENGTH = 60.0
 const START_DAY_HIRING_QUOTA = 5
 
+var day_num: int = 1
+
 signal day_started
 signal day_ended
+signal tween_day
 
 signal hire_failed
 
@@ -50,6 +53,7 @@ func _ready():
 	day_ended.connect(end_day)
 
 func start_day():
+	player_animation_lock = false
 	fired_amount = 0
 	set_deferred("pause", false)
 	hiring_queue = []
@@ -74,8 +78,9 @@ func end_day():
 		for i in range(hiring_quota_remaining):
 			hire()
 			await get_tree().create_timer(0.5).timeout
-	await get_tree().create_timer(2.0).timeout
-	day_started.emit()
+	player_animation_lock = true
+	day_num += 1
+	tween_day.emit()
 
 func hire():
 	if hiring_quota_remaining <= 0:
