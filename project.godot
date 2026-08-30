@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brackeys-26.2"
-run/main_scene="uid://b7hx7eym7wpfj"
+run/main_scene="uid://chx5r6nxm8j6b"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.60784316, 0.79607844, 0.8117647, 1)
 boot_splash/use_filter=false
