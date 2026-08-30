@@ -17,8 +17,7 @@
 [ext_resource type="Theme" uid="uid://dwx1vy1qd256w" path="res://ui/theme.tres" id="13_qao3l"]
 [ext_resource type="Texture2D" uid="uid://osotjc5wctbt" path="res://assets/ui/YGDA Logo.png" id="15_lknku"]
 [ext_resource type="Script" uid="uid://bkdvn0cjwbt1q" path="res://ui/main_menu/logo.gd" id="15_u2jyo"]
-[ext_resource type="AudioStream" uid="uid://522iecltljej" path="res://assets/music/menu_2_intro.mp3" id="18_db6af"]
-[ext_resource type="AudioStream" uid="uid://bps7fgxh3gbrg" path="res://assets/music/menu_2_loop(1).mp3" id="19_rkggs"]
+[ext_resource type="AudioStream" uid="uid://da4ntygovawd4" path="res://assets/music/menu_2.ogg" id="18_qewnw"]
 
 [sub_resource type="Animation" id="Animation_i5wg5"]
 length = 0.001
@@ -452,10 +451,8 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5kg8m")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=613206031]
-stream = ExtResource("18_db6af")
-
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1696019493]
-stream = ExtResource("19_rkggs")
+stream = ExtResource("18_qewnw")
+parameters/looping = true
 
 [connection signal="pressed" from="Menu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
@@ -467,4 +464,3 @@ stream = ExtResource("19_rkggs")
 [connection signal="pressed" from="Settings/ReturnButton" to="Settings" method="_on_return_button_pressed"]
 [connection signal="pressed" from="Credits/Button" to="Credits" method="_on_button_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
-[connection signal="finished" from="AudioStreamPlayer2" to="." method="_on_audio_stream_player_2_finished"]

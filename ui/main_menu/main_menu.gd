@@ -30,9 +30,4 @@ func _on_credits_button_pressed():
 
 
 func _on_audio_stream_player_finished():
-	$AudioStreamPlayer2.start()
-
-
-func _on_audio_stream_player_2_finished():
-	$AudioStreamPlayer2.seek(0)
-	$AudioStreamPlayer2.play()
+	pass
