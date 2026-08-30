@@ -18,11 +18,13 @@ var portraits = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	GameState.hire_failed.connect($Label.set.bind("visible", true))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if GameState.hiring_quota_remaining > 0:
+		$Label.visible = false
 	if current_app == null and GameState.hiring_queue.size() > 0:
 		load_application()
 
