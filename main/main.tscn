@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cu5d4okbwduef" path="res://ui/hud/hud.tscn" id="4_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://d12xatyl171qw" path="res://main/between_day_flash.tscn" id="6_4dugh"]
 [ext_resource type="PackedScene" uid="uid://bt36bnfrc05q4" path="res://ui/pause_menu/pause_menu.tscn" id="6_kfbq2"]
-[ext_resource type="AudioStream" uid="uid://bps7fgxh3gbrg" path="res://assets/music/menu_2_loop(1).mp3" id="7_4dugh"]
+[ext_resource type="AudioStream" uid="uid://b6qywxklymixj" path="res://assets/music/other game song yoyo loop 28.80 seconds.ogg" id="7_4dugh"]
 
 [node name="Main" type="Node2D" unique_id=1068375960]
 script = ExtResource("1_3wy1v")

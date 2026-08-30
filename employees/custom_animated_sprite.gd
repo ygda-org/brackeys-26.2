@@ -9,6 +9,8 @@ const REGIONS = {Vector2i(1,0): 128, Vector2i(-1,0): 128,
 Vector2i(0,1): 0, Vector2i(0,-1): 256}
 
 func _ready():
+	if char_num == "0":
+		char_num = "1"
 	texture = load("res://assets/characters/sprites/portrait_" + char_num + "_walk.png")
 	if not texture:
 		texture = load("uid://2jk3dljxlmrm")

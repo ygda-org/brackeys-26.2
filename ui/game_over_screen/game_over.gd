@@ -9,4 +9,4 @@ func _ready():
 
 func _on_audio_stream_player_finished():
 	$AudioStreamPlayer.seek(0)
-	$AudioStreamPlayer.playing = true
+	$AudioStreamPlayer.play()
